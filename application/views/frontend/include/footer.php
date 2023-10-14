@@ -44,11 +44,8 @@
                             <div class="footer-tittle">
                                 <h4>Services</h4>
                                 <ul>
-                                    <li><a href="#">Commercial Cleaning</a></li>
-                                    <li><a href="#">Office Cleaning</a></li>
-                                    <li><a href="#">Building Cleaning</a></li>
-                                    <li><a href="#">Floor Cleaning</a></li>
-                                    <li><a href="#">Apartment Cleaning</a></li>
+                                    <li><a href="#">Dog Vaccination</a></li>
+
                                 </ul>
                             </div>
                         </div>
@@ -58,9 +55,12 @@
                             <div class="footer-tittle">
                                 <h4>Get in Touch</h4>
                                 <ul>
-                                 <li><a href="#">152-515-6565</a></li>
-                                 <li><a href="#"> Demomail@gmail.com</a></li>
-                                 <li><a href="#">New Orleans, USA</a></li>
+                                 <li><a href="#">09959401818 | 09602016523</a></li>
+                                 <li><a href="https://www.facebook.com/OrigVetCare"> @origvetcare</a></li>
+                                 <li><a href="#">1193 Bohol Circumferential Road,
+                                    CPG North Avenue, Ubujan District,
+                                    Tagbilaran City, Bohol
+                                 </a></li>
                              </ul>
                             </div>
                         </div>

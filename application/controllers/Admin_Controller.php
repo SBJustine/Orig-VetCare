@@ -43,6 +43,8 @@ class Admin_Controller extends CI_Controller {
 		}
 		$this->load->view('backend/page/login');
 	}
+
+	
 	
 	public function dashboard()
 	{
@@ -50,8 +52,46 @@ class Admin_Controller extends CI_Controller {
 		$data['website_info'] = $this->Users_model->fetch_all("website_info");	
 		$this->load->view('backend/include/header', $data);
 		$this->load->view('backend/page/dashboard');
+		$this->load->view('backend/include/nav');
 		$this->load->view('backend/include/footer');	
 	}
+}
+public function appointments()
+	{
+		if ($this->session->has_userdata('user_id') == TRUE) {
+		$data['website_info'] = $this->Users_model->fetch_all("website_info");	
+		$this->load->view('backend/include/header', $data);
+		$this->load->view('backend/page/appointments');
+		$this->load->view('backend/include/nav');
+		$this->load->view('backend/include/footer');	
+	}
+}
+public function vac_records()
+	{
+		if ($this->session->has_userdata('user_id') == TRUE) {
+		$data['website_info'] = $this->Users_model->fetch_all("website_info");	
+		$this->load->view('backend/include/header', $data);
+		$this->load->view('backend/page/vac_records');
+		$this->load->view('backend/include/nav');
+		$this->load->view('backend/include/footer');	
+	}
+}
+public function vaccinations()
+	{
+		if ($this->session->has_userdata('user_id') == TRUE) {
+		$data['website_info'] = $this->Users_model->fetch_all("website_info");	
+		$this->load->view('backend/include/header', $data);
+		$this->load->view('backend/page/vaccinations');
+		$this->load->view('backend/include/nav');
+		$this->load->view('backend/include/footer');
+		}
+	}
+public function register(){
+	$data['website_info'] = $this->Users_model->fetch_all("website_info");
+	$this->load->view('backend/include/header', $data);	
+	$this->load->view('backend/page/register');
+
+		
 }
 public function widgets()
 	{
@@ -59,6 +99,7 @@ public function widgets()
 		$data['website_info'] = $this->Users_model->fetch_all("website_info");	
 		$this->load->view('backend/include/header', $data);
 		$this->load->view('backend/page/widgets');
+		$this->load->view('backend/include/nav');
 		$this->load->view('backend/include/footer');	
 	}
 }
@@ -85,13 +126,7 @@ public function typography()
 		session_destroy();
 		redirect('admin');
 	}
-	public function register(){
-		$data['website_info'] = $this->Users_model->fetch_all("website_info");	
-		$this->load->view('backend/page/register');
-		$this->load->view('backend/include/header', $data);
-		$this->load->view('backend/include/footer');
-			
-	}
+
 	public function settings(){
 		$data['website_info'] = $this->Users_model->fetch_all("website_info");	
 		$this->load->view('backend/page/settings',$data);	

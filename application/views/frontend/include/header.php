@@ -60,12 +60,12 @@
                                             <li><a href="<?= base_url();?>index.php/about">About</a></li>
                                             <li><a  href="<?= base_url();?>index.php/services">Services</a></li>                                         
                                             <li><a href="<?= base_url();?>index.php/contact">Contact</a></li>
-                                            <li><a href="<?= base_url();?>index.php/admin">Login</a></li>
+                                            
                                         </ul>
                                     </nav>
                                 </div>
                                 <div class="header-right-btn f-right d-none d-lg-block ml-30">
-                                    <a href="<?= base_url();?>index.php/appointment"> <button class="header-btn">Make an appointment</a>
+                                    <a href="<?= base_url();?>index.php/admin"> <button class="header-btn">Login</a>
                                 </div>
                             </div>
                         </div>   

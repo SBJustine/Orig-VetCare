@@ -58,8 +58,9 @@ $route['typography'] = 'Admin_Controller/typography';
 $route['logout'] = 'Admin_Controller/logout';
 $route['register'] = 'Admin_Controller/register';
 $route['appointments'] = 'Admin_Controller/appointments';
-$route['vac_records'] = 'Admin_Controller/vac_records';
 $route['vaccinations'] = 'Admin_Controller/vaccinations';
+$route['client'] = 'Admin_Controller/client';
+$route['admin'] = 'Admin_Controller/admin';
 
 /*frontend*/
 $route['home'] = 'Frontend_Controller';

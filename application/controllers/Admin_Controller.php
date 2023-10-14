@@ -66,16 +66,7 @@ public function appointments()
 		$this->load->view('backend/include/footer');	
 	}
 }
-public function vac_records()
-	{
-		if ($this->session->has_userdata('user_id') == TRUE) {
-		$data['website_info'] = $this->Users_model->fetch_all("website_info");	
-		$this->load->view('backend/include/header', $data);
-		$this->load->view('backend/page/vac_records');
-		$this->load->view('backend/include/nav');
-		$this->load->view('backend/include/footer');	
-	}
-}
+
 public function vaccinations()
 	{
 		if ($this->session->has_userdata('user_id') == TRUE) {
@@ -88,11 +79,35 @@ public function vaccinations()
 	}
 public function register(){
 	$data['website_info'] = $this->Users_model->fetch_all("website_info");
-	$this->load->view('backend/include/header', $data);	
-	$this->load->view('backend/page/register');
+	$this->load->view('backend/include/header', $data);
+	$this->load->view('backend/page/register', $data);
 
-		
+	
+
 }
+		
+
+public function client()
+	{
+		if ($this->session->has_userdata('user_id') == TRUE) {
+		$data['website_info'] = $this->Users_model->fetch_all("website_info");	
+		$this->load->view('backend/include/header', $data);
+		$this->load->view('backend/page/client');
+		$this->load->view('backend/include/nav');
+		$this->load->view('backend/include/footer');
+		}
+	}
+
+	public function admin()
+	{
+		if ($this->session->has_userdata('user_id') == TRUE) {
+		$data['website_info'] = $this->Users_model->fetch_all("website_info");	
+		$this->load->view('backend/include/header', $data);
+		$this->load->view('backend/page/admin');
+		$this->load->view('backend/include/nav');
+		$this->load->view('backend/include/footer');
+		}
+	}
 public function widgets()
 	{
 		if ($this->session->has_userdata('user_id') == TRUE) {

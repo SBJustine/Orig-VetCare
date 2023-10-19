@@ -34,19 +34,19 @@
 
         
 
-        <!--? Our Services Start -->
-        <div class="our-services section-padding30">
+        <!-- ? Our Services Start -->
+        <!-- <div class="our-services section-padding30">
             <div class="container">
                 <div class="row justify-content-sm-center">
                     <div class="cl-xl-7 col-lg-8 col-md-10">
-                        <!-- Section Tittle -->
+                       
                         <div class="section-tittle text-center mb-70">
                             <span>Our Professional Services</span>
                             <h2>Best Pet Care Services</h2>
                         </div> 
                     </div>
                 </div>
-                <div class="row justify-content-center"> <!-- Added justify-content-center -->
+                <div class="row justify-content-center"> 
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-services text-center mb-30">
                         <div class="services-ion">
@@ -61,8 +61,74 @@
             </div>
 
             </div>
+        </div> -->
+        <!-- Our Services End -->
+
+        <!-- Hero Area Start -->
+        <!-- <div class="slider-area2 slider-height2 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap text-center pt-50">
+                            <h2>Services</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Hero Area End -->
+        <!--? Our Services Start -->
+        <div class="our-services section-padding30">
+            <div class="container">
+                <div class="row justify-content-sm-center">
+                    <div class="cl-xl-7 col-lg-8 col-md-10">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle text-center mb-70">
+                            <span>Our Professional Services</span>
+                            <h2>Best Pet Care Services</h2>
+                        </div> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services text-center mb-30">
+                            <div class="services-ion">
+                                <span class="flaticon-animal-kingdom"></span>
+                            </div>
+                            <div class="services-cap">
+                                <h5><a href="#">Vaccinations/a></h5>
+                                <p>consectetur adipiscing elit, serfd dgo eiusmod tempor incididunt ut ore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services text-center mb-30">
+                            <div class="services-ion">
+                                 <span class="flaticon-animals"></span>
+                            </div>
+                            <div class="services-cap">
+                                <h5><a href="#">Pet Grooming</a></h5>
+                                <p>consectetur adipiscing elit, serfd dgo eiusmod tempor incididunt ut ore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services text-center mb-30">
+                            <div class="services-ion">
+                                 <span class="flaticon-animals"></span>
+                            </div>
+                            <div class="services-cap">
+                                <h5><a href="#">Pet Treatment</a></h5>
+                                <p>consectetur adipiscing elit, serfd dgo eiusmod tempor incididunt ut ore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
         </div>
         <!-- Our Services End -->
+
         <!--? About Area Start-->
         <div class="about-area fix">
             <!--Right Contents  -->
@@ -70,7 +136,7 @@
                 
             </div>
             <!-- left Contents -->
-            <div class="about-details">
+            <div class="about-details" style="background-image: url('<?php echo base_url();?>assets/img1/gallery/section_bg02.png'); ">
                 <div class="right-caption">
                     <!-- Section Tittle -->
                     <div class="section-tittle mb-50">
@@ -123,16 +189,17 @@
             </div>
         </div>
         <!-- Gallery Area End -->
+
         <!--? Contact form Start -->
-        <div class="contact-form-main pb-top">
+        <div class="contact-form-main pb-top" >
             <div class="container">
                 <div class="row justify-content-md-end">
                     <div class="col-xl-7 col-lg-7">
                         <div class="form-wrapper">
                             <!--Section Tittle  -->
-                            <div class="form-tittle">
-                                <div class="row ">
-                                    <div class="col-xl-12">
+                            <div class="form-tittle" style="background-image: url('<?php echo base_url();?>assets/img1/gallery/contact_bg.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                                <div class="row " >
+                                    <div class="col-xl-12" >
                                         <div class="section-tittle section-tittle2 mb-70">
                                             <h2>World's Leading Law Consultency Agency !</h2>
                                         </div>

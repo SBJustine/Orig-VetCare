@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Users_model extends CI_Model {
+class Client_users extends CI_Model {
 
 	public function __construct(){
 		parent::__construct();
@@ -22,37 +22,20 @@ class Users_model extends CI_Model {
 				return $query->result();
 			} 
 			return 0;
-	
-
-		//Display  Account here
+		
 			
 		}
 
 		function fetch_all($id){
 
-			$query = $this->db->query("SELECT * FROM `admin_users`   " );
-			return $query->result();
-
-		}
-
-		function fetch_allclient($id){
-
 			$query = $this->db->query("SELECT * FROM `client_users`   " );
 			return $query->result();
 
 		}
-		function fetch_allpet($id){
-
-			$query = $this->db->query("SELECT * FROM `pet_users`   " );
-			return $query->result();
-
-		}
-
-
 		function get_info($id){
 			$query = $this->db->select('*')
-								->from('admin_users')
-								->where('admin_id', $id)
+								->from('client_users')
+								->where('client_id', $id)
 								->get();
 
 			return $query->result();
@@ -66,34 +49,17 @@ class Users_model extends CI_Model {
 			return $query->result();
 		}
 
+		// function fetch_site_info()
+		// {
+		// 	$query 	= $this->db->query("SELECT * FROM `website_info` " );
 
+		// 	return $query->result();
+		// }
 
-		//Add Account here
 
 		function insert_data($data)
 		{
-			$this->db->insert('admin_users', $data);
-			$afftectedRows = $this->db->affected_rows();
-	        if ($afftectedRows > 0) {
-	            return TRUE;
-	        } else {
-	            return FALSE;
-	        }
-		}
-
-		function insert_dataclient($data)
-		{
 			$this->db->insert('client_users', $data);
-			$afftectedRows = $this->db->affected_rows();
-	        if ($afftectedRows > 0) {
-	            return TRUE;
-	        } else {
-	            return FALSE;
-	        }
-		}
-		function insert_datapet($data)
-		{
-			$this->db->insert('pet_users', $data);
 			$afftectedRows = $this->db->affected_rows();
 	        if ($afftectedRows > 0) {
 	            return TRUE;

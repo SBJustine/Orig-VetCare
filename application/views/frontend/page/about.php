@@ -1,6 +1,6 @@
 <main> 
         <!-- Hero Area Start -->
-        <div class="slider-area2 slider-height2 d-flex align-items-center">
+        <div class="slider-area2 slider-height2 d-flex align-items-center" style="background-image: url('<?php echo base_url();?>assets/img1/hero/hero2.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
@@ -134,7 +134,7 @@
                     <div class="col-xl-7 col-lg-7">
                         <div class="form-wrapper">
                             <!--Section Tittle  -->
-                            <div class="form-tittle">
+                            <div class="form-tittle" style="background-image: url('<?php echo base_url();?>assets/img1/gallery/contact_bg.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
                                 <div class="row ">
                                     <div class="col-xl-12">
                                         <div class="section-tittle section-tittle2 mb-70">

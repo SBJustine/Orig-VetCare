@@ -52,15 +52,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /*backend*/
 $route['admin'] = 'Admin_Controller';
 $route['dashboard'] = 'Admin_Controller/dashboard';
-$route['widgets'] = 'Admin_Controller/widgets';
-$route['button'] = 'Admin_Controller/button';
-$route['typography'] = 'Admin_Controller/typography';
 $route['logout'] = 'Admin_Controller/logout';
-$route['register'] = 'Admin_Controller/register';
 $route['appointments'] = 'Admin_Controller/appointments';
-$route['vaccinations'] = 'Admin_Controller/vaccinations';
-$route['client'] = 'Admin_Controller/client';
-$route['admin'] = 'Admin_Controller/admin';
+$route['vaccination_report'] = 'Admin_Controller/vaccination_report';
+$route['client_table'] = 'Admin_Controller/client_table';
+$route['create_admin'] = 'Admin_Controller/create_admin';
+$route['admin_table'] = 'Admin_Controller/admin_table';
+$route['add_client'] = 'Admin_Controller/add_client';
+$route['add_pet'] = 'Admin_Controller/add_pet';
+$route['pet_table'] = 'Admin_Controller/pet_table';
+$route['appointment_list'] = 'Admin_Controller/appointment_list';
 
 /*frontend*/
 $route['home'] = 'Frontend_Controller';

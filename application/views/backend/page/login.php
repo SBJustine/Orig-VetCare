@@ -29,7 +29,7 @@
                 
             <h1>Sign in</h1>
             <div class="social-container">
-                <a href="https://www.facebook.com/OrigVetCare" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                 <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
             </div>
@@ -54,7 +54,7 @@
             <div class="overlay-panel overlay-right">
                 <h1>Hello, Friend!</h1>
                 <p>Enter your personal details and monitor your pets with us</p>
-                <a href="<?= base_url();?>index.php/home"><button class="ghost">Home</button></a>
+                <a href="<?= base_url();?>index.php/home"><button class="ghost">Previous</button></a>
             </div>
             
         </div>

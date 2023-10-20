@@ -1,19 +1,16 @@
 
-    <!-- Sign Up Start -->
-    <div class="container-fluid">
+        <!-- Sign Up Start -->
+        <div class="container-fluid">
         <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
             <div class="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-7"> <!-- Adjusted column width for wider form -->
                 <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
                 <div class="card-body">
-                <div class="text-center"> <!-- Center only the "REGISTRATION FORM" text -->
-        <h2>REGISTER PET</h2>
-      </div>
 
-<label style="color: red;"><?= $this->session->flashdata('msg_settings_error');?></label>
-    <label style="color: green;"><?= $this->session->flashdata('msg_settings');?></label>
-    <div class="table-responsive">
-        <!-- Your registration form goes here -->
-        <form action="<?= base_url() ?>index.php/add_pet" method="post">
+                <label style="color: red;"><?= $this->session->flashdata('msg_settings_error');?></label>
+                    <label style="color: green;"><?= $this->session->flashdata('msg_settings');?></label>
+                    <div class="table-responsive">
+                <!-- Your registration form goes here -->
+                <form action="<?= base_url() ?>index.php/add_pet" method="post">
 
             <div class="form-group">
                 <label class="control-label">Name</label>
@@ -25,8 +22,8 @@
             <div class="form-group">
                 <label class="control-label">Breed</label>
                 <select name="pet_breed" id="pet_breed" class="form-control" required>
-                    <option value="dobberman">Dobberman</option>
-                    <option value="husky">Husky</option>
+                    <option value="Dobberman">Dobberman</option>
+                    <option value="Husky">Husky</option>
                 </select>
                 <div class="invalid-feedback">
                     Please select your status.
@@ -35,8 +32,8 @@
             <div class="form-group">
                 <label class="control-label">Species</label>
                 <select name="pet_species" id="pet_species" class="form-control" required>
-                    <option value="dog">Dog</option>
-                    <option value="cat">Cat</option>
+                    <option value="Dog">Dog</option>
+                    <option value="Cat">Cat</option>
                 </select>
                 <div class="invalid-feedback">
                     Please select your status.
@@ -52,8 +49,8 @@
             <div class="form-group">
                 <label class="control-label">Gender</label>
                 <select name="pet_gender" id="pet_gender" class="form-control" required>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
                 </select>
                 <div class="invalid-feedback">
                     Please select your status.

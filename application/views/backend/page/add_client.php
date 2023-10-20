@@ -2,7 +2,7 @@
     <!-- Sign Up Start -->
     <div class="container-fluid">
         <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
-            <div class="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-7"> <!-- Adjusted column width for wider form -->
+            <div class="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-7"><!-- Adjusted column width for wider form -->
                 <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
                 <div class="card-body">
 
@@ -84,6 +84,7 @@
             </div>
         </form>
     </div>
+</div>
                 </div>
             </div>
         </div>

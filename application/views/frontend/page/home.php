@@ -190,74 +190,7 @@
         </div>
         <!-- Gallery Area End -->
 
-        <!--? Contact form Start -->
-        <div class="contact-form-main pb-top" >
-            <div class="container">
-                <div class="row justify-content-md-end">
-                    <div class="col-xl-7 col-lg-7">
-                        <div class="form-wrapper">
-                            <!--Section Tittle  -->
-                            <div class="form-tittle" style="background-image: url('<?php echo base_url();?>assets/img1/gallery/contact_bg.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                <div class="row " >
-                                    <div class="col-xl-12" >
-                                        <div class="section-tittle section-tittle2 mb-70">
-                                            <h2>World's Leading Law Consultency Agency !</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End Section Tittle  -->
-                            <form id="contact-form" action="#" method="POST">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="form-box user-icon mb-30">
-                                            <input type="text" name="name" placeholder="Name">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="form-box email-icon mb-30">
-                                            <input type="text" name="email" placeholder="Phone">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 mb-30">
-                                        <div class="select-itms">
-                                            <select name="select" id="select2">
-                                                <option value="">Health Law</option>
-                                                <option value="">saiful islam</option>
-                                                <option value="">Arafath Miya</option>
-                                                <option value="">Shakil Miya</option>
-                                                <option value="">Tamim Sharker</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="form-box subject-icon mb-30">
-                                            <input type="Email" name="subject" placeholder="Email">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-box message-icon mb-65">
-                                            <textarea name="message" id="message" placeholder="Message"></textarea>
-                                        </div>
-                                        <div class="submit-info">
-                                            <button class="btn submit-btn2" type="submit">Submit Now</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- shape-dog -->
-                                <div class="shape-dog">
-                                    <img src="<?= base_url();?>assets/img1/gallery/shape1.png" alt="">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- contact left Img-->
-            <div class="from-left d-none d-lg-block">
-                <img src="<?= base_url();?>assets/img1/gallery/Vet1.jpg" alt="">
-            </div>
-        </div>
+       
         <!-- Contact form End -->
         <!--? Team Start -->
         <div class="team-area section-padding30">

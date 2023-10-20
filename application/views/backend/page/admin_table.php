@@ -1,19 +1,20 @@
-<div class="container">
-  <div class="col-md-12 mx-auto">
-    <div class="card">
-      <div class="card-header bg-primary text-white">
-        <h3 class="card-title text-center">Admin Users</h3>
+<div class="container" >
+  <div class="col-md-12 mx-auto" >
+    <div class="card" >
+      <div class="card-header bg-primary text-white" >
+        <h3 class="card-title text-center" >Admin Users</h3>
       </div>
       <div class="card-body">
-        <div class="table-responsive">
-          <table class="table table-bordered">
-            <thead class="thead-light">
+        <div class="table-responsive" >
+          <table class="table table-bordered" >
+            <thead class="thead-light" >
               <tr>
                 <th>#</th>
                 <th>Full Name</th>
                 <th>Email</th>
                 <th>Password</th>
-                <th>Action</th> <!-- New Action Column -->
+                <th>Action</th>
+                 <!-- New Action Column -->
               </tr>
             </thead>
             <tbody>

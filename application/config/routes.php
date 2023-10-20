@@ -69,6 +69,7 @@ $route['about'] = 'Frontend_Controller/about';
 $route['services'] = 'Frontend_Controller/services';
 $route['contact'] = 'Frontend_Controller/contact';
 $route['appointment'] = 'Frontend_Controller/appointment';
+$route['login_admin'] = 'Frontend_Controller/login_admin';
 
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';

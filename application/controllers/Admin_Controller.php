@@ -319,6 +319,7 @@ $petUsers = $this->Users_model->fetch_allpet($id);
 
 
 
+
 public function regform_trial() {
 	$this->load->library('form_validation');
 	$this->form_validation->set_rules('fullname', 'Full Name', 'required');

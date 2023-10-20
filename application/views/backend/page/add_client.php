@@ -68,12 +68,13 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label">Date Added</label>
-                        <input name="date_added" class="form-control" placeholder="Date Added" type="text" required>
-                        <div class="invalid-feedback">
-                            Please enter the date added.
-                         </div>
-                     </div>
+    <label class="control-label">Date Added</label>
+    <input name="date_added" class="form-control" placeholder="Date Added" type="text" value="<?php echo date('Y-m-d'); ?>" required>
+    <div class="invalid-feedback">
+        Please enter the date added.
+    </div>
+</div>
+
 
            
             <!-- Add more registration fields as needed -->

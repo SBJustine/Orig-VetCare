@@ -1,8 +1,8 @@
 <!-- Sidebar Start -->
 <div class="sidebar pe-4 pb-3">
-            <nav class="navbar bg-light navbar-light">
+            <nav class="navbar bg-light navbar-light" >
                 
-                <a href="<?= base_url();?>index.php/dashboard"><img src="<?= base_url();?>assets/img1/logo/vetlogo.png" alt=""></a>  
+                <a href="<?= base_url();?>index.php/dashboard" style="margin-left:20px"><img src="<?= base_url();?>assets/img1/logo/vetlogo.png" alt=""></a>  
               
                 
                 <div class="navbar-nav w-100">

@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #009CFF;
+    --primary: maroon;
     --light: #F3F6F9;
     --dark: #191C24;
 }
@@ -12,6 +12,7 @@
     bottom: 45px;
     z-index: 99;
 }
+
 
 
 /*** Spinner ***/
@@ -192,7 +193,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 40px;
 }
 
@@ -275,4 +276,3 @@
     background: var(--dark);
     border-color: var(--primary);
 }
-

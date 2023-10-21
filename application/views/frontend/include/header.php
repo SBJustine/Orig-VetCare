@@ -6,7 +6,7 @@
     <title>Orig | VetCare </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="manifest" href="<?= base_url();?>assets/css1/site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url();?>assets/img1/favicon.ico">
 
     <!-- CSS here -->

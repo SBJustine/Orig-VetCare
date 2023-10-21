@@ -1,54 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
 
-    <!-- Sign Up Start -->
-    <div class="container-fluid">
-        <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
-            <div class="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-7"> <!-- Adjusted column width for wider form -->
-                <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
-                <div class="card-body">
+<head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Orig | VetCare </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-        <label style="color: red;"><?= $this->session->flashdata('msg_settings_error');?></label>
-            <label style="color: green;"><?= $this->session->flashdata('msg_settings');?></label>
-            <div class="table-responsive">
-        <!-- Your registration form goes here -->
-        <form action="<?= base_url() ?>index.php/create_admin" method="post">
+    <!-- Favicon -->
+    <link href="<?= base_url();?>assets/img/favicon.ico" rel="icon">
 
-            <div class="form-group">
-                <label class="control-label">Full Name</label>
-                <input name="fullname" class="form-control"  id="fullname" placeholder="Full Name" type="text" required>
-                <div class="invalid-feedback">
-                    Please enter your full name.
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="<?= base_url();?>assets/css/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="<?= base_url();?>assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?= base_url();?>assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="<?= base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="<?= base_url();?>assets/css/style.css" rel="stylesheet">
+
+    
+    
+</head>
+
+<body>
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+
+
+
+        <!-- Sign In Start -->
+        <div class="container-fluid">
+            <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+                <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                    <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
+                    <div class="d-flex align-items-center justify-content-center mb-3">
+                    <form action="<?= base_url(); ?>index.php/dashoard" method="post">
+                        <div class="text-center"> <!-- Center content -->
+                            <h3 class="text-primary"><i class="fa fa-user me-2" style="color: maroon;"></i></h3>
+                            <h3 style="color: maroon;">Sign In</h3>
+                        </div>
+                    
                 </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label">Email Address</label>
-                <input type="email" class="form-control" id="email" placeholder="Email Address" name="client_email" required>
-                <div class="invalid-feedback">
-                    Please enter an email address.
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" name="user_email" placeholder="name@example.com" required />
+                    <label for="floatingInput">Email address</label>
                 </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label">Password</label>
-                <input name="password" class="form-control" id="password" placeholder="Password" type="password" required>
-                <div class="invalid-feedback">
-                    Please enter a password.
+                <div class="form-floating mb-4">
+                    <input type="password" class="form-control" name="user_password" placeholder="Password" required />
+                    <label for="floatingPassword">Password</label>
                 </div>
-            </div>
-        
-           
-            <!-- Add more registration fields as needed -->
 
-            <div class="modal-footer d-flex">
-                <button type="button" class="btn btn-primary custom-button" data-dismiss="modal">Cancel</button>
-                <input type="submit" class="btn btn-primary custom-button" value="Create">
-            </div>
-        </form>
-    </div>
+                        
+                <button type="submit" name="login_btn" class="btn btn-primary py-3 w-100 mb-4" style= " background-color: maroon;">Sign In</button>
+                        
+                        
+                        <p class="text-center mb-0">Visit <a href="<?= base_url(); ?>index.php/home" style= " color: maroon;">Orig Vetcare</a></p>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- Sign In End -->
     </div>
-    <!-- Sign Up End -->
+    
 
+    
+</body>
 
-                                            
-                      
+</html>

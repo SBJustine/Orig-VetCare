@@ -71,49 +71,7 @@ public function appointment_list()
 		$this->load->view('backend/include/footer');	
 	}
 }
-public function vaccination_report()
-	{
-		if ($this->session->has_userdata('user_id') == TRUE) {
-		$data['website_info'] = $this->Users_model->fetch_all("website_info");	
-		$this->load->view('backend/include/header', $data);
-		$this->load->view('backend/page/vaccination_report');
-		$this->load->view('backend/include/nav');
-		$this->load->view('backend/include/footer');
-		}
-	}
-// public function appointments()
-// 	{
-// 		if ($this->session->has_userdata('user_id') == TRUE) {
-// 		$data['website_info'] = $this->Users_model->fetch_all("website_info");	
-// 		$this->load->view('backend/include/header', $data);
-// 		$this->load->view('backend/page/appointments');
-// 		$this->load->view('backend/include/nav');
-// 		$this->load->view('backend/include/footer');	
-// 	}
-// }
 
-
-
-// public function pet_table()
-// 	{
-// 		if ($this->session->has_userdata('user_id') == TRUE) {
-// 		$data['website_info'] = $this->Users_model->fetch_all("website_info");	
-// 		$this->load->view('backend/include/header', $data);
-// 		$this->load->view('backend/page/pet_table');
-// 		$this->load->view('backend/include/nav');
-// 		$this->load->view('backend/include/footer');	
-// 	}
-// }
-
-
-// public function register(){
-// 	$data['website_info'] = $this->Users_model->fetch_all("website_info");
-// 	$this->load->view('backend/include/header', $data);
-// 	$this->load->view('backend/page/register');
-
-	
-
-// }
 
 public function create_admin() {
 	$this->load->library('form_validation');
@@ -314,68 +272,12 @@ $petUsers = $this->Users_model->fetch_allpet($id);
 	$this->load->view('backend/include/footer');
 }
 
-
-
-
-
-
-
-public function regform_trial() {
-	$this->load->library('form_validation');
-	$this->form_validation->set_rules('fullname', 'Full Name', 'required');
-	$this->form_validation->set_rules('address', 'Address', 'required');
-	$this->form_validation->set_rules('phone_number', 'Phone Number', 'required');
-	$this->form_validation->set_rules('email', 'Email', 'required|valid_email');
-	$this->form_validation->set_rules('password', 'Password', 'required');
-	
-
-	if (!$this->session->has_userdata('user_id')) {
-		redirect('admin'); // Redirect to login page if not logged in
-	}
-
-	if ($this->form_validation->run() === FALSE) {
-		// Validation failed, redirect back to the form
-		$this->load->view('backend/include/header');
-		$this->load->view('backend/include/nav');
-		$this->load->view('backend/page/reg_form_trial');
-		$this->load->view('backend/include/footer');
-	} else {
-		// Validation succeeded, proceed with data insertion
-		$data = array(
-			'fullname' => $this->input->post('fullname'),
-			'address' => $this->input->post('address'),
-			'phone_number' => $this->input->post('phone_number'),
-			'email' => $this->input->post('email'),
-			'password' => $this->input->post('password'),
-			
-		);
-
-		$result = $this->User_model->insert_data($data);
-
-		if ($result) {
-			// Data insertion was successful
-			$this->session->set_flashdata('success', 'Data inserted successfully.');
-		} else {
-			// Data insertion failed
-			$this->session->set_flashdata('error', 'Failed to insert data.');
-		}
-
-		// Redirect to a suitable page after the form submission
-		redirect('regform_trial');
-	}
-
-}
-
-
-
-
-
-public function reg_form_trial()
+public function vaccination_report()
 	{
 		if ($this->session->has_userdata('user_id') == TRUE) {
 		$data['website_info'] = $this->Users_model->fetch_all("website_info");	
 		$this->load->view('backend/include/header', $data);
-		$this->load->view('backend/page/reg_form_trial');
+		$this->load->view('backend/page/vaccination_report');
 		$this->load->view('backend/include/nav');
 		$this->load->view('backend/include/footer');
 		}

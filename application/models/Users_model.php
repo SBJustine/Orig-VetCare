@@ -16,6 +16,14 @@ class Users_model extends CI_Model {
 				return 0;
 
 		}
+		function authenticateclient($client_email){
+			$query = $this->db->query("SELECT * FROM `client_users` where client_email='$client_email' " );
+			if ($query->num_rows() > 0) {
+				return $query->result();
+			}
+				return 0;
+
+		}
 		function get_admin_logged_info($id){
 			$query = $this->db->query("SELECT *, resident_info.firstname,resident_info.lastname,resident_info.contact_no FROM 'admin_users' inner join resident_info.info' on admin_users.res_id=resident_info.id where admin_users.admin_id='$id'");
 			if ($query->num_rows() >0){

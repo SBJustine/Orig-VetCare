@@ -65,7 +65,7 @@
                                     </nav>
                                 </div>
                                 <div class="header-right-btn f-right d-none d-lg-block ml-30">
-                                    <a href="<?= base_url();?>index.php/admin"> <button class="header-btn">Login</a>
+                                    <a href="<?= base_url();?>index.php/login_client"> <button class="header-btn">Login</a>
                                 </div>
                             </div>
                         </div>   

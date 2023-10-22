@@ -30,11 +30,10 @@
                             <div class="footer-tittle">
                                 <h4>Company</h4>
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="single-blog.html">Services</a></li>
-                                    <li><a href="#">Cases</a></li>
-                                    <li><a href="contact.html">  Contact Us</a></li>
+                                    <li><a  href="<?= base_url();?>index.php/home">Home</a></li>
+                                    <li><a  href="<?= base_url();?>index.php/about">About Us</a></li>
+                                    <li><a  href="<?= base_url();?>index.php/services">Services</a></li>
+                                    <li><a  href="<?= base_url();?>index.php/contact">  Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>

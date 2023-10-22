@@ -53,7 +53,7 @@
                                 <span class="flaticon-animal-kingdom"></span>
                             </div>
                             <div class="services-cap">
-                                <h5><a href="#">Vaccinations/a></h5>
+                                <h5><a href="#">Vaccinations</a></h5>
                                 <p>consectetur adipiscing elit, serfd dgo eiusmod tempor incididunt ut ore et dolore magna aliqua.</p>
                             </div>
                         </div>

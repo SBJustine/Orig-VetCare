@@ -45,7 +45,7 @@
                 <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
                     <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
                     <div class="d-flex align-items-center justify-content-center mb-3">
-                    <form action="<?= base_url(); ?>index.php/home" method="post">
+                    <form action="<?= base_url(); ?>index.php/login_client" method="post">
                         <div class="text-center"> <!-- Center content -->
                             <h3 class="text-primary"><i class="fa fa-user me-2" style="color: maroon;"></i></h3>
                             <h3 style="color: maroon;">Sign In</h3>

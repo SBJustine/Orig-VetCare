@@ -16,8 +16,8 @@ class Users_model extends CI_Model {
 				return 0;
 
 		}
-		function authenticateclient($client_email){
-			$query = $this->db->query("SELECT * FROM `client_users` where client_email='$client_email' " );
+		function authenticateclient($email){
+			$query = $this->db->query("SELECT * FROM `client_users` where client_email='$email' " );
 			if ($query->num_rows() > 0) {
 				return $query->result();
 			}

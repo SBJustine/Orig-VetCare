@@ -16,7 +16,7 @@ class Frontend_Controller extends CI_Controller {
 			$email= $this->input->post('user_email');
 			$pw= $this->input->post('user_password');
 
-			$user_data=$this->Users_model->authenticateclient($client_email);
+			$user_data=$this->Users_model->authenticateclient($email);
 
 			if (!empty($user_data)== TRUE) {
 				if ($user_data[0]->password == $pw) {

@@ -15,9 +15,9 @@
             <div class="form-group">
                 <label class="control-label">Name</label>
                 <input name="pet_name" class="form-control"  id="pet_name" placeholder="Pet Name" type="text" required>
-                <div class="invalid-feedback">
+                <!-- <div class="invalid-feedback">
                     Please enter your full name.
-                </div>
+                </div> -->
             </div>
             <div class="form-group">
                 <label class="control-label">Breed</label>
@@ -25,9 +25,9 @@
                     <option value="Dobberman">Dobberman</option>
                     <option value="Husky">Husky</option>
                 </select>
-                <div class="invalid-feedback">
+                <!-- <div class="invalid-feedback">
                     Please select your status.
-                </div>
+                </div> -->
             </div>
             <div class="form-group">
                 <label class="control-label">Species</label>
@@ -35,16 +35,16 @@
                     <option value="Dog">Dog</option>
                     <option value="Cat">Cat</option>
                 </select>
-                <div class="invalid-feedback">
+                <!-- <div class="invalid-feedback">
                     Please select your status.
-                </div>
+                </div> -->
             </div>
             <div class="form-group">
                 <label class="control-label">Age</label>
                 <input name="pet_age" class="form-control"  id="pet_age" placeholder="Age" type="text" required>
-                <div class="invalid-feedback">
+                <!-- <div class="invalid-feedback">
                     Please enter your address.
-                </div>
+                </div> -->
             </div>
             <div class="form-group">
                 <label class="control-label">Gender</label>
@@ -52,25 +52,35 @@
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                 </select>
-                <div class="invalid-feedback">
+                <!-- <div class="invalid-feedback">
                     Please select your status.
-                </div>
+                </div> -->
             </div>
             <div class="form-group">
                 <label class="control-label">Color</label>
-                <input name="pet_color" class="form-control"  id="pet_color" placeholder="Color" type="text" required>
-                <div class="invalid-feedback">
-                    Please enter your address.
-                </div>
+                <select name="pet_color" id="pet_pet color" class="form-control" required>
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+                    <option value="Brown">Brown</option>
+                    <option value="Red">Red</option>
+                    <option value="Gold">Gold</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Gray">Gray</option>
+                    <option value="Cream">Cream</option>
+                    <option value="Yellow">Yellow</option>
+                </select>
+                <!-- <div class="invalid-feedback">
+                    Please select your status.
+                </div> -->
             </div>
             
 
            
             <!-- Add more registration fields as needed -->
 
-            <div class="modal-footer d-flex">
-                <button type="button" class="btn btn-primary custom-button" data-dismiss="modal">Cancel</button>
-                <input type="submit" class="btn btn-primary custom-button" value="Create">
+            <div class="modal-footer d-flex" >
+                <!-- <button type="button" class="btn btn-primary custom-button" data-dismiss="modal">Cancel</button> -->
+                <input type="submit" class="btn btn-primary custom-button" value="Create" >
             </div>
         </form>
     </div>

@@ -6,7 +6,7 @@
                         <div class="bg-light rounded h-100 p-4">
                             <h6 class="mb-4">Responsive Table</h6>
                             <div class="table-responsive">
-                                <table class="table">
+                                <table class="table text-start align-middle table-bordered table-hover mb-0">
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>

@@ -6,7 +6,7 @@
                         <div class="bg-light rounded h-100 p-4">
                             <h6 class="mb-4">Registered Pets</h6>
                             <div class="table-responsive">
-                                <table class="table">
+                                <table class="table text-start align-middle table-bordered table-hover mb-0">
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
@@ -16,6 +16,7 @@
                                             <th scope="col">Gender</th>
                                             <th scope="col">Species</th>
                                             <th scope="col">Color</th>
+                                            <th scope="col">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>

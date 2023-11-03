@@ -79,10 +79,18 @@
            
             <!-- Add more registration fields as needed -->
 
-            <div class="modal-footer d-flex" >
-                <button type="button" class="btn btn-primary custom-button" data-dismiss="modal">Cancel</button>
-                <input type="submit" class="btn btn-primary custom-button" value="Create">
+            <div class="modal-footer d-flex">
+                <style>
+                    /* Custom CSS to change the button color to maroon */
+                    .btn-maroon {
+                        background-color: maroon;
+                        color: white;
+                    }
+                </style>
+               
+                <input type="submit" class="btn btn-maroon custom-button" value="Create">
             </div>
+
         </form>
     </div>
 </div>

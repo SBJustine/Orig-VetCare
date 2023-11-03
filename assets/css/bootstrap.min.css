@@ -156,11 +156,11 @@ sup{
     top:-.5em
 }
 a{
-    color:#009CFF;
+    color:maroon;
     text-decoration:none
 }
 a:hover{
-    color:#007dcc
+    color:maroon
 }
 a:not([href]):not([class]),a:not([href]):not([class]):hover{
     color:inherit;

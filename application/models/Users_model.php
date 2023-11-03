@@ -55,6 +55,15 @@ class Users_model extends CI_Model {
 			return $query->result();
 
 		}
+		function fetch_allreports($id){
+
+			$query = $this->db->query("SELECT * FROM `reports`   " );
+			return $query->result();
+
+		}
+
+
+
 
 
 		function get_info($id){

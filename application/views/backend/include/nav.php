@@ -38,7 +38,7 @@
                         <a href="<?= base_url();?>index.php/admin_table"  class="dropdown-item">Admin Users</a>
                     </div>
                 </div>
-                <a href="<?= base_url();?>index.php/dashboard" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Reports</a>
+                <a href="<?= base_url();?>index.php/reports" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Reports</a>
 
 
 

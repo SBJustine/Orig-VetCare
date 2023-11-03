@@ -205,13 +205,14 @@ $clientUsers = $this->Users_model->fetch_allclient($id);
 }
 
 
+
 public function add_pet() {
 	$this->load->library('form_validation');
 	$this->form_validation->set_rules('pet_name', 'Name', 'required');
-	$this->form_validation->set_rules('pet_breed', 'Breed', 'required|valid_email');
+	$this->form_validation->set_rules('pet_breed', 'Breed', 'required');
 	$this->form_validation->set_rules('pet_age', 'Age', 'required');
 	$this->form_validation->set_rules('pet_gender', 'Gender', 'required');
-	$this->form_validation->set_rules('pet_species', 'Species', 'required|valid_email');
+	$this->form_validation->set_rules('pet_species', 'Species', 'required');
 	$this->form_validation->set_rules('pet_color', 'Color', 'required');
 	
 
@@ -271,6 +272,29 @@ $petUsers = $this->Users_model->fetch_allpet($id);
 	$this->load->view('backend/page/pet_table', $data);
 	$this->load->view('backend/include/footer');
 }
+
+
+
+public function reports() 
+{
+if (!$this->session->has_userdata('user_id')) {
+		redirect('admin'); // Redirect to login page if not logged in
+	}
+
+	$id=1;
+// Fetch the data using the fetch_all() function
+$reports = $this->Users_model->fetch_allreports($id);
+ // Pass the fetched data to the view
+ $data['reports'] = $reports;
+	// Load the view to display the table with data
+	$this->load->view('backend/include/header');
+	$this->load->view('backend/include/nav');
+	$this->load->view('backend/page/reports', $data);
+	$this->load->view('backend/include/footer');
+}
+
+
+
 
 public function vaccination_report()
 	{

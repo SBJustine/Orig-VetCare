@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="<?= base_url();?>assets/css1/slick.css">
     <link rel="stylesheet" href="<?= base_url();?>assets/css1/nice-select.css">
     <link rel="stylesheet" href="<?= base_url();?>assets/css1/style.css">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/font-awesome.min.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css1/font-awesome.min.css'); ?>">
     
 
 </head>

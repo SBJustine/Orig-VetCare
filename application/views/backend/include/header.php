@@ -30,6 +30,8 @@
 
     <!-- Template Stylesheet -->
     <link href="<?= base_url();?>assets/css/style.css" rel="stylesheet">
+
+    
 </head>
 <body>
     <div class="container-xxl position-relative bg-white d-flex p-0">

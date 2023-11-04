@@ -19,14 +19,21 @@
                     Please enter your full name.
                 </div> -->
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label class="control-label">Breed</label>
                 <select name="pet_breed" id="pet_breed" class="form-control" required>
                     <option value="Dobberman">Dobberman</option>
                     <option value="Husky">Husky</option>
                 </select>
-                <!-- <div class="invalid-feedback">
+                 <div class="invalid-feedback">
                     Please select your status.
+                </div> 
+            </div> -->
+            <div class="form-group">
+                <label class="control-label">Breed</label>
+                <input name="pet_breed" class="form-control"  id="pet_breed" placeholder="Pet Breed" type="text" required>
+                <!-- <div class="invalid-feedback">
+                    Please enter your full name.
                 </div> -->
             </div>
             <div class="form-group">
@@ -56,7 +63,7 @@
                     Please select your status.
                 </div> -->
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label class="control-label">Color</label>
                 <select name="pet_color" id="pet_pet color" class="form-control" required>
                     <option value="Black">Black</option>
@@ -69,8 +76,15 @@
                     <option value="Cream">Cream</option>
                     <option value="Yellow">Yellow</option>
                 </select>
-                <!-- <div class="invalid-feedback">
+                 <div class="invalid-feedback">
                     Please select your status.
+                </div> 
+            </div> -->
+            <div class="form-group">
+                <label class="control-label">Color</label>
+                <input name="pet_color" class="form-control"  id="pet_color" placeholder="Pet Color" type="text" required>
+                <!-- <div class="invalid-feedback">
+                    Please enter your full name.
                 </div> -->
             </div>
             

@@ -156,7 +156,7 @@ sup{
     top:-.5em
 }
 a{
-    color:maroon;
+    color:rgb(0, 0, 0);
     text-decoration:none
 }
 a:hover{
@@ -2311,32 +2311,32 @@ textarea.form-control-lg{
 }
 .btn-primary{
     color:#000;
-    background-color:#009CFF;
-    border-color:#009CFF
+    background-color:#dc3545;
+    border-color:#dc3545
 }
 .btn-primary:hover{
     color:#000;
-    background-color:#26abff;
-    border-color:#1aa6ff
+    background-color:#605455;
+    border-color:#dc3545
 }
 .btn-check:focus+.btn-primary,.btn-primary:focus{
     color:#000;
-    background-color:#26abff;
-    border-color:#1aa6ff;
-    box-shadow:0 0 0 .25rem rgba(0,133,217,0.5)
+    background-color:#dc3545;
+    border-color:#dc3545;
+    box-shadow:0 0 0 .25rem #dc3545(0,133,217,0.5)
 }
 .btn-check:checked+.btn-primary,.btn-check:active+.btn-primary,.btn-primary:active,.btn-primary.active,.show>.btn-primary.dropdown-toggle{
     color:#000;
-    background-color:#33b0ff;
-    border-color:#1aa6ff
+    background-color:#dc3545;
+    border-color:#dc3545
 }
 .btn-check:checked+.btn-primary:focus,.btn-check:active+.btn-primary:focus,.btn-primary:active:focus,.btn-primary.active:focus,.show>.btn-primary.dropdown-toggle:focus{
-    box-shadow:0 0 0 .25rem rgba(0,133,217,0.5)
+    box-shadow:0 0 0 .25rem #dc3545(0,133,217,0.5)
 }
 .btn-primary:disabled,.btn-primary.disabled{
     color:#000;
-    background-color:#009CFF;
-    border-color:#009CFF
+    background-color:#dc3545;
+    border-color:#dc3545
 }
 .btn-secondary{
     color:#fff;
@@ -2398,18 +2398,18 @@ textarea.form-control-lg{
 }
 .btn-info{
     color:#000;
-    background-color:#0dcaf0;
-    border-color:#0dcaf0
+    background-color:#dc3545;
+    border-color:#dc3545
 }
 .btn-info:hover{
     color:#000;
-    background-color:#31d2f2;
-    border-color:#25cff2
+    background-color:#767f81;
+    border-color:#dc3545
 }
 .btn-check:focus+.btn-info,.btn-info:focus{
     color:#000;
-    background-color:#31d2f2;
-    border-color:#25cff2;
+    background-color:#dc3545;
+    border-color:#dc3545;
     box-shadow:0 0 0 .25rem rgba(11,172,204,0.5)
 }
 .btn-check:checked+.btn-info,.btn-check:active+.btn-info,.btn-info:active,.btn-info.active,.show>.btn-info.dropdown-toggle{
@@ -6279,7 +6279,7 @@ textarea.form-control-lg{
     word-break:break-word !important
 }
 .text-primary{
-    color:#009CFF !important
+    color:#dc3545 !important
 }
 .text-secondary{
     color:#6c757d !important

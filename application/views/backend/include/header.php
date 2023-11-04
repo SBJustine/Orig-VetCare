@@ -4,13 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Orig VetCare | Admin</title>
+    <title>Orig | Admin</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="<?= base_url();?>assets/img/favicon.ico" rel="icon">
+    <link href="<?= base_url();?>assets/img1/favicon.ico" rel="icon">
+    
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,16 +66,17 @@
 
     <!-- Template Stylesheet -->
     <link href="<?= base_url();?>assets/css/style.css" rel="stylesheet">
+    
 </head>
 
 <body>
     <div class="container-xxl position-relative bg-white d-flex p-0">
         <!-- Spinner Start -->
-         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+         <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
-        </div> 
+        </div>  -->
         <!-- Spinner End -->
         
 
@@ -165,7 +167,7 @@
                             <span class="d-none d-lg-inline-flex" style= "color:maroon">Edu Gelo L. Orig</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">My Profile</a>
+                            <!-- <a href="#" class="dropdown-item">My Profile</a> -->
                             <a href="#" class="dropdown-item">Settings</a>
                             <a href="<?= base_url();?>index.php/logout" class="dropdown-item">Log Out</a>
                         </div>

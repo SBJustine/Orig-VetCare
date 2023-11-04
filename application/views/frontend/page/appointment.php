@@ -16,54 +16,55 @@
                                 </div>
                             </div>
                             <!--End Section Tittle  -->
-                            <form id="contact-form" action="#" method="POST">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="form-box user-icon mb-30">
-                                            <input type="text" name="name" placeholder="Name">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="form-box email-icon mb-30">
-                                            <input type="text" name="email" placeholder="Phone">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="form-box email-icon mb-30">
-                                            <input type="text" name="address" placeholder="Address">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="form-box subject-icon mb-30">
-                                            <input type="Email" name="subject" placeholder="Email">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6">
-                                        <div class="form-box email-icon mb-30"></div>
-                                        <input type="date" name="date" value="" class="form-control">
-                                   </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-box message-icon mb-65">
-                                            <textarea name="message" id="message" placeholder="Message"></textarea>
-                                        </div>
-                                        <div class="submit-info">
-                                            <button class="btn submit-btn2" type="submit">Submit Now</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- shape-dog -->
-                                <div class="shape-dog">
-                                    <div class="gallery-img size-img" style="background-image: url(<?= base_url();?>assets/img/gallery/shape1.png);"></div>
-                                </div>
-                            </form>
+                            <h1>Dog Vaccination Schedule</h1>
+    
+                            <table border="1">
+                                <tr>
+                                    <th>Vaccine</th>
+                                    <th>Age</th>
+                                    <th>Booster (if applicable)</th>
+                                </tr>
+                                <tr>
+                                    <td>Rabies</td>
+                                    <td>8-12 weeks</td>
+                                    <td>1 year later, then every 1-3 years</td>
+                                </tr>
+                                <tr>
+                                    <td>Distemper</td>
+                                    <td>6-8 weeks</td>
+                                    <td>2-4 weeks later, then every 1-3 years</td>
+                                </tr>
+                                <tr>
+                                    <td>Hepatitis</td>
+                                    <td>6-8 weeks</td>
+                                    <td>2-4 weeks later, then every 1-3 years</td>
+                                </tr>
+                                <tr>
+                                    <td>Parvovirus</td>
+                                    <td>6-8 weeks</td>
+                                    <td>2-4 weeks later, then every 1-3 years</td>
+                                </tr>
+                                <tr>
+                                    <td>Leptospirosis</td>
+                                    <td>12 weeks</td>
+                                    <td>2-4 weeks later, then annually</td>
+                                </tr>
+                                <tr>
+                                    <td>Bordetella</td>
+                                    <td>6-8 weeks</td>
+                                    <td>Annually</td>
+                                </tr>
+                                <tr>
+                                    <td>Lyme Disease</td>
+                                    <td>9-12 weeks</td>
+                                    <td>2-4 weeks later, then annually</td>
+                                </tr>
+                            </table>
+  
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- contact left Img-->
-            <div class="from-left d-none d-lg-block">
-            <img src="<?= base_url();?>assets/img1/gallery/contact_form.png" alt="">
-            </div>
+            
         </div>
 </main>

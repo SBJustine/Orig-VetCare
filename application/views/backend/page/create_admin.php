@@ -1,52 +1,67 @@
-<div class="container">
-<div class="d-flex justify-content-center">
-  <div class="col-md-8" style="padding-top: 20px;" >
-  <div class="text-center"> <!-- Center only the "REGISTRATION FORM" text -->
-        <h2>REGISTER ADMIN</h2>
-      </div>
-      <label style="color: red;"><?= $this->session->flashdata('msg_settings_error');?></label>
-    <label style="color: green;"><?= $this->session->flashdata('msg_settings');?></label>
-    <div class="card">
-      <div class="card-body">
-      <form action="<?php echo base_url('index.php/create_admin'); ?>" method="POST">
-  <div class="row ">
-      <div class="col-md-6">
-     <label style="color: red;" ><?= $this->session->flashdata('error');?></label>
-        </div>
-         </div>
-         <div class="row ">
-      <div class="col-md-6">
-     <label style="color: green;" ><?= $this->session->flashdata('success');?></label>
-        </div>
-         </div>
-         
-    <div class="form-group">
-      <label for="fullname">Full Name:</label>
-      <input type="text" class="form-control custom-input" name="fullname" id="fullname" required>
+
+    <!-- Sign Up Start -->
+    <div class="container-fluid">
+        <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+            <div class="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-7"><!-- Adjusted column width for wider form -->
+                <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
+                <div class="card-body">
+
+        <label style="color: red;"><?= $this->session->flashdata('msg_settings_error');?></label>
+            <label style="color: green;"><?= $this->session->flashdata('msg_settings');?></label>
+            <div class="table-responsive">
+        <!-- Your registration form goes here -->
+        <form action="<?= base_url() ?>index.php/create_admin" method="post">
+
+            <div class="form-group">
+                <label class="control-label">Full Name</label>
+                <input name="fullname" class="form-control"  id="fullname" placeholder="Full Name" type="text" required>
+                <div class="invalid-feedback">
+                    Please enter your full name.
+                </div>
+            </div>
+ 
+            <div class="form-group">
+                <label class="control-label">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Email Address" name="email" required>
+                <div class="invalid-feedback">
+                    Please enter an email address.
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Password</label>
+                <input name="password" class="form-control" id="password" placeholder="Password" type="password" required>
+                <div class="invalid-feedback">
+                    Please enter a password.
+                </div>
+            </div>
+           
+
+
+
+           
+            <!-- Add more registration fields as needed -->
+
+            <div class="modal-footer d-flex">
+                <style>
+                    /* Custom CSS to change the button color to maroon */
+                    .btn-maroon {
+                        background-color: maroon;
+                        color: white;
+                    }
+                </style>
+               
+                <input type="submit" class="btn btn-maroon custom-button" value="Create">
+            </div>
+
+        </form>
     </div>
-
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control custom-input" name="email" id="email" required>
+</div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="form-group">
-      <label for="password">Password:</label>
-      <div class="input-group">
-        <input type="password" class="form-control custom-input" name="password" id="password" required>
-    </div><br>
-
-    <input type="submit" class="btn btn-primary custom-button" value="Create">
-  </form>
-      </div>
-      </div>
-  </div>
-</div>
-</div>
+    <!-- Sign Up End -->
 
 
-
-
-
-
-
+                                            
+                      

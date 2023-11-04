@@ -26,7 +26,7 @@ class Frontend_Controller extends CI_Controller {
 
 									);
 					$this->session->set_userdata($userdata);
-					redirect('home');
+					redirect('appointment');
 				}else {
 					$this->session->set_flashdata('msg_login','Invalid Password. Please try again.');
 				}

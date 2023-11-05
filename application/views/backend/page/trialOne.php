@@ -21,7 +21,7 @@
                                     <tbody>
                                     <?php foreach ($appointmentUsers as $key => $user): ?>
                                         <tr class="<?php echo $key % 2 === 0 ? 'bg-light' : 'bg-white'; ?>">
-                                        
+                                        <td><?php echo $user->appointmentId; ?></td>
                                         <td><?php echo $user->appointmentName; ?></td>
                                         <td><?php echo $user->appointmentPetName; ?></td>
                                         <td><?php echo $user->vaccine; ?></td>

@@ -53,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['admin'] = 'Admin_Controller';
 $route['dashboard'] = 'Admin_Controller/dashboard';
 $route['logout'] = 'Admin_Controller/logout';
-$route['appointments'] = 'Admin_Controller/appointments';
+$route['add_appointments'] = 'Admin_Controller/add_appointments';
 $route['vaccination_report'] = 'Admin_Controller/vaccination_report';
 $route['client_table'] = 'Admin_Controller/client_table';
 $route['create_admin'] = 'Admin_Controller/create_admin';

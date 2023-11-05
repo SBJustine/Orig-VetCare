@@ -51,26 +51,73 @@ class Admin_Controller extends CI_Controller {
 		$this->load->view('backend/include/footer');	
 	}
 }
-public function appointments()
-	{
-		if ($this->session->has_userdata('user_id') == TRUE) {
-		$data['website_info'] = $this->Users_model->fetch_all("website_info");	
-		$this->load->view('backend/include/header', $data);
-		$this->load->view('backend/page/appointments');
-		$this->load->view('backend/include/nav');
-		$this->load->view('backend/include/footer');	
+
+
+
+
+public function add_appointments() {
+	$this->load->library('form_validation');
+	$this->form_validation->set_rules('appointmentName', 'Name of Owner', 'required');
+	$this->form_validation->set_rules('appointmentPetName', 'Name of Pet', 'required');
+	$this->form_validation->set_rules('vaccine', 'Type of Vaccine', 'required');
+	$this->form_validation->set_rules('appointmentDate', 'Date and Time', 'required');
+	$this->form_validation->set_rules('appointmentContactNumber', 'Contact Number', 'required');
+	
+	if (!$this->session->has_userdata('user_id')) {
+		redirect('admin'); // Redirect to login page if not logged in
 	}
-}
-public function appointment_list()
-	{
-		if ($this->session->has_userdata('user_id') == TRUE) {
-		$data['website_info'] = $this->Users_model->fetch_all("website_info");	
-		$this->load->view('backend/include/header', $data);
-		$this->load->view('backend/page/appointment_list');
+
+	if ($this->form_validation->run() === FALSE) {
+		// Validation failed, redirect back to the form
+		$this->load->view('backend/include/header');
 		$this->load->view('backend/include/nav');
-		$this->load->view('backend/include/footer');	
+		$this->load->view('backend/page/add_appointments');
+		$this->load->view('backend/include/footer');
+	} else {
+		// Validation succeeded, proceed with data insertion
+		$data = array(
+			'appointmentName' => $this->input->post('appointmentName'),
+			'appointmentPetName' => $this->input->post('appointmentPetName'),
+			'vaccine' => $this->input->post('vaccine'),
+			'appointmentDate' => $this->input->post('appointmentDate'),
+			'appointmentContactNumber' => $this->input->post('appointmentContactNumber'),
+		);
+
+		$result = $this->Users_model->insert_dataappointments($data);
+
+		if ($result) {
+			// Data insertion was successful
+			$this->session->set_flashdata('success', 'Data inserted successfully.');
+		} else {
+			// Data insertion failed
+			$this->session->set_flashdata('error', 'Failed to insert data.');
+		}
+
+
+		// Redirect to a suitable page after the form submission
+		redirect('appointment_list');
 	}
+
 }
+
+public function appointment_list() 
+{
+if (!$this->session->has_userdata('user_id')) {
+		redirect('admin'); // Redirect to login page if not logged in
+	}
+
+	$id=1;
+// Fetch the data using the fetch_all() function
+$appointmentUsers = $this->Users_model->fetch_allappointments($id);
+ // Pass the fetched data to the view
+ $data['appointmentUsers'] = $appointmentUsers;
+	// Load the view to display the table with data
+	$this->load->view('backend/include/header');
+	$this->load->view('backend/include/nav');
+	$this->load->view('backend/page/appointment_list', $data);
+	$this->load->view('backend/include/footer');
+}
+
 
 
 public function create_admin() {
@@ -296,16 +343,19 @@ $reports = $this->Users_model->fetch_allreports($id);
 
 
 
-public function vaccination_report()
-	{
-		if ($this->session->has_userdata('user_id') == TRUE) {
-		$data['website_info'] = $this->Users_model->fetch_all("website_info");	
-		$this->load->view('backend/include/header', $data);
-		$this->load->view('backend/page/vaccination_report');
-		$this->load->view('backend/include/nav');
-		$this->load->view('backend/include/footer');
-		}
-	}
+
+
+
+// public function vaccination_report()
+// 	{
+// 		if ($this->session->has_userdata('user_id') == TRUE) {
+// 		$data['website_info'] = $this->Users_model->fetch_all("website_info");	
+// 		$this->load->view('backend/include/header', $data);
+// 		$this->load->view('backend/page/vaccination_report');
+// 		$this->load->view('backend/include/nav');
+// 		$this->load->view('backend/include/footer');
+// 		}
+// 	}
 
 
 

@@ -167,7 +167,7 @@
                             <span class="d-none d-lg-inline-flex" style= "color:maroon">Edu Gelo L. Orig</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <!-- <a href="#" class="dropdown-item">My Profile</a> -->
+                            <a href="#" class="dropdown-item">My Profile</a>
                             <a href="#" class="dropdown-item">Settings</a>
                             <a href="<?= base_url();?>index.php/logout" class="dropdown-item">Log Out</a>
                         </div>

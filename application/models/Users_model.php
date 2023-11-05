@@ -61,9 +61,12 @@ class Users_model extends CI_Model {
 			return $query->result();
 
 		}
+		function fetch_allappointments($id){
 
+			$query = $this->db->query("SELECT * FROM `appointments`   " );
+			return $query->result();
 
-
+		}
 
 
 		function get_info($id){
@@ -90,6 +93,16 @@ class Users_model extends CI_Model {
 		function insert_data($data)
 		{
 			$this->db->insert('admin_users', $data);
+			$afftectedRows = $this->db->affected_rows();
+	        if ($afftectedRows > 0) {
+	            return TRUE;
+	        } else {
+	            return FALSE;
+	        }
+		}
+		function insert_dataappointments($data)
+		{
+			$this->db->insert('appointments', $data);
 			$afftectedRows = $this->db->affected_rows();
 	        if ($afftectedRows > 0) {
 	            return TRUE;

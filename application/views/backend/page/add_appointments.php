@@ -1,17 +1,17 @@
  <!-- Form Start -->
  <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
-                    <div class="col-sm-12 col-xl-6">
+                    <div class="col-sm-12 col-xl-6">                  
                         <div class="bg-light rounded h-100 p-4">
                             <h6 class="mb-4">Appointment Form</h6>
                             <form action="<?= base_url() ?>index.php/add_appointments" method="post">
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="appointmentName"
+                                <input type="" name="appointmentName" class="form-control" id="appointmentName"
                                     placeholder="">
                                 <label for="floatingInput">Name of Owner</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="appointmentPetName"
+                                <input type="" name="appointmentPetName" class="form-control" id="appointmentPetName"
                                     placeholder="">
                                 <label for="floatingInput">Name of Pet</label>
                             </div>
@@ -21,7 +21,7 @@
                                 <label for="floatingPassword">Password</label>
                             </div> -->
                             <div class="form-floating mb-3">
-                                <select class="form-select" id="vaccine"
+                                <select class="form-select" name="vaccine" id="vaccine"
                                     aria-label="Floating label select example">
                                     <option value="one">One</option>
                                     <option value="two">Two</option>
@@ -29,13 +29,14 @@
                                 </select>
                                 <label for="vaccine">Vaccine</label>
                             </div>
+                            
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="appointmentDate"
-                                    placeholder="" value="<?php echo date('Y-m-d'); ?>" required>
+                                <input type="datetime-local" name="appointmentDateTime" class="form-control" id="appointmentDateTime" value="<?php echo date('Y-m-d\TH:i'); ?>" required>
                                 <label for="floatingInput">Date & Time</label>
                             </div>
+
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="appointmentContactNumber"
+                                <input type="" name="appointmentContactNumber" class="form-control" id="appointmentContactNumber"
                                     placeholder="">
                                 <label for="floatingInput">Contact Number</label>
                             </div>
@@ -52,7 +53,9 @@
                             </div>
                             </form>
                         </div>
+                        
                     </div>
+                    
                     <div class="col-sm-12 col-xl-6">
                         <div class="bg-light rounded h-100 p-4">
                         <div class="d-flex align-items-center justify-content-between mb-4">

@@ -9,7 +9,7 @@
                                 <table class="table text-start align-middle table-bordered table-hover mb-0">
                                     <thead>
                                         <tr>
-                                            
+                                            <th scope="col">#</th>
                                             <th scope="col">Name of Owner</th>
                                             <th scope="col">Name of Pet</th>
                                             <th scope="col">Type of Vaccine</th>
@@ -21,7 +21,7 @@
                                     <tbody>
                                     <?php foreach ($appointmentUsers as $key => $user): ?>
                                         <tr class="<?php echo $key % 2 === 0 ? 'bg-light' : 'bg-white'; ?>">
-                                        
+                                        <td><?php echo $user->appointmentId; ?></td>
                                         <td><?php echo $user->appointmentName; ?></td>
                                         <td><?php echo $user->appointmentPetName; ?></td>
                                         <td><?php echo $user->vaccine; ?></td>
@@ -40,6 +40,6 @@
                         </div>
                     </div>
                     </div>
-                        </div>
+                    </div>
                     </div>
 </main>

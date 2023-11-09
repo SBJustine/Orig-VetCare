@@ -51,17 +51,13 @@ class Admin_Controller extends CI_Controller {
 		$this->load->view('backend/include/footer');	
 	}
 }
-
-
-
-
 public function add_appointments() {
 	$this->load->library('form_validation');
-	$this->form_validation->set_rules('appointmentName', 'Name of Owner', 'required');
-	$this->form_validation->set_rules('appointmentPetName', 'Name of Pet', 'required');
-	$this->form_validation->set_rules('vaccine', 'Type of Vaccine', 'required');
-	$this->form_validation->set_rules('appointmentDate', 'Date and Time', 'required');
-	$this->form_validation->set_rules('appointmentContactNumber', 'Contact Number', 'required');
+	$this->form_validation->set_rules('appointmentName', 'NameofOwner', 'required');
+	$this->form_validation->set_rules('appointmentPetName', 'NameofPet', 'required');
+	$this->form_validation->set_rules('vaccine', 'TypeofVaccine', 'required');
+	$this->form_validation->set_rules('appointmentDate', 'DateandTime', 'required');
+	$this->form_validation->set_rules('appointmentContactNumber', 'ContactNumber', 'required');
 	
 	if (!$this->session->has_userdata('user_id')) {
 		redirect('admin'); // Redirect to login page if not logged in
@@ -81,6 +77,7 @@ public function add_appointments() {
 			'vaccine' => $this->input->post('vaccine'),
 			'appointmentDate' => $this->input->post('appointmentDate'),
 			'appointmentContactNumber' => $this->input->post('appointmentContactNumber'),
+	
 		);
 
 		$result = $this->Users_model->insert_dataappointments($data);

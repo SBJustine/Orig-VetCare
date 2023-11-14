@@ -1,67 +1,51 @@
-
-    <!-- Sign Up Start -->
-    <div class="container-fluid">
-        <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
-            <div class="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-7"><!-- Adjusted column width for wider form -->
-                <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
-                <div class="card-body">
-
-        <label style="color: red;"><?= $this->session->flashdata('msg_settings_error');?></label>
-            <label style="color: green;"><?= $this->session->flashdata('msg_settings');?></label>
-            <div class="table-responsive">
-        <!-- Your registration form goes here -->
-        <form action="<?= base_url() ?>index.php/create_admin" method="post">
-
-            <div class="form-group">
-                <label class="control-label">Full Name</label>
-                <input name="fullname" class="form-control"  id="fullname" placeholder="Full Name" type="text" required>
-                <div class="invalid-feedback">
-                    Please enter your full name.
-                </div>
-            </div>
- 
-            <div class="form-group">
-                <label class="control-label">Email Address</label>
-                <input type="email" class="form-control" id="email" placeholder="Email Address" name="email" required>
-                <div class="invalid-feedback">
-                    Please enter an email address.
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label">Password</label>
-                <input name="password" class="form-control" id="password" placeholder="Password" type="password" required>
-                <div class="invalid-feedback">
-                    Please enter a password.
-                </div>
-            </div>
-           
-
-
-
-           
-            <!-- Add more registration fields as needed -->
-
-            <div class="modal-footer d-flex">
-                <style>
-                    /* Custom CSS to change the button color to maroon */
-                    .btn-maroon {
-                        background-color: maroon;
-                        color: white;
-                    }
-                </style>
-               
-                <input type="submit" class="btn btn-maroon custom-button" value="Create">
-            </div>
-
-        </form>
-    </div>
-</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Sign Up End -->
-
-
-                                            
-                      
+ <!-- Form Start -->
+ <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-sm-12 col-xl-6">                  
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">Create Admin</h6>
+                            <form action="<?= base_url() ?>index.php/create_admin" method="post">
+                            <div class="form-floating mb-3">
+                                <input type="" name="fullname" class="form-control" id="fullname"
+                                    placeholder="">
+                                <label for="floatingInput">Fullname</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="" name="email" class="form-control" id="email"
+                                    placeholder="">
+                                <label for="floatingInput">Email</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" name="password" class="form-control" id="password"
+                                    placeholder="Password">
+                                <label for="floatingPassword">Password</label>
+                            </div> 
+                            
+                            <div class="modal-footer d-flex">
+                                <style>
+                                    /* Custom CSS to change the button color to maroon */
+                                    .btn-maroon {
+                                        background-color: maroon;
+                                        color: white;
+                                    }
+                                </style>
+                            
+                                <input type="submit" class="btn btn-maroon custom-button" value="Create">
+                            </div>
+                            </form>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light rounded h-100 p-4">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0">Calender Reminder</h6>
+                                <a href="">Show All</a>
+                            </div>
+                            <div id="calender"></div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    

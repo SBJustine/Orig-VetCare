@@ -1,116 +1,81 @@
+ <!-- Form Start -->
+ <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-sm-12 col-xl-6">                  
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">Add Pet</h6>
+                            <form action="<?= base_url() ?>index.php/add_pet" method="post">
+                            <div class="form-floating mb-3">
+                                <input type="" name="pet_name" class="form-control" id="pet_name"
+                                    placeholder="">
+                                <label for="floatingInput">Name of Pet</label>
+                            </div>
 
-        <!-- Sign Up Start -->
-        <div class="container-fluid">
-        <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
-            <div class="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-7"> <!-- Adjusted column width for wider form -->
-                <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
-                <div class="card-body">
+                            <div class="form-floating mb-3">
+                                <input type="" name="pet_breed" class="form-control" id="pet_breed"
+                                    placeholder="">
+                                <label for="floatingInput">Breed</label>
+                            </div>
+                            <!-- <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="floatingPassword"
+                                    placeholder="Password">
+                                <label for="floatingPassword">Password</label>
+                            </div> -->
+                            <div class="form-floating mb-3">
+                                <select class="form-select" name="pet_species" id="pet_species"
+                                    aria-label="Floating label select example">
+                                    <option value="Dog">Dog</option>
+                                    <option value="Cat">Cat</option>                                  
+                                </select>
+                                <label for="vaccine">Species</label>
+                            </div>
 
-                <label style="color: red;"><?= $this->session->flashdata('msg_settings_error');?></label>
-                    <label style="color: green;"><?= $this->session->flashdata('msg_settings');?></label>
-                    <div class="table-responsive">
-                <!-- Your registration form goes here -->
-                <form action="<?= base_url() ?>index.php/add_pet" method="post">
+                            <div class="form-floating mb-3">
+                                <input type="" name="pet_age" class="form-control" id="pet_age"
+                                    placeholder="">
+                                <label for="floatingInput">Age</label>
+                            </div>
 
-            <div class="form-group">
-                <label class="control-label">Name</label>
-                <input name="pet_name" class="form-control"  id="pet_name" placeholder="Pet Name" type="text" required>
-                <!-- <div class="invalid-feedback">
-                    Please enter your full name.
-                </div> -->
-            </div>
-            <!-- <div class="form-group">
-                <label class="control-label">Breed</label>
-                <select name="pet_breed" id="pet_breed" class="form-control" required>
-                    <option value="Dobberman">Dobberman</option>
-                    <option value="Husky">Husky</option>
-                </select>
-                 <div class="invalid-feedback">
-                    Please select your status.
-                </div> 
-            </div> -->
-            <div class="form-group">
-                <label class="control-label">Breed</label>
-                <input name="pet_breed" class="form-control"  id="pet_breed" placeholder="Pet Breed" type="text" required>
-                <!-- <div class="invalid-feedback">
-                    Please enter your full name.
-                </div> -->
-            </div>
-            <div class="form-group">
-                <label class="control-label">Species</label>
-                <select name="pet_species" id="pet_species" class="form-control" required>
-                    <option value="Dog">Dog</option>
-                    <option value="Cat">Cat</option>
-                </select>
-                <!-- <div class="invalid-feedback">
-                    Please select your status.
-                </div> -->
-            </div>
-            <div class="form-group">
-                <label class="control-label">Age</label>
-                <input name="pet_age" class="form-control"  id="pet_age" placeholder="Age" type="text" required>
-                <!-- <div class="invalid-feedback">
-                    Please enter your address.
-                </div> -->
-            </div>
-            <div class="form-group">
-                <label class="control-label">Gender</label>
-                <select name="pet_gender" id="pet_gender" class="form-control" required>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                </select>
-                <!-- <div class="invalid-feedback">
-                    Please select your status.
-                </div> -->
-            </div>
-            <!-- <div class="form-group">
-                <label class="control-label">Color</label>
-                <select name="pet_color" id="pet_pet color" class="form-control" required>
-                    <option value="Black">Black</option>
-                    <option value="White">White</option>
-                    <option value="Brown">Brown</option>
-                    <option value="Red">Red</option>
-                    <option value="Gold">Gold</option>
-                    <option value="Blue">Blue</option>
-                    <option value="Gray">Gray</option>
-                    <option value="Cream">Cream</option>
-                    <option value="Yellow">Yellow</option>
-                </select>
-                 <div class="invalid-feedback">
-                    Please select your status.
-                </div> 
-            </div> -->
-            <div class="form-group">
-                <label class="control-label">Color</label>
-                <input name="pet_color" class="form-control"  id="pet_color" placeholder="Pet Color" type="text" required>
-                <!-- <div class="invalid-feedback">
-                    Please enter your full name.
-                </div> -->
-            </div>
-            
+                            <div class="form-floating mb-3">
+                                <select class="form-select" name="pet_gender" id="pet_gender"
+                                    aria-label="Floating label select example">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>                               
+                                </select>
+                                <label for="vaccine">Gender</label>
+                            </div>
 
-           
-            <!-- Add more registration fields as needed -->
+                            <div class="form-floating mb-3">
+                                <input type="" name="pet_color" class="form-control" id="pet_color"
+                                    placeholder="">
+                                <label for="floatingInput">Color</label>
+                            </div>
 
-            <div class="modal-footer d-flex">
-                <style>
+                            <div class="modal-footer d-flex">
+                                <style>
+                                    /* Custom CSS to change the button color to maroon */
+                                    .btn-maroon {
+                                        background-color: maroon;
+                                        color: white;
+                                    }
+                                </style>
+                            
+                                <input type="submit" class="btn btn-maroon custom-button" value="Create">
+                            </div>
+                            </form>
+                        </div>
+                        
+                    </div>
                     
-                    .btn-maroon {
-                        background-color: maroon;
-                        color: white;
-                    }
-                </style>
-               
-                <input type="submit" class="btn btn-maroon custom-button" value="Create">
-            </div>
-        </form>
-    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Sign Up End -->
-
-
-                                            
-                      
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light rounded h-100 p-4">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0">Calender Reminder</h6>
+                                <a href="">Show All</a>
+                            </div>
+                            <div id="calender"></div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    

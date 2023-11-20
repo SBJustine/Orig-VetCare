@@ -11,14 +11,15 @@
                         <!-- Video icon -->
                         <div class="video-icon">
                             <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=1aP-TXUpNoU" data-animation="bounceIn" data-delay=".4s">
-                                <i class="fas fa-play"></i>
+                                <i class="fa fa-play"></i>
+                                <!-- far fa-file-alt me-2 -->
                             </a>
                         </div>
                         <div class="hero__caption" >
                             <span data-animation="fadeInUp" data-delay=".3s">We help monitor your pet</span>
-                            <h1 data-animation="fadeInUp" data-delay=".3s">We Care Your Pets.</h1>
+                            <h1 data-animation="fadeInUp" data-delay=".3s">The Care that your Pets Deserve.</h1>
                             <!-- <p data-animation="fadeInUp" data-delay=".6s">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna sectetur adipisci.</p> -->
-                            <a href="#" class="hero-btn" data-animation="fadeInLeft" data-delay=".3s">Contact Now<i class="ti-arrow-right"></i> </a>
+                            <a href="<?= base_url();?>index.php/contact" class="hero-btn" data-animation="fadeInLeft" data-delay=".3s">Contact Now<i class="ti-arrow-right"></i> </a>
                         </div>
                     </div>
                 </div>
@@ -86,28 +87,7 @@
         </div>
         <!-- Our Services End -->
 
-        <!--? About Area Start-->
-        <div class="about-area fix">
-            <!--Right Contents  -->
-            <div class="about-img" style="background-image: url('<?php echo base_url();?>assets/img1/gallery/Vet1.jpg'); ">
-                
-            </div>
-            <!-- left Contents -->
-            <div class="about-details" style="background-image: url('<?php echo base_url();?>assets/img1/gallery/section_bg02.png'); ">
-                <div class="right-caption">
-                    <!-- Section Tittle -->
-                    <div class="section-tittle mb-50">
-                        <h2>We are commited for<br> better service</h2>
-                    </div>
-                    <div class="about-more">
-                        <p class="pera-top">Mollit anim laborum duis adseu dolor iuyn voluptcate velit ess <br>cillum dolore egru lofrre dsu.</p>
-                        <p class="mb-65 pera-bottom">Mollit anim laborum.Dvcuis aute serunt  iruxvfg dhjkolohr indd re voluptate velit esscillumlore eu quife nrulla parihatur. Excghcepteur sfwsignjnt occa cupidatat non aute iruxvfg dhjinulpadeserunt moll.</p>
-                        <a href="#" class="btn">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About Area End-->
+        
         <!--? Gallery Area Start -->
         <div class="gallery-area section-padding30">
             <div class="container fix">
@@ -146,7 +126,6 @@
             </div>
         </div>
         <!-- Gallery Area End -->
-
        
         <!-- Contact form End -->
         <!--? Team Start -->

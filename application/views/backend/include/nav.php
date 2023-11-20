@@ -38,6 +38,31 @@
                         <a href="<?= base_url();?>index.php/admin_table"  class="dropdown-item">Admin Users</a>
                     </div>
                 </div>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-th me-2"></i>Products</a>
+                    <div class="dropdown-menu bg-transparent border-0">
+                        <a href="<?= base_url();?>index.php/products"  class="dropdown-item">Add New Products</a>
+                        <a href="<?= base_url();?>index.php/products_table"  class="dropdown-item">List of Products</a>
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Payment</a>
+                    <div class="dropdown-menu bg-transparent border-0">
+                        <a href="<?= base_url();?>index.php/payment"  class="dropdown-item">Add New Admin</a>
+                        <a href="<?= base_url();?>index.php/payment_table"  class="dropdown-item">Admin Users</a>
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Salary</a>
+                    <div class="dropdown-menu bg-transparent border-0">
+                        <a href="<?= base_url();?>index.php/salary"  class="dropdown-item">Pay Salary</a>
+                        <a href="<?= base_url();?>index.php/salary_table"  class="dropdown-item">Salary Transactions</a>
+                    </div>
+                </div>
+
                 <a href="<?= base_url();?>index.php/reports" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Reports</a>
 
 

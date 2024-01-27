@@ -26,7 +26,7 @@ class Frontend_Controller extends CI_Controller {
 
 									);
 					$this->session->set_userdata($userdata);
-					redirect('appointment');
+					redirect('myAccount');
 				}else {
 					$this->session->set_flashdata('msg_login','Invalid Password. Please try again.');
 				}
@@ -70,8 +70,40 @@ class Frontend_Controller extends CI_Controller {
 	public function appointment()
 	{
 		$data['website_info'] = $this->Users_model->fetch_all("website_info");
-		$this->load->view('frontend/include/header',$data);
+		$this->load->view('frontend/include/headerClient',$data);
 		$this->load->view('frontend/page/appointment',$data);
 		$this->load->view('frontend/include/footer',$data);
+	}
+	public function myAccount()
+	{
+		$data['website_info'] = $this->Users_model->fetch_all("website_info");
+		$this->load->view('frontend/include/headerClient',$data);
+		$this->load->view('frontend/page/myAccount',$data);
+		$this->load->view('frontend/include/footer',$data);
+	}
+
+	public function myPets()
+	{
+		$data['website_info'] = $this->Users_model->fetch_all("website_info");
+		$this->load->view('frontend/include/headerClient',$data);
+		$this->load->view('frontend/page/myPets',$data);
+		$this->load->view('frontend/include/footer',$data);
+	}
+
+	public function vacSched()
+	{
+		$data['website_info'] = $this->Users_model->fetch_all("website_info");
+		$this->load->view('frontend/include/headerClient',$data);
+		$this->load->view('frontend/page/vacSched',$data);
+		$this->load->view('frontend/include/footer',$data);
+	}
+	
+	public function prodPurchased()
+	{
+		$data['website_info'] = $this->Users_model->fetch_all("website_info");
+		$this->load->view('frontend/include/headerClient',$data);
+		$this->load->view('frontend/page/prodPurchased',$data);
+		$this->load->view('frontend/include/footer',$data);
+	
 	}
 }

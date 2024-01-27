@@ -31,8 +31,8 @@
                                 <span class="flaticon-animal-kingdom"></span>
                             </div>
                             <div class="services-cap">
-                                <h5><a href="#">Pet Boarding</a></h5>
-                                <p>consectetur adipiscing elit, serfd dgo eiusmod tempor incididunt ut ore et dolore magna aliqua.</p>
+                                <h5><a href="#">Pet Grooming</a></h5>
+                                <p>Orig VetCare offers professional dog grooming services to keep your canine companions clean, healthy, and looking their best.</p>
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                             </div>
                             <div class="services-cap">
                                 <h5><a href="#">Pet Treatment</a></h5>
-                                <p>consectetur adipiscing elit, serfd dgo eiusmod tempor incididunt ut ore et dolore magna aliqua.</p>
+                                <p>Orig VetCare delivers expert dog treatment services, providing compassionate and effective care to ensure the health and happiness of your beloved pets.</p>
                             </div>
                         </div>
                     </div>
@@ -54,43 +54,11 @@
                             </div>
                             <div class="services-cap">
                                 <h5><a href="#">Vaccinations</a></h5>
-                                <p>consectetur adipiscing elit, serfd dgo eiusmod tempor incididunt ut ore et dolore magna aliqua.</p>
+                                <p>Orig VetCare provides comprehensive dog vaccination services to ensure the health and well-being of your furry companions.</p>
                             </div>
                         </div>
                     </div>
-                    <div class=" col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-services text-center mb-30">
-                            <div class="services-ion">
-                                 <span class="flaticon-animals"></span>
-                            </div>
-                            <div class="services-cap">
-                                <h5><a href="#">Pet Treatment</a></h5>
-                                <p>consectetur adipiscing elit, serfd dgo eiusmod tempor incididunt ut ore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-services text-center mb-30">
-                            <div class="services-ion">
-                               <span class="flaticon-animals-1"></span>
-                            </div>
-                            <div class="services-cap">
-                                <h5><a href="#">Vaccinations</a></h5>
-                                <p>consectetur adipiscing elit, serfd dgo eiusmod tempor incididunt ut ore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-services text-center mb-30">
-                            <div class="services-ion">
-                                <span class="flaticon-animal-kingdom"></span>
-                            </div>
-                            <div class="services-cap">
-                                <h5><a href="#">Pet Boarding</a></h5>
-                                <p>consectetur adipiscing elit, serfd dgo eiusmod tempor incididunt ut ore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>

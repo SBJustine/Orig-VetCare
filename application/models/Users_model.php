@@ -49,6 +49,12 @@ class Users_model extends CI_Model {
 			return $query->result();
 
 		}
+		function fetch_allpetOwner($id){
+
+			$query = $this->db->query("SELECT * FROM `client_users`   " );
+			return $query->result();
+
+		}
 		function fetch_allpet($id){
 
 			$query = $this->db->query("SELECT * FROM `pet_users`   " );
@@ -121,6 +127,18 @@ class Users_model extends CI_Model {
 	            return FALSE;
 	        }
 		}
+
+		// function insert_dataowner($data)
+		// {
+		// 	$this->db->insert('client_users', $data);
+		// 	$afftectedRows = $this->db->affected_rows();
+	    //     if ($afftectedRows > 0) {
+	    //         return TRUE;
+	    //     } else {
+	    //         return FALSE;
+	    //     }
+		// }
+
 		function insert_datapet($data)
 		{
 			$this->db->insert('pet_users', $data);

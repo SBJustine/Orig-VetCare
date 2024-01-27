@@ -10,10 +10,9 @@
                     <div class="col-xl-7 col-lg-8 col-md-10 ">
                         <!-- Video icon -->
                         <div class="video-icon">
-                            <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=1aP-TXUpNoU" data-animation="bounceIn" data-delay=".4s">
-                                <i class="fa fa-play"></i>
-                                <!-- far fa-file-alt me-2 -->
-                            </a>
+                                    <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=up68UAfH0d0" data-animation="bounceIn" data-delay=".4s">
+                                        <i class="fas fa-play"></i>
+                                    </a>
                         </div>
                         <div class="hero__caption" >
                             <span data-animation="fadeInUp" data-delay=".3s">We help monitor your pet</span>
@@ -104,22 +103,22 @@
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="single-gallery mb-30">
                             <!-- <a href="assets/img/gallery/gallery1.png" class="img-pop-up">View Project</a> -->
-                            <div class="gallery-img size-img" style="background-image: url(<?= base_url();?>assets/img1/gallery/gallery1.png);"></div>
+                            <div class="gallery-img size-img" style="background-image: url(<?= base_url();?>assets/img1/gallery/gallery1.jpg);"></div>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-6 col-sm-6">
                         <div class="single-gallery mb-30">
-                            <div class="gallery-img size-img" style="background-image: url(<?= base_url();?>assets/img1/gallery/gallery2.png);"></div>
+                            <div class="gallery-img size-img" style="background-image: url(<?= base_url();?>assets/img1/gallery/gallery2.jpg);"></div>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-6 col-sm-6">
                         <div class="single-gallery mb-30">
-                            <div class="gallery-img size-img" style="background-image: url(<?= base_url();?>assets/img1/gallery/gallery3.png);"></div>
+                            <div class="gallery-img size-img" style="background-image: url(<?= base_url();?>assets/img1/gallery/gallery3.jpg);"></div>
                         </div>
                     </div>
                     <div class="col-lg-4  col-md-6 col-sm-6">
                         <div class="single-gallery mb-30">
-                            <div class="gallery-img size-img" style="background-image: url(<?= base_url();?>assets/img1/gallery/gallery4.png);"></div>
+                            <div class="gallery-img size-img" style="background-image: url(<?= base_url();?>assets/img1/gallery/gallery4.jpg);"></div>
                         </div>
                     </div>
                 </div>
@@ -142,73 +141,17 @@
                 </div>
                 <div class="row">
                     <!-- single Tem -->
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="<?= base_url();?>assets/img1/gallery/Vet1.jpg" alt="">
-                            </div>
-                            <div class="team-caption">
-                                <span>Mike Janathon</span>
-                                <h3><a href="#">Veterinarian</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="<?= base_url();?>assets/img1/gallery/Vet1.jpg" alt="">
-                            </div>
-                            <div class="team-caption">
-                                <span>Mike J Smith</span>
-                                <h3><a href="#">Veterinarian</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="<?= base_url();?>assets/img1/gallery/Vet1.jpg" alt="">
-                            </div>
-                            <div class="team-caption">
-                                <span>Pule W Smith</span>
-                                <h3><a href="#">Veterinarian</a></h3>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-">
+                        <div class="single-team mb-30 ">
+                            <div class="about-img">
+                                <img src="<?= base_url();?>assets/img1/gallery/ovet33.jpg" alt="">
+                            </div>    
                 </div>
             </div>
         </div>
+        
         <!-- Team End -->
-        <!--? Testimonial Start -->
-        <div class="testimonial-area testimonial-padding section-bg" data-background="<?= base_url();?>assets/img1/gallery/section_bg03.png">
-            <div class="container">
-                <!-- Testimonial contents -->
-                <div class="row d-flex justify-content-center">
-                    <div class="col-xl-8 col-lg-8 col-md-10">
-                        <div class="h1-testimonial-active dot-style">
-                            <!-- Single Testimonial -->
-                            <div class="single-testimonial text-center">
-                                <div class="testimonial-caption ">
-                                    <!-- founder -->
-                                    <div class="testimonial-founder">
-                                        <div class="founder-img mb-40">
-                                            <img src="<?= base_url();?>assets/img1/gallery/circleVet.png" alt="">
-                                            <span>Edu Gelo L. Orig</span>
-                                            <p>Veterinarian</p>
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-top-cap">
-                                        <p>“Where Love and Science Unite to Keep Our Furry Friends Healthy and Happy.”</p>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Testimonial End -->
+
         
         <!--? contact-animal-owner Start -->
         <div class="contact-animal-owner section-bg" data-background="<?= base_url();?>assets/img1/gallery/section_bg04.png">

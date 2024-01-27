@@ -59,10 +59,12 @@ $route['client_table'] = 'Admin_Controller/client_table';
 $route['create_admin'] = 'Admin_Controller/create_admin';
 $route['admin_table'] = 'Admin_Controller/admin_table';
 $route['add_client'] = 'Admin_Controller/add_client';
+$route['petOwner'] = 'Admin_Controller/petOwner';
 $route['add_pet'] = 'Admin_Controller/add_pet';
 $route['pet_table'] = 'Admin_Controller/pet_table';
 $route['appointment_list'] = 'Admin_Controller/appointment_list';
 $route['reports'] = 'Admin_Controller/reports';
+$route['myAccount1'] = 'Admin_Controller/myAccount1';
 
 /*frontend*/
 $route['login_client'] = 'Frontend_Controller';
@@ -71,6 +73,11 @@ $route['about'] = 'Frontend_Controller/about';
 $route['services'] = 'Frontend_Controller/services';
 $route['contact'] = 'Frontend_Controller/contact';
 $route['appointment'] = 'Frontend_Controller/appointment';
+$route['myAccount'] = 'Frontend_Controller/myAccount';
+$route['myPets'] = 'Frontend_Controller/myPets';
+$route['vacSched'] = 'Frontend_Controller/vacSched';
+$route['prodPurchased'] = 'Frontend_Controller/prodPurchased';
+$route['myAccount1'] = 'Frontend_Controller/myAccount1';
 $route['login_admin'] = 'Frontend_Controller/login_admin';
 
 

@@ -249,6 +249,24 @@ $clientUsers = $this->Users_model->fetch_allclient($id);
 }
 
 
+public function petOwner() 
+{
+if (!$this->session->has_userdata('user_id')) {
+		redirect('admin'); // Redirect to login page if not logged in
+	}
+
+	$id=1;
+// Fetch the data using the fetch_all() function
+$petOwner = $this->Users_model->fetch_allpetOwner($id);
+ // Pass the fetched data to the view
+ $data['petOwner'] = $petOwner;
+	// Load the view to display the table with data
+	$this->load->view('backend/include/header');
+	$this->load->view('backend/include/nav');
+	$this->load->view('backend/page/petOwner', $data);
+	$this->load->view('backend/include/footer');
+}
+
 
 public function add_pet() {
 	$this->load->library('form_validation');

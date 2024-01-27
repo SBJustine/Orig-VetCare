@@ -55,7 +55,7 @@
                                 <h4>Get in Touch</h4>
                                 <ul>
                                  <li><a href="#">09959401818 | 09602016523</a></li>
-                                 <li><a href="https://www.facebook.com/OrigVetCare"> @origvetcare</a></li>
+                                 <li><a href="https://www.facebook.com/OrigVetCare"> @origvetcare | FB Page</a></li>
                                  <li><a href="#">1193 Bohol Circumferential Road,
                                     CPG North Avenue, Ubujan District,
                                     Tagbilaran City, Bohol

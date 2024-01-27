@@ -34,12 +34,11 @@
     
 </head>
 
-<body>
-    <div class="container-xxl position-relative bg-white d-flex p-0">
+<!--<body class="slider-area" style="background-image: url('<?= base_url();?>assets/img1/gallery/section_bg04.png'); background-size: cover; background-position: center;"> -->
+<body >
 
-
-
-        <!-- Sign In Start -->
+    <div class="container-xxl position-relative bg-white d-flex p-0" style="background-image: url('<?= base_url();?>assets/img1/gallery/section_bg04.png'); background-size: cover; background-position: center;">
+        <!-- Sign In Start -->    
         <div class="container-fluid">
             <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
                 <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
@@ -49,8 +48,7 @@
                         <div class="text-center"> <!-- Center content -->
                             <h3 class="text-primary"><i class="fa fa-user me-2" style="color: maroon;"></i></h3>
                             <h3 style="color: maroon;">Sign In</h3>
-                        </div>
-                    
+                        </div>                  
                 </div>
                 <div class="form-floating mb-3">
                     <input type="email" class="form-control" name="user_email" placeholder="name@example.com" required />
@@ -60,8 +58,8 @@
                     <input type="password" class="form-control" name="user_password" placeholder="Password" required />
                     <label for="floatingPassword">Password</label>
                 </div>
-
-                        
+                
+                
                         <button style= " background-color: maroon;" type="submit" name="login_btn_client" class="btn btn-primary py-3 w-100 mb-4" >Sign In</button>
                         
                         

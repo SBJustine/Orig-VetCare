@@ -46,11 +46,26 @@ class Frontend_Controller extends CI_Controller {
 		$this->load->view('frontend/page/home',$data);
 		$this->load->view('frontend/include/footer',$data);
 	}
+
+	public function home1()
+	{
+		$data['website_info'] = $this->Users_model->fetch_all("website_info");
+		$this->load->view('frontend/include/header1',$data);
+		$this->load->view('frontend/page/home1',$data);
+		$this->load->view('frontend/include/footer',$data);
+	}
 	public function about()
 	{
 		$data['website_info'] = $this->Users_model->fetch_all("website_info");
 		$this->load->view('frontend/include/header',$data);
 		$this->load->view('frontend/page/about',$data);
+		$this->load->view('frontend/include/footer',$data);
+	}
+	public function about1()
+	{
+		$data['website_info'] = $this->Users_model->fetch_all("website_info");
+		$this->load->view('frontend/include/header1',$data);
+		$this->load->view('frontend/page/about1',$data);
 		$this->load->view('frontend/include/footer',$data);
 	}
 	public function services()
@@ -60,11 +75,25 @@ class Frontend_Controller extends CI_Controller {
 		$this->load->view('frontend/page/services',$data);
 		$this->load->view('frontend/include/footer',$data);
 	}
+	public function services1()
+	{
+		$data['website_info'] = $this->Users_model->fetch_all("website_info");
+		$this->load->view('frontend/include/header1',$data);
+		$this->load->view('frontend/page/services1',$data);
+		$this->load->view('frontend/include/footer',$data);
+	}
 	public function contact()
 	{
 		$data['website_info'] = $this->Users_model->fetch_all("website_info");
 		$this->load->view('frontend/include/header',$data);
 		$this->load->view('frontend/page/contact',$data);
+		$this->load->view('frontend/include/footer',$data);
+	}
+	public function contact1()
+	{
+		$data['website_info'] = $this->Users_model->fetch_all("website_info");
+		$this->load->view('frontend/include/header1',$data);
+		$this->load->view('frontend/page/contact1',$data);
 		$this->load->view('frontend/include/footer',$data);
 	}
 	public function appointment()
@@ -77,7 +106,7 @@ class Frontend_Controller extends CI_Controller {
 	public function myAccount()
 	{
 		$data['website_info'] = $this->Users_model->fetch_all("website_info");
-		$this->load->view('frontend/include/headerClient',$data);
+		$this->load->view('frontend/include/header2',$data);
 		$this->load->view('frontend/include/navClient',$data);
 		$this->load->view('frontend/page/myAccount',$data);
 		// $this->load->view('frontend/include/footer',$data);
@@ -86,7 +115,7 @@ class Frontend_Controller extends CI_Controller {
 	public function welcomeAcc()
 	{
 		$data['website_info'] = $this->Users_model->fetch_all("website_info");
-		$this->load->view('frontend/include/headerMyAcc',$data);
+		$this->load->view('frontend/include/header1',$data);
 		$this->load->view('frontend/page/welcomeAcc',$data);
 	    $this->load->view('frontend/include/footer',$data);
 	}

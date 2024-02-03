@@ -63,7 +63,7 @@
 <body>
     <header>
     	<!-- Preloader Start -->
-    <div id="preloader-active">
+    <!-- <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
@@ -72,7 +72,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
         <!--? Header Start -->
         <div class="header-area header-transparent">
             <div class="main-header header-sticky">
@@ -80,8 +80,8 @@
                     <div class="row align-items-center">
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-1">
-                            <div class="logo">
-                                <a href="<?= base_url();?>index.php/home"><img src="<?= base_url();?>assets/img1/logo/vetlogo.png" alt=""></a>
+                            <div class="logo" style="margin-top:-20px">
+                                <a href="<?= base_url();?>index.php/home1"><img src="<?= base_url();?>assets/img1/logo/vetlogo.png" alt=""></a>
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-10">
@@ -90,16 +90,16 @@
                                 <div class="main-menu f-right d-none d-lg-block">
                                     <nav> 
                                         <ul id="navigation">
-                                            <li><a class="nav-link active" href="<?= base_url();?>index.php/home">Home</a></li>                                       
-                                            <li><a  href="<?= base_url();?>index.php/services">Services</a></li>
-                                            <li><a href="<?= base_url();?>index.php/about">About</a></li>                                         
-                                            <li><a href="<?= base_url();?>index.php/contact">Contact</a></li>
+                                            <li><a class="nav-link active" href="<?= base_url();?>index.php/home1">Home</a></li>                                       
+                                            <li><a  href="<?= base_url();?>index.php/services1">Services</a></li>
+                                            <li><a href="<?= base_url();?>index.php/about1">About</a></li>                                         
+                                            <li><a href="<?= base_url();?>index.php/contact1">Contact</a></li>
                                             <li><a href="<?= base_url();?>index.php/myAccount">My Account</a></li>
                                             
                                         </ul>
                                     </nav>
                                 </div>
-                                <div class="header-right-btn f-right d-none d-lg-block ml-30">
+                                <div class="header-right-btn f-right d-none d-lg-block ml-30" style="margin-top:-10px">
                                     <a href="<?= base_url();?>index.php/login_client"> <button class="header-btn">Logout</a>
                                 </div>
                             </div>

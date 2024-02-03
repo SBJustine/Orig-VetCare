@@ -98,7 +98,7 @@
                     <div class="row align-items-center">
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-1">
-                            <div class="logo">
+                            <div class="logo" style="margin-top:-20px">
                                 <a href="<?= base_url();?>index.php/home"><img src="<?= base_url();?>assets/img1/logo/vetlogo.png" alt=""></a>
                             </div>
                         </div>
@@ -116,7 +116,7 @@
                                         </ul>
                                     </nav>
                                 </div>
-                                <div class="header-right-btn f-right d-none d-lg-block ml-30">
+                                <div class="header-right-btn f-right d-none d-lg-block ml-30" style="margin-top:-10px">
                                     <a href="<?= base_url();?>index.php/login_client"> <button class="header-btn">Login</a>
                                 </div>
                             </div>

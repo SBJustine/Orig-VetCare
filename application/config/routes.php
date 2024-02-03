@@ -69,9 +69,13 @@ $route['myAccount1'] = 'Admin_Controller/myAccount1';
 /*frontend*/
 $route['login_client'] = 'Frontend_Controller';
 $route['home'] = 'Frontend_Controller/home';
+$route['home1'] = 'Frontend_Controller/home1';
 $route['about'] = 'Frontend_Controller/about';
+$route['about1'] = 'Frontend_Controller/about1';
 $route['services'] = 'Frontend_Controller/services';
+$route['services1'] = 'Frontend_Controller/services1';
 $route['contact'] = 'Frontend_Controller/contact';
+$route['contact1'] = 'Frontend_Controller/contact1';
 $route['appointment'] = 'Frontend_Controller/appointment';
 $route['myAccount'] = 'Frontend_Controller/myAccount';
 $route['myPets'] = 'Frontend_Controller/myPets';

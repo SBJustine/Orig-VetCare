@@ -18,7 +18,7 @@
                             <span data-animation="fadeInUp" data-delay=".3s">We help monitor your pet</span>
                             <h1 data-animation="fadeInUp" data-delay=".3s">Welcome!</h1>
                             <!-- <p data-animation="fadeInUp" data-delay=".6s">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna sectetur adipisci.</p> -->
-                            <a href="<?= base_url();?>index.php/contact" class="hero-btn" data-animation="fadeInLeft" data-delay=".3s">My Account<i class="fa fa-arrow-right me-lg-2"></i> </a>
+                            <a href="<?= base_url();?>index.php/myAccount" class="hero-btn" data-animation="fadeInLeft" data-delay=".3s">My Account<i class="fa fa-arrow-right me-lg-2"></i> </a>
                         </div>
                     </div>
                 </div>

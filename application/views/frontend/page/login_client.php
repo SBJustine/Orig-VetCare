@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="<?= base_url();?>assets/img/favicon.ico" rel="icon">
+    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url();?>assets/img1/favicon.ico">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,10 +34,10 @@
     
 </head>
 
-<!--<body class="slider-area" style="background-image: url('<?= base_url();?>assets/img1/gallery/section_bg04.png'); background-size: cover; background-position: center;"> -->
+
 <body >
 
-    <div class="container-xxl position-relative bg-white d-flex p-0" style="background-image: url('<?= base_url();?>assets/img1/gallery/section_bg04.png'); background-size: cover; background-position: center;">
+    <div class="container-xxl position-relative bg-white d-flex p-0" style="background-image: url('<?= base_url();?>assets/img1/gallery/section_bg02.png'); background-size: cover; background-position: center;">
         <!-- Sign In Start -->    
         <div class="container-fluid">
             <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">

@@ -1,57 +1,12 @@
 <main>
 
-    <!-- Load the Google Maps API separately -->
-    <style>
-        /* Your custom CSS styles here */
-        #map {
-            height: 400px;
-            width: 100%;
-            margin-top: 20px;
-        }
-
-        /* Style the Google Maps API elements */
-        .gm-style-iw {
-            background-color: #fff; /* Set your desired background color */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a box shadow */
-        }
-
-        /* Add any other styles as needed */
-    </style>
-</head>
-<body>
-    <section class="contact-section">
+<section class="contact-section">
         <div class="container">
-            <div id="map"></div>
+            <iframe id="map" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.4823095975096!2d123.7497234!3d9.7872388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aa4de9c87cccc7%3A0x2e26efbc58318434!2sOrig%20Vetcare%20Animal%20Clinic!5e0!3m2!1sen!2sph!4v1645964899117!5m2!1sen!2sph">
+            </iframe>
         </div>
     </section>
-
-    <script>
-        function initMap() {
-            var uluru = { lat: -25.363, lng: 131.044 };
-            var grayStyles = [
-                {
-                    featureType: "all",
-                    stylers: [
-                        { saturation: -90 },
-                        { lightness: 50 }
-                    ]
-                },
-                {
-                    elementType: 'labels.text.fill',
-                    stylers: [{ color: '#ccdee9' }]
-                }
-            ];
-            var map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: -31.197, lng: 150.744 },
-                zoom: 9,
-                styles: grayStyles,
-                scrollwheel: false
-            });
-        }
-        
-    </script>
-    <!-- Load the Google Maps API separately -->
-    <script src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.4823095975096!2d123.7497234!3d9.7872388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aa4de9c87cccc7%3A0x2e26efbc58318434!2sOrig%20Vetcare%20Animal%20Clinic!5e0!3m2!1sen!2sph!4v1645964899117!5m2!1sen!2sph"></script>
                     
 
 

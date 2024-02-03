@@ -173,12 +173,6 @@ document.getElementById('message').value = "";
 
 
 }
-
-
-
-
-
-
     </script>
         
     </body>

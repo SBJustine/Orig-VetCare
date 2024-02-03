@@ -8,8 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="<?= base_url();?>assets/css1/site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url();?>assets/img1/favicon.ico">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Page Title</title>
 
     <!-- CSS here -->
@@ -59,6 +57,23 @@
       emailjs.init("1CV5MTuAG2z3Xaa7Q");
    })();
 </script>
+
+<style>
+        /* Your custom CSS styles here */
+        #map {
+            height: 400px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* Style the Google Maps API elements */
+        .gm-style-iw {
+            background-color: #fff; /* Set your desired background color */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+        }
+
+        /* Add any other styles as needed */
+    </style>
 
 
 </head>

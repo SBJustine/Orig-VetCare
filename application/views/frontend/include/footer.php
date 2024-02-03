@@ -122,6 +122,64 @@
     <!-- Jquery Plugins, main Jquery -->	
     <script src="<?= base_url();?>assets/js1/plugins.js"></script>
     <script src="<?= base_url();?>assets/js1/main.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    
+
+
+    <script>
+                
+        window.onload = function() {
+  document.getElementById('contactForm').addEventListener('submit',function(event) { event.preventDefault();
+  
+      console.log('heyyy');
+  var templateParams = {
+      from_name : document.getElementById('name').value,
+      from_email : document.getElementById('email').value,
+      subject : document.getElementById('subject').value,
+      message : document.getElementById('message').value
+  }
+  emailjs.send('service_bub6ydg', 'template_frb9bk3', templateParams, '1CV5MTuAG2z3Xaa7Q')
+  .then(function(response) {
+
+    //sweet alert
+
+    swal({
+           title: "Message Sent Successfully!",
+      icon: "success",
+    });
+    document.getElementById('name').value = "";
+document.getElementById('email').value = "";
+document.getElementById('subject').value = "";
+document.getElementById('message').value = "";
+     console.log('SUCCESS!', response.status, response.text);
+
+
+  }, function(error) {
+
+    swal({
+           title: "Failed to Send! Please Try Again",
+      icon: "error",
+    });
+
+     console.log('FAILED...', error);
+  });
+
+ 
+
+  });
+
+
+
+}
+
+
+
+
+
+
+    </script>
         
     </body>
 </html>

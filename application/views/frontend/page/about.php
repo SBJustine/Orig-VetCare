@@ -1,16 +1,6 @@
 <main> 
         <!-- Hero Area Start -->
-        <div class="slider-area2 slider-height2 d-flex align-items-center" style="background-image: url('<?php echo base_url();?>assets/img1/hero/hero2.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="hero-cap text-center pt-50">
-                            <h2>About Us</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <!-- Hero Area End -->
         <!-- About Details Start -->
         <div class="about-details section-padding30">

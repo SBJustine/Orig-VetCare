@@ -78,6 +78,7 @@ $route['myPets'] = 'Frontend_Controller/myPets';
 $route['vacSched'] = 'Frontend_Controller/vacSched';
 $route['prodPurchased'] = 'Frontend_Controller/prodPurchased';
 $route['myAccount1'] = 'Frontend_Controller/myAccount1';
+$route['welcomeAcc'] = 'Frontend_Controller/welcomeAcc';
 $route['login_admin'] = 'Frontend_Controller/login_admin';
 
 

@@ -26,7 +26,7 @@ class Frontend_Controller extends CI_Controller {
 
 									);
 					$this->session->set_userdata($userdata);
-					redirect('myAccount');
+					redirect('welcomeAcc');
 				}else {
 					$this->session->set_flashdata('msg_login','Invalid Password. Please try again.');
 				}
@@ -72,14 +72,23 @@ class Frontend_Controller extends CI_Controller {
 		$data['website_info'] = $this->Users_model->fetch_all("website_info");
 		$this->load->view('frontend/include/headerClient',$data);
 		$this->load->view('frontend/page/appointment',$data);
-		$this->load->view('frontend/include/footer',$data);
+		// $this->load->view('frontend/include/footer',$data);
 	}
 	public function myAccount()
 	{
 		$data['website_info'] = $this->Users_model->fetch_all("website_info");
 		$this->load->view('frontend/include/headerClient',$data);
+		$this->load->view('frontend/include/navClient',$data);
 		$this->load->view('frontend/page/myAccount',$data);
-		$this->load->view('frontend/include/footer',$data);
+		// $this->load->view('frontend/include/footer',$data);
+	}
+
+	public function welcomeAcc()
+	{
+		$data['website_info'] = $this->Users_model->fetch_all("website_info");
+		$this->load->view('frontend/include/headerMyAcc',$data);
+		$this->load->view('frontend/page/welcomeAcc',$data);
+	    $this->load->view('frontend/include/footer',$data);
 	}
 
 	public function myPets()

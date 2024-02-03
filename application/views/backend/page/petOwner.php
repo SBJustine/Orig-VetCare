@@ -10,7 +10,7 @@
                                         <tr>
                                             <th scope="col">#</th>
                                             <th scope="col">Pet Owners</th>
-                                            <th scope="col"></th>
+                                            <th scope="col">Action</th>
                                             
                                         </tr>
                                     </thead>
@@ -20,6 +20,8 @@
                                         <!-- <td><?php echo $user->owner_id; ?></td> -->
                                         <td><?php echo $user->client_id; ?></td>
                                       <td><?php echo $user->client_fullname; ?></td>
+                                      
+                                  
 
                                       <td> <a href="<?= base_url();?>index.php/add_pet" class="btn btn-primary">Add pet</a>
                                        <a href="<?= base_url();?>index.php/pet_table" class="btn btn-primary">View Pets</a>

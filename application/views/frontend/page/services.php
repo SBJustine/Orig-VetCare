@@ -1,17 +1,5 @@
 	<main> 
-        <!-- Hero Area Start -->
-        <div class="slider-area2 slider-height2 d-flex align-items-center" style="background-image: url('<?php echo base_url();?>assets/img1/hero/hero2.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="hero-cap text-center pt-50">
-                            <h2>Services</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Hero Area End -->
+
         <!--? Our Services Start -->
         <div class="our-services section-padding30">
             <div class="container">
@@ -28,7 +16,7 @@
                     <div class=" col-lg-4 col-md-6 col-sm-6">
                         <div class="single-services text-center mb-30">
                             <div class="services-ion">
-                                <span class="flaticon-animal-kingdom"></span>
+                                <span class="fa fa-dog me-lg-2"></span>
                             </div>
                             <div class="services-cap">
                                 <h5><a href="#">Pet Grooming</a></h5>
@@ -39,7 +27,7 @@
                     <div class=" col-lg-4 col-md-6 col-sm-6">
                         <div class="single-services text-center mb-30">
                             <div class="services-ion">
-                                 <span class="flaticon-animals"></span>
+                                 <span class="fa fa-stethoscope me-lg-2"></span>
                             </div>
                             <div class="services-cap">
                                 <h5><a href="#">Pet Treatment</a></h5>
@@ -50,7 +38,7 @@
                     <div class=" col-lg-4 col-md-6 col-sm-6">
                         <div class="single-services text-center mb-30">
                             <div class="services-ion">
-                               <span class="flaticon-animals-1"></span>
+                               <span class="fa fa-syringe me-lg-2"></span>
                             </div>
                             <div class="services-cap">
                                 <h5><a href="#">Vaccinations</a></h5>

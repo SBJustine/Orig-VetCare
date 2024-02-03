@@ -18,7 +18,7 @@
                             <span data-animation="fadeInUp" data-delay=".3s">We help monitor your pet</span>
                             <h1 data-animation="fadeInUp" data-delay=".3s">The Care that your Pets Deserve.</h1>
                             <!-- <p data-animation="fadeInUp" data-delay=".6s">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna sectetur adipisci.</p> -->
-                            <a href="<?= base_url();?>index.php/contact" class="hero-btn" data-animation="fadeInLeft" data-delay=".3s">Contact Now<i class="ti-arrow-right"></i> </a>
+                            <a href="<?= base_url();?>index.php/contact" class="hero-btn" data-animation="fadeInLeft" data-delay=".3s">Contact Now<i class="fa fa-arrow-right me-lg-2"></i> </a>
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                     <div class=" col-lg-4 col-md-6 col-sm-6">
                         <div class="single-services text-center mb-30">
                             <div class="services-ion">
-                                <span class="flaticon-animal-kingdom"></span>
+                                <span class="fa fa-syringe me-lg-2"></span>
                             </div>
                             <div class="services-cap">
                                 <h5><a href="#">Vaccinations</a></h5>
@@ -61,7 +61,7 @@
                     <div class=" col-lg-4 col-md-6 col-sm-6">
                         <div class="single-services text-center mb-30">
                             <div class="services-ion">
-                                 <span class="flaticon-animals"></span>
+                                 <span class="fa fa-dog me-lg-2"></span>
                             </div>
                             <div class="services-cap">
                                 <h5><a href="#">Pet Grooming</a></h5>
@@ -72,7 +72,7 @@
                     <div class=" col-lg-4 col-md-6 col-sm-6">
                         <div class="single-services text-center mb-30">
                             <div class="services-ion">
-                                 <span class="flaticon-animals"></span>
+                                 <span class="fa fa-stethoscope me-lg-2"></span>
                             </div>
                             <div class="services-cap">
                                 <h5><a href="#">Pet Treatment</a></h5>

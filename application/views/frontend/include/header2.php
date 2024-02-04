@@ -100,7 +100,7 @@
                                     </nav>
                                 </div>
                                 <div class="header-right-btn f-right d-none d-lg-block ml-30" style="margin-top:-10px">
-                                    <a href="<?= base_url();?>index.php/login_client"> <button class="header-btn">Logout</a>
+                                    <a href="<?= base_url();?>index.php/login_client"> <button class="header-btn" >Logout</a>
                                 </div>
                             </div>
                         </div>   
@@ -114,3 +114,7 @@
         </div>
         <!-- Header End -->
     </header>
+
+
+
+    

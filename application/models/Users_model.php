@@ -73,6 +73,12 @@ class Users_model extends CI_Model {
 			return $query->result();
 
 		}
+		// function fetch_allprofile($id){
+
+		// 	$query = $this->db->query("SELECT * FROM `profile`   " );
+		// 	return $query->result();
+
+		// }
 
 
 		function get_info($id){

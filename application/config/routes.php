@@ -65,6 +65,7 @@ $route['pet_table'] = 'Admin_Controller/pet_table';
 $route['appointment_list'] = 'Admin_Controller/appointment_list';
 $route['reports'] = 'Admin_Controller/reports';
 $route['myAccount1'] = 'Admin_Controller/myAccount1';
+$route['profile'] = 'Admin_Controller/profile';
 
 /*frontend*/
 $route['login_client'] = 'Frontend_Controller';

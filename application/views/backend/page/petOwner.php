@@ -21,10 +21,13 @@
                                         <td><?php echo $user->client_id; ?></td>
                                       <td><?php echo $user->client_fullname; ?></td>
                                       
-                                  
+                                      <!--base_url('your_controller/your_method?user_id=' . $user_id);-->
 
-                                      <td> <a href="<?= base_url();?>index.php/add_pet" class="btn btn-primary">Add pet</a>
-                                       <a href="<?= base_url();?>index.php/pet_table" class="btn btn-primary">View Pets</a>
+                                      <td> <a href="<?= base_url();?>index.php/add_pet?client_id=<?php echo $user->client_id; ?>" class="btn btn-primary">Add pet</a>
+                                  
+                                       <!-- <a href="<?= base_url();?>index.php/pet_table" class="btn btn-primary">View Pets</a> -->
+                                     
+                                       <a href="<?= base_url();?>index.php/pet_table?client_id=<?php echo $user->client_id; ?>" class="btn btn-primary">View Pets</a>
                                     </td>
                                         </tr>
                                     <?php endforeach; ?>

@@ -120,11 +120,11 @@ class Frontend_Controller extends CI_Controller {
 	    $this->load->view('frontend/include/footer',$data);
 	}
 
-	public function myPets()
+	public function owner_pet()
 	{
 		$data['website_info'] = $this->Users_model->fetch_all("website_info");
 		$this->load->view('frontend/include/headerClient',$data);
-		$this->load->view('frontend/page/myPets',$data);
+		$this->load->view('frontend/page/owner_pet',$data);
 		$this->load->view('frontend/include/footer',$data);
 	}
 

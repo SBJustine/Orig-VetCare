@@ -1657,9 +1657,12 @@ progress{
     background-clip:padding-box;
     border:1px solid #ced4da;
     appearance:none;
+
+    
     border-radius:5px;
     transition:border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out
 }
+
 @media (prefers-reduced-motion: reduce){
     .form-control{
         transition:none
@@ -6348,7 +6351,8 @@ textarea.form-control-lg{
     background-color:#F3F6F9 !important
 }
 .bg-white{
-    background-color:#fff !important
+    background-color:#fff!important
+    
 }
 .bg-transparent{
     background-color:rgba(0,0,0,0) !important

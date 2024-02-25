@@ -3,52 +3,64 @@
                 <div class="row g-4">
                     <div class="col-sm-12 col-xl-6">                  
                         <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">Add Pet</h6>
-                            <form action="<?= base_url() ?>index.php/add_pet" method="post">
+                            <h6 class="mb-4">Add Employee</h6>
+                            <form action="<?= base_url() ?>index.php/add_employee" method="post">
+
                             <div class="form-floating mb-3">
-                                <input type="" name="pet_name" class="form-control" id="pet_name"
+                                <input type="" name="employeeName" class="form-control" id="employeeName"
                                     placeholder="">
-                                <label for="floatingInput">Name of Pet</label>
+                                <label for="floatingInput">Fullname</label>
                             </div>
 
                             <div class="form-floating mb-3">
-                                <input type="" name="pet_breed" class="form-control" id="pet_breed"
-                                    placeholder="">
-                                <label for="floatingInput">Breed</label>
-                            </div>
-                            <!-- <div class="form-floating mb-3">
-                                <input type="password" class="form-control" id="floatingPassword"
-                                    placeholder="Password">
-                                <label for="floatingPassword">Password</label>
-                            </div> -->
-                            <div class="form-floating mb-3">
-                                <select class="form-select" name="pet_species" id="pet_species"
+                                <select class="form-select" name="employeePosition" id="employeePosition"
                                     aria-label="Floating label select example">
-                                    <option value="Dog">Dog</option>
-                                    <option value="Cat">Cat</option>                                  
+                                    <option value="Veterinarian">Veterinarian</option>
+                                    <option value="Groomer">Groomer</option>
                                 </select>
-                                <label for="vaccine">Species</label>
+                                <label for="floatingInput">Position</label>
                             </div>
 
                             <div class="form-floating mb-3">
-                                <input type="" name="pet_age" class="form-control" id="pet_age"
+                                <input type="" name="employeeAddress" class="form-control" id="employeeAdress"
+                                    placeholder="">
+                                <label for="floatingInput">Address</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="" name="employeeAge" class="form-control" id="employeeAge"
                                     placeholder="">
                                 <label for="floatingInput">Age</label>
                             </div>
 
                             <div class="form-floating mb-3">
-                                <select class="form-select" name="pet_gender" id="pet_gender"
+                                <select class="form-select" name="employeeSex" id="employeeSex"
                                     aria-label="Floating label select example">
                                     <option value="Male">Male</option>
-                                    <option value="Female">Female</option>                               
+                                    <option value="Female">Female</option>
                                 </select>
-                                <label for="vaccine">Gender</label>
+                                <label for="floatingInput">Sex</label>
                             </div>
 
                             <div class="form-floating mb-3">
-                                <input type="" name="pet_color" class="form-control" id="pet_color"
+                                <input type="" name="employeePhoneNum" class="form-control" id="employeePhoneNum"
                                     placeholder="">
-                                <label for="floatingInput">Color</label>
+                                <label for="floatingInput">Phone Number</label>
+                            </div>
+
+
+                            <div class="form-floating mb-3">
+                                <select class="form-select" name="employeeStatus" id="employeeStatus"
+                                    aria-label="Floating label select example">
+                                    <option value="active">Active</option>
+                                    <option value="inactive">Inactive</option>
+                                </select>
+                                <label for="floatingInput">Status</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="datetime-local" name="employeeAdded" class="form-control" id="employeeAdded" value="<?php echo date('Y-m-d\TH:i'); ?>" required>
+                                <label for="floatingInput">Date Added</label>
                             </div>
 
                             <div class="modal-footer d-flex">
@@ -59,8 +71,7 @@
                                         color: white;
                                     }
                                 </style>
-                             <input type="text" name="client_id" class="form-control" id="pet_color"
-                                    placeholder="" value="<?= $client_id ?>">
+                            
                                 <input type="submit" class="btn btn-maroon custom-button" value="Create">
                             </div>
                             </form>
@@ -79,5 +90,4 @@
                     </div>
                     </div>
                     </div>
-                    
                     

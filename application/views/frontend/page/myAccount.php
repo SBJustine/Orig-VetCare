@@ -3,7 +3,6 @@
             <!-- Chart Start -->
             <div class="container-fluid pt-4 px-4">
                 
-
             
         <!-- Slider Single -->
         <div class="single-slider d-flex align-items-center slider-height">
@@ -29,3 +28,72 @@
                 </div>
             </div>
             <!-- Chart End -->
+
+             
+                <!-- Sale & Revenue Start 
+<div class="container-fluid pt-4 px-4" style= "margin-top:100px; margin-left:250px">
+                <div class="row g-4">
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-chart-line fa-3x text-primary"></i>
+                            <div class="ms-3">
+                                <p class="mb-2">Number of Clients</p>
+                                <h6>
+                                     <?php
+                                     $connection = mysqli_connect("localhost","root","","vaccine");
+
+                                     $query = "SELECT client_id FROM client_users ORDER BY client_id";
+                                     $query_run = mysqli_query($connection,$query);
+                                     $row = mysqli_num_rows($query_run);
+
+                                     echo '<h1>'.$row.'</h1>';
+                                     ?>
+                                    
+                                    </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                            <div class="ms-3">
+                                <p class="mb-2">Number of Registered Pets</p>
+                                <h6>
+                                <?php
+                                     $connection = mysqli_connect("localhost","root","","vaccine");
+
+                                     $query = "SELECT pet_id FROM pet_users ORDER BY pet_id";
+                                     $query_run = mysqli_query($connection,$query);
+                                     $row = mysqli_num_rows($query_run);
+
+                                     echo '<h1>'.$row.'</h1>';
+                                     ?>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-chart-area fa-3x text-primary"></i>
+                            <div class="ms-3">
+                                <p class="mb-2">Total Appointments</p>
+                                <h6>
+                                <?php
+                                     $connection = mysqli_connect("localhost","root","","vaccine");
+
+                                     $query = "SELECT appointmentId FROM appointments ORDER BY appointmentId";
+                                     $query_run = mysqli_query($connection,$query);
+                                     $row = mysqli_num_rows($query_run);
+
+                                     echo '<h1>'.$row.'</h1>';
+                                     ?>
+
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            Sale & Revenue End -->
+    

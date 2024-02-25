@@ -26,6 +26,16 @@
                         <a href="<?= base_url();?>index.php/admin_table"  class="dropdown-item">Admin Users</a>
                     </div>
                 </div>
+
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-user me-2"></i>Employee</a>
+                    <div class="dropdown-menu bg-transparent border-0">
+                        <a href="<?= base_url();?>index.php/add_employee"  class="dropdown-item">Add Employee</a>
+                        <a href="<?= base_url();?>index.php/employee_table"  class="dropdown-item">List of employees</a>
+                    </div>
+                </div>
+
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-user me-2"></i>Client</a>
                     <div class="dropdown-menu bg-transparent border-0">
@@ -39,23 +49,20 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-th me-2"></i>Products</a>
                     <div class="dropdown-menu bg-transparent border-0">
-                        <a href="<?= base_url();?>index.php/products"  class="dropdown-item">Purchase Product</a>
-                        <a href="<?= base_url();?>index.php/products"  class="dropdown-item">Add New Products</a>
-                        <a href="<?= base_url();?>index.php/products_table"  class="dropdown-item">List of Products</a>
+                        <a href="<?= base_url();?>index.php/add_product"  class="dropdown-item">Add New Products</a>
+                        <a href="<?= base_url();?>index.php/product_table"  class="dropdown-item">List of Products</a>
                     </div>
                 </div>
 
                 <div class="nav-item dropdown">
-                    <a href="<?= base_url();?>index.php/dashboard" class="nav-item nav-link" ><i class="fa fa-laptop -alt me-2" ></i>Attendance</a>
-                    </div> 
-
-                    <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-user me-2"></i>Employee</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-th me-2"></i>Purchase</a>
                     <div class="dropdown-menu bg-transparent border-0">
-                        <a href="<?= base_url();?>index.php/dashboard"  class="dropdown-item">Add Employee</a>
-                        <a href="<?= base_url();?>index.php/dashboard"  class="dropdown-item">List of employees</a>
+                        <a href="<?= base_url();?>index.php/purchase_table"  class="dropdown-item"> Products</a>
+                        <a href="<?= base_url();?>index.php/dashboard"  class="dropdown-item">Purchased Products</a>
                     </div>
                 </div>
+
+                <a href="<?= base_url();?>index.php/attendance" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>Attendance</a> 
 
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Salary</a>

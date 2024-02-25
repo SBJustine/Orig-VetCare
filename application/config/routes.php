@@ -66,6 +66,14 @@ $route['appointment_list'] = 'Admin_Controller/appointment_list';
 $route['reports'] = 'Admin_Controller/reports';
 $route['myAccount1'] = 'Admin_Controller/myAccount1';
 $route['profile'] = 'Admin_Controller/profile';
+$route['add_employee'] = 'Admin_Controller/add_employee';
+$route['employee_table'] = 'Admin_Controller/employee_table';
+$route['attendance_table'] = 'Admin_Controller/attendance_table';
+$route['attendance'] = 'Admin_Controller/attendance';
+$route['salary_table'] = 'Admin_Controller/salary_table';
+$route['add_product'] = 'Admin_Controller/add_product';
+$route['product_table'] = 'Admin_Controller/product_table';
+$route['purchase_table'] = 'Admin_Controller/purchase_table';
 
 /*frontend*/
 $route['login_client'] = 'Frontend_Controller';
@@ -79,12 +87,15 @@ $route['contact'] = 'Frontend_Controller/contact';
 $route['contact1'] = 'Frontend_Controller/contact1';
 $route['appointment'] = 'Frontend_Controller/appointment';
 $route['myAccount'] = 'Frontend_Controller/myAccount';
-$route['myPets'] = 'Frontend_Controller/myPets';
 $route['vacSched'] = 'Frontend_Controller/vacSched';
 $route['prodPurchased'] = 'Frontend_Controller/prodPurchased';
 $route['myAccount1'] = 'Frontend_Controller/myAccount1';
 $route['welcomeAcc'] = 'Frontend_Controller/welcomeAcc';
 $route['login_admin'] = 'Frontend_Controller/login_admin';
+$route['pet_grooming'] = 'Admin_Controller/pet_grooming';
+$route['pet_treatment'] = 'Admin_Controller/pet_treatment';
+$route['pet_vaccine'] = 'Admin_Controller/pet_vaccine';
+$route['owner_pet'] = 'Admin_Controller/owner_pet';
 
 
 $route['default_controller'] = 'welcome';

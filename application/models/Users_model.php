@@ -32,9 +32,10 @@ class Users_model extends CI_Model {
 			return 0;
 	
 
-		//Display  Account here
 			
 		}
+
+		//Display  Account here
 
 		function fetch_all($id){
 
@@ -57,7 +58,9 @@ class Users_model extends CI_Model {
 		}
 		function fetch_allpet($id){
 
-			$query = $this->db->query("SELECT * FROM `pet_users`   " );
+			// ONCE NGA NAA NAY ID SA OWNER ANG PET, PWEDE NA MAGFILTER GAMIT ANG where client-ID = $id
+
+			$query = $this->db->query("SELECT * FROM `pet_users`" );
 			return $query->result();
 
 		}
@@ -73,6 +76,49 @@ class Users_model extends CI_Model {
 			return $query->result();
 
 		}
+
+		function fetch_allemployee($id){
+
+			$query = $this->db->query("SELECT * FROM `employee_table`   " );
+			return $query->result();
+
+		}
+
+		function fetch_allproduct($id){
+
+			$query = $this->db->query("SELECT * FROM `product_table`   " );
+			return $query->result();
+
+		}
+
+		function fetch_allpurchase($id){
+
+			$query = $this->db->query("SELECT * FROM `purchase_table`   " );
+			return $query->result();
+
+		}
+
+		function fetch_allattendance($id){
+
+			$query = $this->db->query("SELECT * FROM `employee_table`   " );
+			return $query->result();
+
+		}
+
+		function fetch_allattendance_table($id){
+
+			$query = $this->db->query("SELECT * FROM `employee_table`   " );
+			return $query->result();
+
+		}
+		
+		function fetch_allowner_pet($id){
+
+			$query = $this->db->query("SELECT * FROM `pet_table`   " );
+			return $query->result();
+
+		}
+
 		// function fetch_allprofile($id){
 
 		// 	$query = $this->db->query("SELECT * FROM `profile`   " );
@@ -134,16 +180,6 @@ class Users_model extends CI_Model {
 	        }
 		}
 
-		// function insert_dataowner($data)
-		// {
-		// 	$this->db->insert('client_users', $data);
-		// 	$afftectedRows = $this->db->affected_rows();
-	    //     if ($afftectedRows > 0) {
-	    //         return TRUE;
-	    //     } else {
-	    //         return FALSE;
-	    //     }
-		// }
 
 		function insert_datapet($data)
 		{
@@ -156,7 +192,49 @@ class Users_model extends CI_Model {
 	        }
 		}
 
+		function insert_dataemployee($data)
+		{
+			$this->db->insert('employee_table', $data);
+			$afftectedRows = $this->db->affected_rows();
+	        if ($afftectedRows > 0) {
+	            return TRUE;
+	        } else {
+	            return FALSE;
+	        }
+		}
 
+		function insert_dataproduct($data)
+		{
+			$this->db->insert('product_table', $data);
+			$afftectedRows = $this->db->affected_rows();
+	        if ($afftectedRows > 0) {
+	            return TRUE;
+	        } else {
+	            return FALSE;
+	        }
+		}
+
+		function insert_datapurchase($data)
+		{
+			$this->db->insert('purchase_table', $data);
+			$afftectedRows = $this->db->affected_rows();
+	        if ($afftectedRows > 0) {
+	            return TRUE;
+	        } else {
+	            return FALSE;
+	        }
+		}
+
+		// function insert_dataattendance($data)
+		// {
+		// 	$this->db->insert('attendance_table', $data);
+		// 	$afftectedRows = $this->db->affected_rows();
+	    //     if ($afftectedRows > 0) {
+	    //         return TRUE;
+	    //     } else {
+	    //         return FALSE;
+	    //     }
+		// }
 
 		function set_update($table,$id,$data)
 		{

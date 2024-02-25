@@ -8,8 +8,19 @@
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-line fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">Today Sale</p>
-                                <h6 class="mb-0">$1234</h6>
+                                <p class="mb-2">Number of Clients</p>
+                                <h6>
+                                     <?php
+                                     $connection = mysqli_connect("localhost","root","","vaccine");
+
+                                     $query = "SELECT client_id FROM client_users ORDER BY client_id";
+                                     $query_run = mysqli_query($connection,$query);
+                                     $row = mysqli_num_rows($query_run);
+
+                                     echo '<h1>'.$row.'</h1>';
+                                     ?>
+                                    
+                                    </h6>
                             </div>
                         </div>
                     </div>
@@ -17,8 +28,18 @@
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-bar fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">Total Sale</p>
-                                <h6 class="mb-0">$1234</h6>
+                                <p class="mb-2">Number of Registered Pets</p>
+                                <h6>
+                                <?php
+                                     $connection = mysqli_connect("localhost","root","","vaccine");
+
+                                     $query = "SELECT pet_id FROM pet_users ORDER BY pet_id";
+                                     $query_run = mysqli_query($connection,$query);
+                                     $row = mysqli_num_rows($query_run);
+
+                                     echo '<h1>'.$row.'</h1>';
+                                     ?>
+                                </h6>
                             </div>
                         </div>
                     </div>
@@ -26,8 +47,19 @@
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-area fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">Today Revenue</p>
-                                <h6 class="mb-0">$1234</h6>
+                                <p class="mb-2">Total Appointments</p>
+                                <h6>
+                                <?php
+                                     $connection = mysqli_connect("localhost","root","","vaccine");
+
+                                     $query = "SELECT appointmentId FROM appointments ORDER BY appointmentId";
+                                     $query_run = mysqli_query($connection,$query);
+                                     $row = mysqli_num_rows($query_run);
+
+                                     echo '<h1>'.$row.'</h1>';
+                                     ?>
+
+                                </h6>
                             </div>
                         </div>
                     </div>
@@ -35,7 +67,7 @@
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-pie fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">Total Revenue</p>
+                                <p class="mb-2">Total Products</p>
                                 <h6 class="mb-0">$1234</h6>
                             </div>
                         </div>
@@ -84,10 +116,10 @@
                                 <tr class="text-dark">
                                     <th scope="col"><input class="form-check-input" type="checkbox"></th>
                                     <th scope="col">Date</th>
-                                    <th scope="col">Invoice</th>
-                                    <th scope="col">Customer</th>
-                                    <th scope="col">Amount</th>
-                                    <th scope="col">Status</th>
+                                    <th scope="col">Product</th>
+                                    <th scope="col">Cost</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Category</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
@@ -95,9 +127,9 @@
                                 <tr>
                                     <td><input class="form-check-input" type="checkbox"></td>
                                     <td>01 Jan 2045</td>
-                                    <td>INV-0123</td>
+                                    <td>Dog Food</td>
                                     <td>Jhon Doe</td>
-                                    <td>$123</td>
+                                    <td>Dog Food</td>
                                     <td>Paid</td>
                                     <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                                 </tr>
@@ -106,7 +138,7 @@
                                     <td>01 Jan 2045</td>
                                     <td>INV-0123</td>
                                     <td>Jhon Doe</td>
-                                    <td>$123</td>
+                                    <td>Dog Food</td>
                                     <td>Paid</td>
                                     <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                                 </tr>
@@ -115,7 +147,7 @@
                                     <td>01 Jan 2045</td>
                                     <td>INV-0123</td>
                                     <td>Jhon Doe</td>
-                                    <td>$123</td>
+                                    <td>Dog Food</td>
                                     <td>Paid</td>
                                     <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                                 </tr>
@@ -124,7 +156,7 @@
                                     <td>01 Jan 2045</td>
                                     <td>INV-0123</td>
                                     <td>Jhon Doe</td>
-                                    <td>$123</td>
+                                    <td>Dog Food</td>
                                     <td>Paid</td>
                                     <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                                 </tr>
@@ -133,7 +165,7 @@
                                     <td>01 Jan 2045</td>
                                     <td>INV-0123</td>
                                     <td>Jhon Doe</td>
-                                    <td>$123</td>
+                                    <td>Dog Food</td>
                                     <td>Paid</td>
                                     <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                                 </tr>

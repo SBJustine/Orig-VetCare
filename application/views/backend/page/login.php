@@ -41,9 +41,9 @@
 
 
         <div class="container-fluid" style="background-image: url('<?= base_url();?>assets/img1/gallery/login10.jpg'); background-size: cover; background-position: center;">
-            <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+            <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;" >
                 <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
-                    <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
+                    <div class="bg-white rounded p-4 p-sm-5 my-4 mx-3 ">
                     <div class="d-flex align-items-center justify-content-center mb-3">
                     <form action="<?= base_url(); ?>index.php/admin" method="post">
                         <div class="text-center"> <!-- Center content -->

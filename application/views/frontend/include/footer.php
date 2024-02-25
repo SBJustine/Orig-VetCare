@@ -17,10 +17,10 @@
                              </div>
                              <!-- social -->
                              <div class="footer-social">
-                                 <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-square"></i></a>
-                                 <a href="#"><i class="fab fa-twitter-square"></i></a>
+                                 <!-- <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-square"></i></a> -->
+                                 <!-- <a href="#"><i class="fab fa-twitter-square"></i></a>
                                  <a href="#"><i class="fab fa-linkedin"></i></a>
-                                 <a href="#"><i class="fab fa-pinterest-square"></i></a>
+                                 <a href="#"><i class="fab fa-pinterest-square"></i></a> -->
                              </div>
                          </div>
                        </div>
@@ -43,8 +43,9 @@
                             <div class="footer-tittle">
                                 <h4>Services</h4>
                                 <ul>
-                                    <li><a href="#">Dog Vaccination</a></li>
-
+                                    <li><a href="<?= base_url();?>index.php/services">Pet Vaccination</a></li>
+                                    <li><a href="<?= base_url();?>index.php/services">Pet Grooming</a></li>
+                                    <li><a href="<?= base_url();?>index.php/services">Pet Treatment</a></li>
                                 </ul>
                             </div>
                         </div>

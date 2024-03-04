@@ -54,13 +54,7 @@
                     </div>
                 </div>
 
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-th me-2"></i>Purchase</a>
-                    <div class="dropdown-menu bg-transparent border-0">
-                        <a href="<?= base_url();?>index.php/purchase_table"  class="dropdown-item"> Products</a>
-                        <a href="<?= base_url();?>index.php/dashboard"  class="dropdown-item">Purchased Products</a>
-                    </div>
-                </div>
+                <a href="<?= base_url();?>index.php/purchasedprod_list" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>Purchase</a>
 
                 <a href="<?= base_url();?>index.php/attendance" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>Attendance</a> 
 

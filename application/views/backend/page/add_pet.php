@@ -5,6 +5,7 @@
                         <div class="bg-light rounded h-100 p-4">
                             <h6 class="mb-4">Add Pet</h6>
                             <form action="<?= base_url() ?>index.php/add_pet" method="post">
+                            
                             <div class="form-floating mb-3">
                                 <input type="" name="pet_name" class="form-control" id="pet_name"
                                     placeholder="">
@@ -59,7 +60,7 @@
                                         color: white;
                                     }
                                 </style>
-                             <input type="text" name="client_id" class="form-control" id="pet_color"
+                             <input type="hidden" name="client_id" class="form-control" id=""
                                     placeholder="" value="<?= $client_id ?>">
                                 <input type="submit" class="btn btn-maroon custom-button" value="Create">
                             </div>

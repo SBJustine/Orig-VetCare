@@ -10,9 +10,10 @@
                     <div class="col-xl-7 col-lg-8 col-md-10 ">
                         <!-- Video icon -->
                         <div class="video-icon">
-                                    <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=up68UAfH0d0" data-animation="bounceIn" data-delay=".4s">
+                                    <a class="popup-video btn-icon" href="https://www.facebook.com/reel/1517790392123463" data-animation="bounceIn" data-delay=".4s">
                                         <i class="fas fa-play"></i>
                                     </a>
+                                    
                         </div>
                         <div class="hero__caption" >
                             <span data-animation="fadeInUp" data-delay=".3s">We help monitor your pet</span>

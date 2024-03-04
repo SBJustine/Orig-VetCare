@@ -21,16 +21,22 @@
                                                 <span class="arrow">&#9650;</span>
                                             </div>
                                         </th>
-                                        <th scope="col" onclick="sortTable(2)" data-sort="asc">
+                                        <th>
                                             <div class="d-flex justify-content-between align-items-center">
                                                 Email
-                                                <span class="arrow">&#9650;</span>
+                                                <span class="arrow"></span>
                                             </div>
                                         </th>
-                                        <th scope="col" onclick="sortTable(3)" data-sort="asc">
+                                        <th>
                                             <div class="d-flex justify-content-between align-items-center">
                                                 Password
-                                                <span class="arrow">&#9650;</span>
+                                                <span class="arrow"></span>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                Date_Added
+                                                <span class="arrow"></span>
                                             </div>
                                         </th>
                                         <th scope="col">Action</th>
@@ -43,6 +49,7 @@
                                         <td><?php echo $user->fullname; ?></td>
                                         <td><?php echo $user->email; ?></td>
                                         <td><?php echo $user->password; ?></td>
+                                        <td><?php echo $user->date_added; ?></td>
                                         <td>
                                             <button class="btn btn-primary">Update</button>
                                         </td>

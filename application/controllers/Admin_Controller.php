@@ -8,6 +8,7 @@ class Admin_Controller extends CI_Controller {
 		parent::__construct();
 
 		$this->load->model('Users_model');
+		$this->load->model('Attendance_model');
 
 	}
 
@@ -41,8 +42,13 @@ class Admin_Controller extends CI_Controller {
 	}
 	
 	
+
+	
 	public function dashboard()
 	{
+		if (!$this->session->has_userdata('user_id')) {
+			redirect('admin'); // Redirect to login page if not logged in
+		}
 		if ($this->session->has_userdata('user_id') == TRUE) {
 		$data['website_info'] = $this->Users_model->fetch_all("website_info");	
 		$this->load->view('backend/include/header', $data);
@@ -122,7 +128,7 @@ public function create_admin() {
 	$this->form_validation->set_rules('fullname', 'Full Name', 'required');
 	$this->form_validation->set_rules('email', 'Email', 'required|valid_email');
 	$this->form_validation->set_rules('password', 'Password', 'required');
-	
+	$this->form_validation->set_rules('date_added', 'Date_Added', 'required');
 
 	if (!$this->session->has_userdata('user_id')) {
 		redirect('admin'); // Redirect to login page if not logged in
@@ -141,7 +147,7 @@ public function create_admin() {
 			'fullname' => $this->input->post('fullname'),
 			'email' => $this->input->post('email'),
 			'password' => $this->input->post('password'),
-			
+			'date_added' => $this->input->post('date_added'),
 		);
 
 		$result = $this->Users_model->insert_data($data);
@@ -189,7 +195,7 @@ public function add_client() {
 	$this->form_validation->set_rules('client_email', 'Email', 'required|valid_email');
 	$this->form_validation->set_rules('password', 'Password', 'required');
 	$this->form_validation->set_rules('client_status', 'Status', 'required');
-	$this->form_validation->set_rules('date_added', 'Date Added', 'required');
+	$this->form_validation->set_rules('date_added', 'Date_Added', 'required');
 	
 	if (!$this->session->has_userdata('user_id')) {
 		redirect('admin'); // Redirect to login page if not logged in
@@ -321,49 +327,6 @@ $employeeUsers = $this->Users_model->fetch_allemployee($id);
 
 
 
-public function purchase_table() {
-	$this->load->library('form_validation');
-	$this->form_validation->set_rules('date_purchased', 'Date Purchased', 'required');
-	$this->form_validation->set_rules('quantity_purchased', 'Quantity', 'required');
-	$this->form_validation->set_rules('total_cost', 'Cost', 'required');
-	
-	
-	if (!$this->session->has_userdata('user_id')) {
-		redirect('admin'); // Redirect to login page if not logged in
-	}
-
-	if ($this->form_validation->run() === FALSE) {
-		// Validation failed, redirect back to the form
-		$this->load->view('backend/include/header');
-		$this->load->view('backend/include/nav');
-		$this->load->view('backend/page/purchase_table');
-		$this->load->view('backend/include/footer');
-	} else {
-		// Validation succeeded, proceed with data insertion
-		$data = array(
-			'date_purchased' => $this->input->post('date_purchased'),
-			'quantity_purchased' => $this->input->post('quantity_purchased'),
-			'total_cost' => $this->input->post('total_cost'),
-				
-		);
-
-		$result = $this->Users_model->insert_datapurchase($data);
-
-		if ($result) {
-			// Data insertion was successful
-			$this->session->set_flashdata('success', 'Data inserted successfully.');
-		} else {
-			// Data insertion failed
-			$this->session->set_flashdata('error', 'Failed to insert data.');
-		}
-
-
-		// Redirect to a suitable page after the form submission
-		redirect('purchase_table');
-	}
-
-}
-
 
 
 public function add_product() {
@@ -439,50 +402,6 @@ $productUsers = $this->Users_model->fetch_allproduct($id);
 }
 
 
-
-// public function attendance() {
-// 	$this->load->library('form_validation');
-// 	$this->form_validation->set_rules('numOfDaysPresent', 'Days Present', 'required');
-// 	$this->form_validation->set_rules('numOfDaysAbsent', 'Days Absent', 'required');
-	
-	
-// 	if (!$this->session->has_userdata('user_id')) {
-// 		redirect('admin'); // Redirect to login page if not logged in
-// 	}
-
-// 	if ($this->form_validation->run() === FALSE) {
-// 		// Validation failed, redirect back to the form
-// 		$this->load->view('backend/include/header');
-// 		$this->load->view('backend/include/nav');
-// 		$this->load->view('backend/page/attendance');
-// 		$this->load->view('backend/include/footer');
-// 	} else {
-// 		// Validation succeeded, proceed with data insertion
-// 		$data = array(
-// 			'numOfDaysPresent' => $this->input->post('numOfDaysPresent'),
-// 			'numOfDaysAbsent' => $this->input->post('numOfDaysAbsent'),
-		
-				
-// 		);
-
-// 		$result = $this->Users_model->insert_dataattendance($data);
-
-// 		if ($result) {
-// 			// Data insertion was successful
-// 			$this->session->set_flashdata('success', 'Data inserted successfully.');
-// 		} else {
-// 			// Data insertion failed
-// 			$this->session->set_flashdata('error', 'Failed to insert data.');
-// 		}
-
-
-// 		// Redirect to a suitable page after the form submission
-// 		redirect('attendance_table');
-// 	}
-
-// }
-
-
 public function attendance() 
 {
 if (!$this->session->has_userdata('user_id')) {
@@ -519,6 +438,76 @@ $attendance_table = $this->Users_model->fetch_allattendance_table($id);
 	$this->load->view('backend/page/attendance_table', $data);
 	$this->load->view('backend/include/footer');
 }
+// public function attendance_table() {
+//     if (!$this->session->has_userdata('user_id')) {
+//         redirect('admin'); // Redirect to login page if not logged in
+//     }
+
+//     // Assuming you're fetching attendance table data for the current user (with ID 1)
+//     $id = 1;
+//     $attendance_table = $this->Attendance_model->fetch_allattendance_table($id);
+
+//     // Modify the data structure to include the 'daysPresent' property for each user
+//     foreach ($attendance_table as $user) {
+//         // Assuming you're fetching daysPresent from the database or setting it appropriately
+//         $attendanceData = $this->Attendance_model->getAttendanceData($user->employeeID);
+//         $user->daysPresent = $attendanceData['daysPresent']; // Set it to the fetched value
+//         $user->daysAbsent = $attendanceData['daysAbsent']; // Set it to the fetched value
+//     }
+
+//     // Pass the modified data to the view
+//     $data['attendance_table'] = $attendance_table;
+
+//     // Load the views
+//     $this->load->view('backend/include/header');
+//     $this->load->view('backend/include/nav');
+//     $this->load->view('backend/page/attendance_table', $data);
+//     $this->load->view('backend/include/footer');
+// }
+
+// Inside your controller (e.g., Admin)
+// public function present($employeeID) {
+//     // Assuming you have a model to handle attendance data, load it if not already loaded
+//     $this->load->model('Attendance_model');
+
+//     // Update the attendance for the specified employee
+//     $result = $this->Attendance_model->markPresent($employeeID);
+
+//     // Check if the update was successful
+//     if ($result) {
+//         // If successful, fetch the updated count of days present and absent
+//         $attendanceData = $this->Attendance_model->getAttendanceData($employeeID);
+//         // Return the updated data as JSON
+//         echo json_encode($attendanceData);
+//     } else {
+//         // If unsuccessful, return an error message
+//         echo json_encode(array('error' => 'Failed to mark attendance as present!'));
+//     }
+// }
+
+// Inside your controller (e.g., Admin)
+// public function absent($employeeID) {
+//     // Assuming you have a model to handle attendance data, load it if not already loaded
+//     $this->load->model('Attendance_model');
+
+//     // Update the attendance for the specified employee
+//     $result = $this->Attendance_model->markAbsent($employeeID);
+
+//     // Check if the update was successful
+//     if ($result) {
+//         // If successful, fetch the updated count of days present and absent
+//         $attendanceData = $this->Attendance_model->getAttendanceData($employeeID);
+//         // Return the updated data as JSON
+//         echo json_encode($attendanceData);
+//     } else {
+//         // If unsuccessful, return an error message
+//         echo json_encode(array('error' => 'Failed to mark attendance as absent!'));
+//     }
+// }
+
+
+
+
 
 // public function attendance_table() 
 // {
@@ -558,7 +547,6 @@ public function petOwner()
 if (!$this->session->has_userdata('user_id')) {
 		redirect('admin'); // Redirect to login page if not logged in
 	}
-
 	$id=1;
 // Fetch the data using the fetch_all() function
 $petOwner = $this->Users_model->fetch_allpetOwner($id);
@@ -571,15 +559,27 @@ $petOwner = $this->Users_model->fetch_allpetOwner($id);
 	$this->load->view('backend/include/footer');
 }
 
-
-
-
-
+public function purchasedprod_list() 
+{
+if (!$this->session->has_userdata('user_id')) {
+		redirect('admin'); // Redirect to login page if not logged in
+	}
+	$id=1;
+// Fetch the data using the fetch_all() function
+$purchasedprod_list = $this->Users_model->fetch_allpurchasedprod_list($id);
+ // Pass the fetched data to the view
+ $data['purchasedprod_list'] = $purchasedprod_list;
+	// Load the view to display the table with data
+	$this->load->view('backend/include/header');
+	$this->load->view('backend/include/nav');
+	$this->load->view('backend/page/purchasedprod_list', $data);
+	$this->load->view('backend/include/footer');
+}
 public function add_pet() {
 	$this->load->library('form_validation');
 	//	carga ang id number ni client-user pra ma trace kinsay tag iya sa pet
 	
-	// $this->form_validation->set_rules('client_id', 'Client', 'required');
+	$this->form_validation->set_rules('client_id', 'Client', 'required');
 	$this->form_validation->set_rules('pet_name', 'Name', 'required');
 	$this->form_validation->set_rules('pet_breed', 'Breed', 'required');
 	$this->form_validation->set_rules('pet_age', 'Age', 'required');
@@ -608,7 +608,8 @@ public function add_pet() {
 	} else {
 		// Validation succeeded, proceed with data insertion
 		$data = array(
-			// 'client_id' => $this->input->post('client_id'),
+			
+			'client_id' => $this->input->post('client_id'),
 			'pet_name' => $this->input->post('pet_name'),
 			'pet_breed' => $this->input->post('pet_breed'),
 			'pet_age' => $this->input->post('pet_age'),
@@ -629,11 +630,70 @@ public function add_pet() {
 		}
 
 		// Redirect to a suitable page after the form submission
-		redirect('pet_table');
+		redirect('add_pet');
 	}
 
 }
 
+public function purchase_form() {
+	$this->load->library('form_validation');
+	//	carga ang id number ni client-user pra ma trace kinsay tag iya sa pet
+	
+	$this->form_validation->set_rules('productID', 'Product', 'required');
+	$this->form_validation->set_rules('owner_id', 'Owner', 'required');
+	$this->form_validation->set_rules('employeeID', 'Employee', 'required');
+	$this->form_validation->set_rules('date_purchased', 'Date Purchased', 'required');
+	$this->form_validation->set_rules('quantity_purchased', 'Quantity', 'required');
+	$this->form_validation->set_rules('total_cost', 'Cost', 'required');
+	
+	
+
+	if (!$this->session->has_userdata('user_id')) {
+		redirect('admin'); // Redirect to login page if not logged in
+	}
+
+	if ($this->form_validation->run() === FALSE) {
+		// Validation failed, redirect back to the form
+		$productID = $this->input->get('productID');
+
+        // Use $user_id as needed in your controller logic
+
+        // Optionally, you can pass it to the view
+        $data['productID'] = $productID;
+        // $this->load->view('your_view', $data);
+		$this->load->view('backend/include/header');
+		$this->load->view('backend/include/nav');
+		$this->load->view('backend/page/purchase_form',$data);
+		$this->load->view('backend/include/footer');
+	} else {
+		// Validation succeeded, proceed with data insertion
+		$data = array(
+			
+			'productID' => $this->input->post('productID'),
+			'owner_id' => $this->input->post('owner_id'),
+			'employeeID' => $this->input->post('employeeID'),
+			'date_purchased' => $this->input->post('date_purchased'),
+			'quantity_purchased' => $this->input->post('quantity_purchased'),
+			'total_cost' => $this->input->post('total_cost'),
+			
+			
+		);
+
+		$result = $this->Users_model->insert_datapurchase($data);
+
+		if ($result) {
+			// Data insertion was successful
+			$this->session->set_flashdata('success', 'Data inserted successfully.');
+		} else {
+			// Data insertion failed
+			$this->session->set_flashdata('error', 'Failed to insert data.');
+		}
+
+		// Redirect to a suitable page after the form submission
+		redirect('purchase_table');
+	}
+
+}
 public function pet_table() 
 {
 if (!$this->session->has_userdata('user_id')) {
@@ -659,6 +719,33 @@ $petUsers = $this->Users_model->fetch_allpet($id);
 	$this->load->view('backend/page/pet_table', $data);
 	$this->load->view('backend/include/footer');
 }
+
+public function purchase_table() 
+{
+if (!$this->session->has_userdata('user_id')) {
+		redirect('admin'); // Redirect to login page if not logged in
+	}
+
+	$id=1;
+	
+$productID = $this->input->get('productID');
+
+// Use $user_id as needed in your controller logic
+
+// Optionally, you can pass it to the view
+$data['productID'] = $productID;
+
+ //Fetch the data using the fetch_all() function
+$purchaseUsers = $this->Users_model->fetch_allpurchase($id);
+ 
+ $data['purchaseUsers'] = $purchaseUsers;
+	
+	$this->load->view('backend/include/header');
+	$this->load->view('backend/include/nav');
+	$this->load->view('backend/page/purchase_table', $data);
+	$this->load->view('backend/include/footer');
+}
+
 
 
 
@@ -686,6 +773,7 @@ public function profile(){
 	$this->load->view('backend/include/header',$data);
 	$this->load->view('backend/include/nav');
 	$this->load->view('backend/page/profile',$data);
+	
 
 }
 

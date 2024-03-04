@@ -28,7 +28,7 @@
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-bar fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">Number of Registered Pets</p>
+                                <p class="mb-2">Total Pets Registered</p>
                                 <h6>
                                 <?php
                                      $connection = mysqli_connect("localhost","root","","vaccine");
@@ -67,8 +67,18 @@
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-pie fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">Total Products</p>
-                                <h6 class="mb-0">$1234</h6>
+                                <p class="mb-2">Total Employees</p>
+                                <h6>
+                                <?php
+                                     $connection = mysqli_connect("localhost","root","","vaccine");
+
+                                     $query = "SELECT employeeID FROM employee_table ORDER BY employeeID";
+                                     $query_run = mysqli_query($connection,$query);
+                                     $row = mysqli_num_rows($query_run);
+
+                                     echo '<h1>'.$row.'</h1>';
+                                     ?>
+                                </h6>
                             </div>
                         </div>
                     </div>

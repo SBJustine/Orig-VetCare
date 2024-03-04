@@ -24,8 +24,8 @@
                                     <td><?php echo $user->employeeID; ?></td>
                                     <td><?php echo $user->employeeName; ?></td>
                                     <td>
-                                        <a href="<?= base_url();?>index.php/attendance_table" class="btn btn-primary">Present</a>
-                                        <a href="<?= base_url();?>index.php/attendance_table" class="btn btn-primary">Absent</a>
+                                        <a href="<?= base_url();?>index.php/attendance_table?employeeID=<?php echo $user->employeeID;?>" class="btn btn-primary">Present</a>
+                                        <a href="<?= base_url();?>index.php/attendance_table?employeeID=<?php echo $user->employeeID;?>" class="btn btn-primary">Absent</a>
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>
@@ -36,4 +36,5 @@
             </div>
         </div>
     </div>
-</main>
+
+                                </main>

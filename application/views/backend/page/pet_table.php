@@ -9,8 +9,8 @@
                                 <table class="table text-start align-middle table-bordered table-hover mb-0">
                                     <thead>
                                         <tr>
+                                            <!-- <th scope="col">#</th> -->
                                             <th scope="col">#</th>
-                                            
                                             <th scope="col">Name</th>
                                             <th scope="col">Breed</th>
                                             <th scope="col">Age</th>
@@ -27,15 +27,14 @@
                                         <?php if($user->client_id==$client_id){
                                             ?>
                                         
-                                        <td><?php echo $user->pet_id; ?></td>
-                                      
+                                        <!-- <td><?php echo $user->pet_id; ?></td> -->
+                                        <td><?php echo $user->client_id; ?></td>
                                         <td><?php echo $user->pet_name; ?></td>
                                         <td><?php echo $user->pet_breed; ?></td>
                                         <td><?php echo $user->pet_age; ?></td>
                                         <td><?php echo $user->pet_gender; ?></td>
-                                        <td><?php echo $user->pet_species; ?>
-                                        <td><?php echo $user->pet_color; ?>
-                                        <td>
+                                        <td><?php echo $user->pet_species; ?></td>
+                                        <td><?php echo $user->pet_color; ?><td>
                                             
                                             <button class="btn btn-primary">Update</button>
                                         

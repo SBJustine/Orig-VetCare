@@ -73,7 +73,9 @@ $route['attendance'] = 'Admin_Controller/attendance';
 $route['salary_table'] = 'Admin_Controller/salary_table';
 $route['add_product'] = 'Admin_Controller/add_product';
 $route['product_table'] = 'Admin_Controller/product_table';
+$route['purchase_form'] = 'Admin_Controller/purchase_form';
 $route['purchase_table'] = 'Admin_Controller/purchase_table';
+$route['purchasedprod_list'] = 'Admin_Controller/purchasedprod_list';
 
 /*frontend*/
 $route['login_client'] = 'Frontend_Controller';

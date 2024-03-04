@@ -25,14 +25,14 @@
                                                 Fullname<span class="arrow">&#9650;</span>
                                             </div>
                                         </th>
-                                        <th scope="col" onclick="sortTableEmployee(2)">
+                                        <th>
                                             <div class="d-flex justify-content-between align-items-center">
-                                                Position<span class="arrow">&#9650;</span>
+                                                Position<span class="arrow"></span>
                                             </div>
                                         </th>
-                                        <th scope="col" onclick="sortTableEmployee(3)">
+                                        <th>
                                             <div class="d-flex justify-content-between align-items-center">
-                                                Address<span class="arrow">&#9650;</span>
+                                                Address<span class="arrow"></span>
                                             </div>
                                         </th>
                                         <th scope="col" onclick="sortTableEmployee(4)">
@@ -40,24 +40,24 @@
                                                 Age<span class="arrow">&#9650;</span>
                                             </div>
                                         </th>
-                                        <th scope="col" onclick="sortTableEmployee(5)">
+                                        <th>
                                             <div class="d-flex justify-content-between align-items-center">
-                                                Sex<span class="arrow">&#9650;</span>
+                                                Sex<span class="arrow"></span>
                                             </div>
                                         </th>
-                                        <th scope="col" onclick="sortTableEmployee(6)">
+                                        <th>
                                             <div class="d-flex justify-content-between align-items-center">
-                                                Phone Number<span class="arrow">&#9650;</span>
+                                                Phone Number<span class="arrow"></span>
                                             </div>
                                         </th>
-                                        <th scope="col" onclick="sortTableEmployee(7)">
+                                        <th>
                                             <div class="d-flex justify-content-between align-items-center">
-                                                Status<span class="arrow">&#9650;</span>
+                                                Status<span class="arrow"></span>
                                             </div>
                                         </th>
-                                        <th scope="col" onclick="sortTableEmployee(8)">
+                                        <th>
                                             <div class="d-flex justify-content-between align-items-center">
-                                                Date Added<span class="arrow">&#9650;</span>
+                                                Date Added<span class="arrow"></span>
                                             </div>
                                         </th>
                                         <th scope="col">Action</th>

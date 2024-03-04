@@ -16,40 +16,46 @@
                                 <thead>
                                     <tr>
                                         <th scope="col" onclick="sortTable(0)">
+                                        <div class="d-flex justify-content-between align-items-center">
                                             #
                                             <span class="arrow" data-column="0">&#9650;</span>
+                                            <div>
                                         </th>
                                         <th scope="col" onclick="sortTable(1)">
+                                        <div class="d-flex justify-content-between align-items-center">
                                             Fullname
                                             <span class="arrow" data-column="1">&#9650;</span>
+                                            <div>
                                         </th>
-                                        <th scope="col" onclick="sortTable(2)">
+                                        <th>
                                             Address
-                                            <span class="arrow" data-column="2">&#9650;</span>
+                                            <span class="arrow" data-column="2"></span>
                                         </th>
-                                        <th scope="col" onclick="sortTable(3)">
+                                        <th>
                                             Phone Number
-                                            <span class="arrow" data-column="3">&#9650;</span>
+                                            <span class="arrow" data-column="3"></span>
                                         </th>
-                                        <th scope="col" onclick="sortTable(4)">
+                                        <th>
                                             Sex
-                                            <span class="arrow" data-column="4">&#9650;</span>
+                                            <span class="arrow" data-column="4"></span>
                                         </th>
-                                        <th scope="col" onclick="sortTable(5)">
+                                        <th>
                                             Email
-                                            <span class="arrow" data-column="5">&#9650;</span>
+                                            <span class="arrow" data-column="5"></span>
                                         </th>
-                                        <th scope="col" onclick="sortTable(6)">
+                                        <th>
                                             Password
-                                            <span class="arrow" data-column="6">&#9650;</span>
+                                            <span class="arrow" data-column="6"></span>
                                         </th>
-                                        <th scope="col" onclick="sortTable(7)">
+                                        <th>
                                             Status
-                                            <span class="arrow" data-column="7">&#9650;</span>
+                                            <span class="arrow" data-column="7"></span>
                                         </th>
-                                        <th scope="col" onclick="sortTable(8)">
+                                        <th>
+                                        <div class="d-flex justify-content-between align-items-center">
                                             Date Added
-                                            <span class="arrow" data-column="8">&#9650;</span>
+                                            <span class="arrow" data-column="8"></span>
+                                            <div>
                                         </th>
                                         <th scope="col">Action</th>
                                     </tr>

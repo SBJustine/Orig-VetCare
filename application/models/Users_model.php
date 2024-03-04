@@ -64,6 +64,25 @@ class Users_model extends CI_Model {
 			return $query->result();
 
 		}
+		function fetch_allpurchasedprod_list($id){
+
+			$query = $this->db->query("SELECT * FROM `product_table`   " );
+			return $query->result();
+
+		}
+		function fetch_allpurchase($id){
+
+			$query = $this->db->query("SELECT * FROM `purchase_table`" );
+			return $query->result();
+
+		}
+		// function fetch_allpurchaseform($id){
+
+		// 	$query = $this->db->query("SELECT * FROM `purchase_table`" );
+		// 	return $query->result();
+
+		// }
+
 		function fetch_allreports($id){
 
 			$query = $this->db->query("SELECT * FROM `reports`   " );
@@ -91,12 +110,6 @@ class Users_model extends CI_Model {
 
 		}
 
-		function fetch_allpurchase($id){
-
-			$query = $this->db->query("SELECT * FROM `purchase_table`   " );
-			return $query->result();
-
-		}
 
 		function fetch_allattendance($id){
 
@@ -111,6 +124,7 @@ class Users_model extends CI_Model {
 			return $query->result();
 
 		}
+		
 		
 		function fetch_allowner_pet($id){
 
@@ -192,6 +206,17 @@ class Users_model extends CI_Model {
 	        }
 		}
 
+		function insert_datapurchase($data)
+		{
+			$this->db->insert('purchase_table', $data);
+			$afftectedRows = $this->db->affected_rows();
+	        if ($afftectedRows > 0) {
+	            return TRUE;
+	        } else {
+	            return FALSE;
+	        }
+		}
+
 		function insert_dataemployee($data)
 		{
 			$this->db->insert('employee_table', $data);
@@ -214,16 +239,6 @@ class Users_model extends CI_Model {
 	        }
 		}
 
-		function insert_datapurchase($data)
-		{
-			$this->db->insert('purchase_table', $data);
-			$afftectedRows = $this->db->affected_rows();
-	        if ($afftectedRows > 0) {
-	            return TRUE;
-	        } else {
-	            return FALSE;
-	        }
-		}
 
 		// function insert_dataattendance($data)
 		// {

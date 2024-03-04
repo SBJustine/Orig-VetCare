@@ -32,7 +32,9 @@
     <!-- Template Stylesheet -->
     <link href="<?= base_url();?>assets/css/style.css" rel="stylesheet">
 
-    
+
+        <link rel="stylesheet" href="<?= base_url();?>assets/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="<?= base_url();?>assets/css/responsive.bootstrap4.min.css">
     
    
 </head>
@@ -146,3 +148,6 @@
                 </div>
             </nav>
             <!-- Navbar End -->
+            
+
+</body>

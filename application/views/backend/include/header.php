@@ -64,9 +64,9 @@
                 <a href="#" class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars" style="color:maroon" ></i>
                 </a>
-                 <form class="d-none d-md-flex ms-4">
+                 <!-- <form class="d-none d-md-flex ms-4">
                     <input class="form-control border-0" type="search" placeholder="Search">
-                </form>
+                </form> -->
 
                 <div class="navbar-nav align-items-center ms-auto">
                     <!-- <div class="nav-item dropdown">

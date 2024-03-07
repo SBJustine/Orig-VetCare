@@ -12,14 +12,13 @@
                     <div class="bg-light rounded h-100 p-4">
                         <h6 class="mb-4">List of Products</h6>
                         <div class="table-responsive">
-                        <div class="d-flex justify-content-end mb-3">
-                        <!-- <div class="form-group" id="productTable" >
-                            <input type="text" class="form-control" id="productTable" placeholder="Search...">
-                        </div>
-                        <button type="button" class="btn btn-primary" onclick="filterTable()" id="productTable">Search</button> -->
-                    </form>
-                        </div>
-                            <table class="table text-start align-middle table-bordered table-hover mb-0" id="productTable" >
+                            <!-- Search Bar -->
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="searchProductInput" placeholder="Search...">
+                                </div>
+                            </div>
+                            <table class="table text-start align-middle table-bordered table-hover mb-0" id="productTable">
                                 <thead>
                                     <tr>
                                         <th scope="col" onclick="sortTable('productTable', 0)">
@@ -132,11 +131,31 @@
                 arrow.innerHTML = "&#9660;";
             }
         }
+
+        // Search Function
+        document.getElementById("searchProductInput").addEventListener("input", function() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchProductInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("productTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1]; // Change index to the column you want to search
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        });
     </script>
 
-<script>
-    $(document).ready(function () {
-      $('#productTable').DataTable();
-    });
-  </script>
+    <script>
+        $(document).ready(function () {
+            $('#productTable').DataTable();
+        });
+    </script>
 </main>

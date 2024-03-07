@@ -62,7 +62,7 @@
                                 </style>
                              <input type="hidden" name="client_id" class="form-control" id=""
                                     placeholder="" value="<?= $client_id ?>">
-                                <input type="submit" class="btn btn-maroon custom-button" value="Create">
+                                <input type="submit" class="btn btn-maroon custom-button" value="ADD">
                             </div>
                             </form>
                         </div>

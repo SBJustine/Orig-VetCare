@@ -7,49 +7,15 @@
         <!-- Slider Single -->
         <div class="single-slider d-flex align-items-center slider-height">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-7 col-lg-8 col-md-10 ">
-                        <div class="hero__caption" >
-                            <span data-animation="fadeInUp" data-delay=".3s">We help monitor your pet</span>
-                            <h1 data-animation="fadeInUp" data-delay=".3s">Welcome to your account!</h1>
-                            <!-- <p data-animation="fadeInUp" data-delay=".6s">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna sectetur adipisci.</p> -->
-                            <a href="<?= base_url();?>index.php/contact" class="hero-btn" data-animation="fadeInLeft" data-delay=".3s">Appointments<i class="fa fa-arrow-right me-lg-2"></i> </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-            
-        
-                </div>
-            </div>
-            <!-- Chart End -->
-
-             
-                <!-- Sale & Revenue Start 
-<div class="container-fluid pt-4 px-4" style= "margin-top:100px; margin-left:250px">
+                <!-- Sale & Revenue Start -->
+            <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
                     <div class="col-sm-6 col-xl-3">
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-line fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">Number of Clients</p>
-                                <h6>
-                                     <?php
-                                     $connection = mysqli_connect("localhost","root","","vaccine");
-
-                                     $query = "SELECT client_id FROM client_users ORDER BY client_id";
-                                     $query_run = mysqli_query($connection,$query);
-                                     $row = mysqli_num_rows($query_run);
-
-                                     echo '<h1>'.$row.'</h1>';
-                                     ?>
-                                    
-                                    </h6>
+                                <p class="mb-2">Today Sale</p>
+                                <h6 class="mb-0">$1234</h6>
                             </div>
                         </div>
                     </div>
@@ -57,18 +23,8 @@
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-bar fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">Number of Registered Pets</p>
-                                <h6>
-                                <?php
-                                     $connection = mysqli_connect("localhost","root","","vaccine");
-
-                                     $query = "SELECT pet_id FROM pet_users ORDER BY pet_id";
-                                     $query_run = mysqli_query($connection,$query);
-                                     $row = mysqli_num_rows($query_run);
-
-                                     echo '<h1>'.$row.'</h1>';
-                                     ?>
-                                </h6>
+                                <p class="mb-2">Total Sale</p>
+                                <h6 class="mb-0">$1234</h6>
                             </div>
                         </div>
                     </div>
@@ -76,24 +32,107 @@
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-area fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">Total Appointments</p>
-                                <h6>
-                                <?php
-                                     $connection = mysqli_connect("localhost","root","","vaccine");
-
-                                     $query = "SELECT appointmentId FROM appointments ORDER BY appointmentId";
-                                     $query_run = mysqli_query($connection,$query);
-                                     $row = mysqli_num_rows($query_run);
-
-                                     echo '<h1>'.$row.'</h1>';
-                                     ?>
-
-                                </h6>
+                                <p class="mb-2">Today Revenue</p>
+                                <h6 class="mb-0">$1234</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-chart-pie fa-3x text-primary"></i>
+                            <div class="ms-3">
+                                <p class="mb-2">Total Revenue</p>
+                                <h6 class="mb-0">$1234</h6>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Sale & Revenue End -->
+<!-- Recent Sales Start -->
+<div class="container-fluid pt-4 px-4">
+                <div class="bg-light text-center rounded p-4">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h6 class="mb-0">Recent Salse</h6>
+                        <a href="">Show All</a>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table text-start align-middle table-bordered table-hover mb-0">
+                            <thead>
+                                <tr class="text-dark">
+                                    <th scope="col"><input class="form-check-input" type="checkbox"></th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Invoice</th>
+                                    <th scope="col">Customer</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td>01 Jan 2045</td>
+                                    <td>INV-0123</td>
+                                    <td>Jhon Doe</td>
+                                    <td>$123</td>
+                                    <td>Paid</td>
+                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td>01 Jan 2045</td>
+                                    <td>INV-0123</td>
+                                    <td>Jhon Doe</td>
+                                    <td>$123</td>
+                                    <td>Paid</td>
+                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td>01 Jan 2045</td>
+                                    <td>INV-0123</td>
+                                    <td>Jhon Doe</td>
+                                    <td>$123</td>
+                                    <td>Paid</td>
+                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td>01 Jan 2045</td>
+                                    <td>INV-0123</td>
+                                    <td>Jhon Doe</td>
+                                    <td>$123</td>
+                                    <td>Paid</td>
+                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td>01 Jan 2045</td>
+                                    <td>INV-0123</td>
+                                    <td>Jhon Doe</td>
+                                    <td>$123</td>
+                                    <td>Paid</td>
+                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Recent Sales End -->
 
-            Sale & Revenue End -->
-    
+
+            
+        
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+
+            
+        
+               
+            

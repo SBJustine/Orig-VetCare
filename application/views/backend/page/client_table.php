@@ -10,7 +10,13 @@
             <div class="row">
                 <div class="col-12">
                     <div class="bg-light rounded h-100 p-4">
-                        <h6 class="mb-4">Registered Client</h6>
+                        <h6 class="mb-4">REGISTERED CLIENT</h6>
+                                    <!-- Search Bar -->
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="searchClientInput" placeholder="Search...">
+                                </div>
+                            </div>
                         <div class="table-responsive">
                             <table class="table text-start align-middle table-bordered table-hover mb-0" id="dtBasicExample">
                                 <thead>
@@ -146,5 +152,25 @@
                 arrow.innerHTML = "&#9660;";
             }
         }
+
+        // Search Function
+        document.getElementById("searchClientInput").addEventListener("input", function() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchClientInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("dtBasicExample");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1]; // Change index to the column you want to search
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        });
     </script>
 </main>

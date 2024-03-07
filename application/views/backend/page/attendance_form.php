@@ -4,7 +4,7 @@
                     <div class="col-sm-12 col-xl-6">                  
                         <div class="bg-light rounded h-100 p-4">
                             <!-- <h6 class="mb-4">Purchase Product</h6> -->
-                            <form action="<?php echo base_url() ?>index.php/purchase_form" method="post">
+                            <form action="<?php echo base_url() ?>index.php/attendance_form" method="post">
                             <input type="text" name="productID" class="form-control" id=""
                                     placeholder="" value="<?= $productID ?>">
                             <!-- <div class="form-floating mb-3">

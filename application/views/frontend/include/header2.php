@@ -45,6 +45,8 @@
 
     <!-- Template Stylesheet -->
     <link href="<?= base_url();?>assets/css/style.css" rel="stylesheet">
+
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     
 
         <!-- this is for the sending email -->

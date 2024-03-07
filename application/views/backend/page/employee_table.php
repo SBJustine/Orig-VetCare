@@ -7,16 +7,23 @@
     
     <div class="container-fluid pt-4 px-4">
         <div class="bg-light rounded-top p-4">
+
             <div class="row">
                 <div class="col-12">
                     <div class="bg-light rounded h-100 p-4">
-                        <h6 class="mb-4">Registered Employee</h6>
+                        <h6 class="mb-4">REGISTERED EMPLOYEE</h6>
+                                    <!-- Search Bar -->
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="searchEmployeeInput" placeholder="Search...">
+                                </div>
+                            </div>
                         <div class="table-responsive">
                             <table class="table text-start align-middle table-bordered table-hover mb-0" id="employeeTable">
                                 <thead>
                                     <tr>
                                         <th scope="col" onclick="sortTableEmployee(0)">
-                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex justify-content-between align-items-center">
                                                 #<span class="arrow">&#9650;</span>
                                             </div>
                                         </th>
@@ -90,7 +97,6 @@
     </div>
 </main>
 
-
 <script>
     function sortTableEmployee(columnIndex) {
         var table, rows, switching, i, x, y, shouldSwitch;
@@ -149,4 +155,24 @@
             arrow.innerHTML = "&#9660;"; // Down arrow
         }
     }
+
+    // Search Function
+    document.getElementById("searchEmployeeInput").addEventListener("input", function() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("searchEmployeeInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("employeeTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1]; // Change index to the column you want to search
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    });
 </script>

@@ -9,6 +9,7 @@ class Admin_Controller extends CI_Controller {
 
 		$this->load->model('Users_model');
 		$this->load->model('Attendance_model');
+		$this->load->library('session');
 
 	}
 
@@ -640,8 +641,8 @@ public function purchase_form() {
 	//	carga ang id number ni client-user pra ma trace kinsay tag iya sa pet
 	
 	$this->form_validation->set_rules('productID', 'Product', 'required');
-	$this->form_validation->set_rules('owner_id', 'Owner', 'required');
-	$this->form_validation->set_rules('employeeID', 'Employee', 'required');
+	// $this->form_validation->set_rules('owner_id', 'Owner', 'required');
+	// $this->form_validation->set_rules('employeeID', 'Employee', 'required');
 	$this->form_validation->set_rules('date_purchased', 'Date Purchased', 'required');
 	$this->form_validation->set_rules('quantity_purchased', 'Quantity', 'required');
 	$this->form_validation->set_rules('total_cost', 'Cost', 'required');
@@ -670,8 +671,8 @@ public function purchase_form() {
 		$data = array(
 			
 			'productID' => $this->input->post('productID'),
-			'owner_id' => $this->input->post('owner_id'),
-			'employeeID' => $this->input->post('employeeID'),
+			// 'owner_id' => $this->input->post('owner_id'),
+			// 'employeeID' => $this->input->post('employeeID'),
 			'date_purchased' => $this->input->post('date_purchased'),
 			'quantity_purchased' => $this->input->post('quantity_purchased'),
 			'total_cost' => $this->input->post('total_cost'),

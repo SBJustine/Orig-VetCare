@@ -7,18 +7,6 @@
                             <form action="<?php echo base_url() ?>index.php/attendance_form" method="post">
                             <input type="text" name="productID" class="form-control" id=""
                                     placeholder="" value="<?= $productID ?>">
-                            <!-- <div class="form-floating mb-3">
-                                <input type="" name="productName" class="form-control" id=""
-                                    placeholder="">
-                                <label for="floatingInput">Product Name</label>
-                            </div> -->
-                            
-
-                            <!-- <div class="form-floating mb-3">
-                                <input type="" name="employeeID" class="form-control" id="employeeName"
-                                    placeholder="">
-                                <label for="floatingInput">Employee Name</label>
-                            </div> -->
 
                             <div class="form-floating mb-3">
                                 <input type="" name="total_cost" class="form-control" id="total_cost"

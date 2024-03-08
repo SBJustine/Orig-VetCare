@@ -403,6 +403,8 @@ $productUsers = $this->Users_model->fetch_allproduct($id);
 }
 
 
+
+
 public function attendance() 
 {
 if (!$this->session->has_userdata('user_id')) {
@@ -510,36 +512,6 @@ $attendance_table = $this->Users_model->fetch_allattendance_table($id);
 
 
 
-// public function attendance_table() 
-// {
-// if (!$this->session->has_userdata('user_id')) {
-// 		redirect('admin'); // Redirect to login page if not logged in
-// 	}
-
-// 	$id=1;
-	
-// $employeeID = $this->input->get('employeeID');
-
-// // Use $user_id as needed in your controller logic
-
-// // Optionally, you can pass it to the view
-// $data['employeeID'] = $employeeID;
-
-//  //Fetch the data using the fetch_all() function
-// $employeeID = $this->Users_model->fetch_allattendance($id);
- 
-//  $data['attendanceUsers'] = $attendanceUsers;
-	
-// 	$this->load->view('backend/include/header');
-// 	$this->load->view('backend/include/nav');
-// 	$this->load->view('backend/page/attendance_table', $data);
-// 	$this->load->view('backend/include/footer');
-// }
-
-
-
-
-
 
 
 
@@ -560,22 +532,7 @@ $petOwner = $this->Users_model->fetch_allpetOwner($id);
 	$this->load->view('backend/include/footer');
 }
 
-public function purchasedprod_list() 
-{
-if (!$this->session->has_userdata('user_id')) {
-		redirect('admin'); // Redirect to login page if not logged in
-	}
-	$id=1;
-// Fetch the data using the fetch_all() function
-$purchasedprod_list = $this->Users_model->fetch_allpurchasedprod_list($id);
- // Pass the fetched data to the view
- $data['purchasedprod_list'] = $purchasedprod_list;
-	// Load the view to display the table with data
-	$this->load->view('backend/include/header');
-	$this->load->view('backend/include/nav');
-	$this->load->view('backend/page/purchasedprod_list', $data);
-	$this->load->view('backend/include/footer');
-}
+
 public function add_pet() {
 	$this->load->library('form_validation');
 	//	carga ang id number ni client-user pra ma trace kinsay tag iya sa pet
@@ -634,6 +591,49 @@ public function add_pet() {
 		redirect('add_pet');
 	}
 
+}
+
+public function pet_table() 
+{
+if (!$this->session->has_userdata('user_id')) {
+		redirect('admin'); // Redirect to login page if not logged in
+	}
+
+	$id=1;
+	
+$client_id = $this->input->get('client_id');
+
+// Use $user_id as needed in your controller logic
+
+// Optionally, you can pass it to the view
+$data['client_id'] = $client_id;
+
+ //Fetch the data using the fetch_all() function
+$petUsers = $this->Users_model->fetch_allpet($id);
+ 
+ $data['petUsers'] = $petUsers;
+	
+	$this->load->view('backend/include/header');
+	$this->load->view('backend/include/nav');
+	$this->load->view('backend/page/pet_table', $data);
+	$this->load->view('backend/include/footer');
+}
+
+public function purchasedprod_list() 
+{
+if (!$this->session->has_userdata('user_id')) {
+		redirect('admin'); // Redirect to login page if not logged in
+	}
+	$id=1;
+// Fetch the data using the fetch_all() function
+$purchasedprod_list = $this->Users_model->fetch_allpurchasedprod_list($id);
+ // Pass the fetched data to the view
+ $data['purchasedprod_list'] = $purchasedprod_list;
+	// Load the view to display the table with data
+	$this->load->view('backend/include/header');
+	$this->load->view('backend/include/nav');
+	$this->load->view('backend/page/purchasedprod_list', $data);
+	$this->load->view('backend/include/footer');
 }
 
 public function purchase_form() {
@@ -695,31 +695,6 @@ public function purchase_form() {
 	}
 
 }
-public function pet_table() 
-{
-if (!$this->session->has_userdata('user_id')) {
-		redirect('admin'); // Redirect to login page if not logged in
-	}
-
-	$id=1;
-	
-$client_id = $this->input->get('client_id');
-
-// Use $user_id as needed in your controller logic
-
-// Optionally, you can pass it to the view
-$data['client_id'] = $client_id;
-
- //Fetch the data using the fetch_all() function
-$petUsers = $this->Users_model->fetch_allpet($id);
- 
- $data['petUsers'] = $petUsers;
-	
-	$this->load->view('backend/include/header');
-	$this->load->view('backend/include/nav');
-	$this->load->view('backend/page/pet_table', $data);
-	$this->load->view('backend/include/footer');
-}
 
 public function purchase_table() 
 {
@@ -746,9 +721,6 @@ $purchaseUsers = $this->Users_model->fetch_allpurchase($id);
 	$this->load->view('backend/page/purchase_table', $data);
 	$this->load->view('backend/include/footer');
 }
-
-
-
 
 public function reports() 
 {

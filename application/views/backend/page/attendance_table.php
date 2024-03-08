@@ -10,12 +10,15 @@
             <div class="row">
                 <div class="col-12">
                     <div class="bg-light rounded h-100 p-4">
-                        <h6 class="mb-4">Attendance Table</h6>
+                        <h6 class="mb-4">ATTENDANCE TABLE</h6>
                         <!-- Search Bar -->
                         <div class="row mb-3">
                             <div class="col-md-3">
                                 <input type="text" class="form-control" id="searchAttendanceInput" placeholder="Search...">
                             </div>
+                            <!-- <div class="col-md-6" style="margin-left:200px">
+                                <a href="<?= base_url();?>index.php/attendance_table" class="btn btn-primary">List of Attendance</a>
+                            </div> -->
                         </div>
                         <div class="table-responsive">
                             <table class="table text-start align-middle table-bordered table-hover mb-0">

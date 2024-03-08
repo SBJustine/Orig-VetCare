@@ -16,9 +16,7 @@
                             <div class="col-md-3">
                                 <input type="text" class="form-control" id="searchAttendanceInput" placeholder="Search...">
                             </div>
-                            <!-- <div class="col-md-6" style="margin-left:200px">
-                                <a href="<?= base_url();?>index.php/attendance_table" class="btn btn-primary">List of Attendance</a>
-                            </div> -->
+                            
                         </div>
                         <div class="table-responsive">
                             <table class="table text-start align-middle table-bordered table-hover mb-0">
@@ -35,8 +33,8 @@
                                         <tr class="<?php echo $key % 2 === 0 ? 'bg-light' : 'bg-white'; ?>">
                                             <td><?php echo $user->employeeID; ?></td>
                                             <td><?php echo $user->employeeName; ?></td>
-                                            <td><?php /* Display number of days present */ ?></td>
-                                            <td><?php /* Display number of days absent */ ?></td>
+                                            <td><?php echo $user->numOfDaysPresent; ?></td>
+                                            <td><?php echo $user->numOfDaysAbsent; ?></td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
@@ -69,4 +67,31 @@
             }
         });
     </script>
+
+<script>
+    $(document).ready(function() {
+        // Retrieve parameters from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const employeeID = urlParams.get('employeeID');
+        const status = urlParams.get('status');
+
+        if (employeeID && status) {
+            // Find the corresponding row in the table and update the attendance status
+            const row = $(`tr[data-employeeID="${employeeID}"]`);
+            if (row.length > 0) {
+                if (status === 'present') {
+                    // Update the number of days present
+                    const presentDays = parseInt(row.find('.presentDays').text()) + 1;
+                    row.find('.presentDays').text(presentDays);
+                } else if (status === 'absent') {
+                    // Update the number of days absent
+                    const absentDays = parseInt(row.find('.absentDays').text()) + 1;
+                    row.find('.absentDays').text(absentDays);
+                }
+            }
+        }
+    });
+</script>
+
+
 </main>

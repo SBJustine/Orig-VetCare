@@ -240,16 +240,16 @@ class Users_model extends CI_Model {
 		}
 
 
-		// function insert_dataattendance($data)
-		// {
-		// 	$this->db->insert('attendance_table', $data);
-		// 	$afftectedRows = $this->db->affected_rows();
-	    //     if ($afftectedRows > 0) {
-	    //         return TRUE;
-	    //     } else {
-	    //         return FALSE;
-	    //     }
-		// }
+		function insert_dataattendance_table($data)
+		{
+			$this->db->insert('attendance_table', $data);
+			$afftectedRows = $this->db->affected_rows();
+	        if ($afftectedRows > 0) {
+	            return TRUE;
+	        } else {
+	            return FALSE;
+	        }
+		}
 
 		function set_update($table,$id,$data)
 		{

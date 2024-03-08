@@ -10,12 +10,27 @@
                                 <input type="text" class="form-control" id="searchProductInput" placeholder="Search...">
                             </div>
                         </div>
-                        <table class="table text-start align-middle table-bordered table-hover mb-0">
+                        <table class="table text-start align-middle table-bordered table-hover mb-0" id="productTable">
                             <thead>
                                 <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Product Name</th>
-                                    <th scope="col">Action</th>
+                                    <th scope="col" onclick="sortTable(0)">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            # 
+                                            <span class="arrow">&#9650;</span>
+                                        </div>
+                                    </th>
+                                    <th scope="col" onclick="sortTable(1)">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            Product Name
+                                            <span class="arrow">&#9650;</span>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            Action 
+                                            <span class="arrow"></span>
+                                        </div>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -38,12 +53,56 @@
     </div>
 
     <script>
+        function sortTable(columnIndex) {
+            var table, rows, switching, i, x, y, shouldSwitch;
+            table = document.getElementById("productTable"); // Get the table by ID
+            switching = true;
+            var sortOrder = table.rows[0].getElementsByTagName("th")[columnIndex].getAttribute("data-sort");
+            
+            while (switching) {
+                switching = false;
+                rows = table.rows;
+                for (i = 1; i < (rows.length - 1); i++) {
+                    shouldSwitch = false;
+                    x = rows[i].getElementsByTagName("td")[columnIndex];
+                    y = rows[i + 1].getElementsByTagName("td")[columnIndex];
+                    
+                    if (sortOrder === "asc") {
+                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else {
+                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                }
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                }
+            }
+            // Toggle sorting order
+            var newSortOrder = sortOrder === "asc" ? "desc" : "asc";
+            table.rows[0].getElementsByTagName("th")[columnIndex].setAttribute("data-sort", newSortOrder);
+            
+            // Update arrow icon
+            var arrow = table.rows[0].getElementsByTagName("th")[columnIndex].querySelector(".arrow");
+            if (newSortOrder === "asc") {
+                arrow.innerHTML = "&#9650;"; // Up arrow
+            } else {
+                arrow.innerHTML = "&#9660;"; // Down arrow
+            }
+        }
+
         // Search Function
         document.getElementById("searchProductInput").addEventListener("input", function() {
             var input, filter, table, tr, td, i, txtValue;
             input = document.getElementById("searchProductInput");
             filter = input.value.toUpperCase();
-            table = document.querySelector(".table");
+            table = document.getElementById("productTable"); // Get the table by ID
             tr = table.getElementsByTagName("tr");
             for (i = 0; i < tr.length; i++) {
                 td = tr[i].getElementsByTagName("td")[1]; // Change index to the column you want to search

@@ -112,7 +112,7 @@
                                             <li><a  href="<?= base_url();?>index.php/services">Services</a></li>
                                             <li><a href="<?= base_url();?>index.php/about">About</a></li>                                         
                                             <li><a href="<?= base_url();?>index.php/contact">Contact</a></li>
-                                            
+                                            <li><a href="<?= base_url();?>index.php/create_appointment">Make an appointment</a></li>
                                         </ul>
                                     </nav>
                                 </div>

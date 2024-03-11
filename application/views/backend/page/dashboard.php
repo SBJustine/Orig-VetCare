@@ -153,7 +153,7 @@
                                                 <td><?php echo $user->quantity_purchased; ?></td>
                                                 <td><?php echo $user->date_purchased; ?></td>
                                                 <td>
-                                                    <input type="hidden" name="productID" class="form-control" value="<?= $productID ?>">
+                                                    <!-- <input type="hidden" name="productID" class="form-control" value="<?= $productID ?>"> -->
                                                     <button class="btn btn-primary">Update</button>
                                                 </td>
                                             <!-- <?php endif; ?> -->

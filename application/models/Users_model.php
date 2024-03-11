@@ -82,6 +82,12 @@ class Users_model extends CI_Model {
 		// 	return $query->result();
 
 		// }
+		// function fetch_alldashboard($id){
+
+		// 	$query = $this->db->query("SELECT * FROM `purchased_table`   " );
+		// 	return $query->result();
+
+		// }
 
 		function fetch_allreports($id){
 
@@ -250,6 +256,18 @@ class Users_model extends CI_Model {
 	            return FALSE;
 	        }
 		}
+
+		// public function updateAttendance($employeeID, $status) {
+		// 	// Update the attendance table based on the status
+		// 	if ($status === 'present') {
+		// 		// Increment the number of days present for the employee
+		// 		// Perform necessary database update operation
+		// 	} elseif ($status === 'absent') {
+		// 		// Increment the number of days absent for the employee
+		// 		// Perform necessary database update operation
+		// 	}
+		// }
+		
 
 		function set_update($table,$id,$data)
 		{

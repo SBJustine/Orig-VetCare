@@ -47,8 +47,9 @@
                                     <td><?php echo $user->employeeName; ?></td>
                                     <!-- Inside the loop -->
                                     <td>
-                                        <a href="<?= base_url();?>index.php/attendance_table?employeeID=<?php echo $user->employeeID;?>&status=present" class="btn btn-primary">Present</a>
-                                        <a href="<?= base_url();?>index.php/attendance_table?employeeID=<?php echo $user->employeeID;?>&status=absent" class="btn btn-primary">Absent</a>
+                                    <a href="<?= base_url();?>index.php/attendance_table?employeeID=<?= $user->employeeID ?>&status=present" class="btn btn-primary">Present</a>
+<a href="<?= base_url();?>index.php/attendance_table?employeeID=<?= $user->employeeID ?>&status=absent" class="btn btn-primary">Absent</a>
+
                                     </td>
 
                                 </tr>

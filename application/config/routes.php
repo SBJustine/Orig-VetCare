@@ -77,6 +77,7 @@ $route['purchase_form'] = 'Admin_Controller/purchase_form';
 $route['purchase_table'] = 'Admin_Controller/purchase_table';
 $route['purchasedprod_list'] = 'Admin_Controller/purchasedprod_list';
 $route['attendance_form'] = 'Admin_Controller/attendance_form';
+$route['update_admin'] = 'Admin_Controller/update_admin';
 
 /*frontend*/
 $route['login_client'] = 'Frontend_Controller';
@@ -95,11 +96,11 @@ $route['prodPurchased'] = 'Frontend_Controller/prodPurchased';
 $route['myAccount1'] = 'Frontend_Controller/myAccount1';
 $route['welcomeAcc'] = 'Frontend_Controller/welcomeAcc';
 $route['login_admin'] = 'Frontend_Controller/login_admin';
-$route['pet_grooming'] = 'Admin_Controller/pet_grooming';
-$route['pet_treatment'] = 'Admin_Controller/pet_treatment';
-$route['pet_vaccine'] = 'Admin_Controller/pet_vaccine';
-$route['owner_pet'] = 'Admin_Controller/owner_pet';
-
+$route['pet_grooming'] = 'Frontend_Controller/pet_grooming';
+$route['pet_treatment'] = 'Frontend_Controller/pet_treatment';
+$route['pet_vaccine'] = 'Frontend_Controller/pet_vaccine';
+$route['owner_pet'] = 'Frontend_Controller/owner_pet';
+$route['create_appointment'] = 'Frontend_Controller/create_appointment';
 
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';

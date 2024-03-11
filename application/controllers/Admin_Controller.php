@@ -52,6 +52,7 @@ class Admin_Controller extends CI_Controller {
 		}
 		if ($this->session->has_userdata('user_id') == TRUE) {
 		$data['website_info'] = $this->Users_model->fetch_all("website_info");
+		$id=1;
 		
 		//Fetch the data using the fetch_all() function
 $purchaseUsers = $this->Users_model->fetch_allpurchase($id);
@@ -430,50 +431,50 @@ $attendance = $this->Users_model->fetch_allattendance($id);
 }
 
 
-// public function attendance_table() 
-// {
-// if (!$this->session->has_userdata('user_id')) {
-// 		redirect('admin'); // Redirect to login page if not logged in
-// 	}
+public function attendance_table() 
+{
+if (!$this->session->has_userdata('user_id')) {
+		redirect('admin'); // Redirect to login page if not logged in
+	}
 
-// 	$id=1;
-// // Fetch the data using the fetch_all() function
-// $attendance_table = $this->Users_model->fetch_allattendance_table($id);
-//  // Pass the fetched data to the view
-//  $data['attendance_table'] = $attendance_table;
-// 	// Load the view to display the table with data
-// 	$this->load->view('backend/include/header');
-// 	$this->load->view('backend/include/nav');
-// 	$this->load->view('backend/page/attendance_table', $data);
-// 	$this->load->view('backend/include/footer');
-// }
-public function attendance_table() {
-    // Check if the user is logged in
-    if (!$this->session->has_userdata('user_id')) {
-        redirect('admin'); // Redirect to login page if not logged in
-    }
-
-    // Assuming you're fetching attendance table data for the current user (with ID 1)
-    $id = 1;
-    $attendance_table = $this->Attendance_model->fetch_allattendance_table($id);
-
-    // Modify the data structure to include the 'daysPresent' and 'daysAbsent' properties for each user
-    foreach ($attendance_table as $user) {
-        // Assuming you're fetching daysPresent and daysAbsent from the database or setting it appropriately
-        $attendanceData = $this->Attendance_model->getAttendanceData($user->employeeID);
-        $user->daysPresent = $attendanceData['daysPresent']; // Set it to the fetched value
-        $user->daysAbsent = $attendanceData['daysAbsent']; // Set it to the fetched value
-    }
-
-    // Pass the modified data to the view
-    $data['attendance_table'] = $attendance_table;
-
-    // Load the views
-    $this->load->view('backend/include/header');
-    $this->load->view('backend/include/nav');
-    $this->load->view('backend/page/attendance_table', $data);
-    $this->load->view('backend/include/footer');
+	$id=1;
+// Fetch the data using the fetch_all() function
+$attendance_table = $this->Users_model->fetch_allattendance_table($id);
+ // Pass the fetched data to the view
+ $data['attendance_table'] = $attendance_table;
+	// Load the view to display the table with data
+	$this->load->view('backend/include/header');
+	$this->load->view('backend/include/nav');
+	$this->load->view('backend/page/attendance_table', $data);
+	$this->load->view('backend/include/footer');
 }
+// public function attendance_table() {
+//     // Check if the user is logged in
+//     if (!$this->session->has_userdata('user_id')) {
+//         redirect('admin'); // Redirect to login page if not logged in
+//     }
+
+//     // Assuming you're fetching attendance table data for the current user (with ID 1)
+//     $id = 1;
+//     $attendance_table = $this->Attendance_model->fetch_allattendance_table($id);
+
+//     // Modify the data structure to include the 'daysPresent' and 'daysAbsent' properties for each user
+//     foreach ($attendance_table as $user) {
+//         // Assuming you're fetching daysPresent and daysAbsent from the database or setting it appropriately
+//         $attendanceData = $this->Attendance_model->getAttendanceData($user->employeeID);
+//         $user->daysPresent = $attendanceData['daysPresent']; // Set it to the fetched value
+//         $user->daysAbsent = $attendanceData['daysAbsent']; // Set it to the fetched value
+//     }
+
+//     // Pass the modified data to the view
+//     $data['attendance_table'] = $attendance_table;
+
+//     // Load the views
+//     $this->load->view('backend/include/header');
+//     $this->load->view('backend/include/nav');
+//     $this->load->view('backend/page/attendance_table', $data);
+//     $this->load->view('backend/include/footer');
+// }
 
 
 // Inside your controller (e.g., Admin)

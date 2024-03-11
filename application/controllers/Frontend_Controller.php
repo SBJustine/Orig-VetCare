@@ -7,6 +7,7 @@ class Frontend_Controller extends CI_Controller {
 		parent::__construct();
 
 		$this->load->model('Users_model');
+		$this->load->model('Appointment_model');
 
 	}
 
@@ -96,13 +97,67 @@ class Frontend_Controller extends CI_Controller {
 		$this->load->view('frontend/page/contact1',$data);
 		$this->load->view('frontend/include/footer',$data);
 	}
-	public function appointment()
-	{
-		$data['website_info'] = $this->Users_model->fetch_all("website_info");
-		$this->load->view('frontend/include/headerClient',$data);
-		$this->load->view('frontend/page/appointment',$data);
-		// $this->load->view('frontend/include/footer',$data);
+	// public function appointment()
+	// {
+	// 	$data['website_info'] = $this->Users_model->fetch_all("website_info");
+	// 	$this->load->view('frontend/include/headerClient',$data);
+	// 	$this->load->view('frontend/page/appointment',$data);
+	// 	// $this->load->view('frontend/include/footer',$data);
+	// }
+
+	// public function create_appointment()
+	// {
+	// 	$data['website_info'] = $this->Users_model->fetch_all("website_info");
+	// 	$this->load->view('frontend/include/header',$data);
+	// 	$this->load->view('frontend/page/create_appointment',$data);
+	// 	$this->load->view('frontend/include/footer',$data);
+	// }
+
+	public function create_appointment() {
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('appointmentName', 'Name of owner', 'required');
+		$this->form_validation->set_rules('appointmentPetName', 'Name of pet', 'required|valid_email');
+		$this->form_validation->set_rules('vaccine', 'Select a service', 'required');
+		$this->form_validation->set_rules('appointmentContactNumber', 'Contact Number', 'required');
+		$this->form_validation->set_rules('appointmentDate', 'Appointment Date', 'required');
+	
+		if (!$this->session->has_userdata('user_id')) {
+			redirect('admin'); // Redirect to login page if not logged in
+		}
+	
+		if ($this->form_validation->run() === FALSE) {
+			// Validation failed, redirect back to the form
+			$this->load->view('frontend/include/header');
+			$this->load->view('frontend/include/nav');
+			$this->load->view('frontend/page/create_appointment');
+			$this->load->view('frontend/include/footer');
+		} else {
+			// Validation succeeded, proceed with data insertion
+			$data = array(
+				
+				'appointmentName' => $this->input->post('appointmentName'),
+				'appointmentPetName' => $this->input->post('appointmentPetName'),
+				'vaccine' => $this->input->post('vaccine'),
+				'appointmentContactNumber' => $this->input->post('appointmentContactNumber'),
+				'appointmentDate' => $this->input->post('appointmentDate'),
+			);
+	
+			$result = $this->Users_model->insert_dataappointment($data);
+	
+			if ($result) {
+				// Data insertion was successful
+				$this->session->set_flashdata('success', 'Data inserted successfully.');
+			} else {
+				// Data insertion failed
+				$this->session->set_flashdata('error', 'Failed to insert data.');
+			}
+	
+			// Redirect to a suitable page after the form submission
+			redirect('appointment_table');
+		}
+	
 	}
+	
 	public function myAccount()
 	{
 		$data['website_info'] = $this->Users_model->fetch_all("website_info");

@@ -16,7 +16,7 @@
                                 </div>
                             </div>
                             <!--End Section Tittle  -->
-                            <form action="<?= base_url() ?>index.php/create_appointment" id="contact-form" action="#" method="POST" >
+                            <form action="<?= base_url()?>index.php/create_appointment" id="contact-form" action="#" method="POST" >
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
                                         <div class="form-box user-icon mb-30">
@@ -47,7 +47,7 @@
 
                                     <div class="col-lg-6 col-md-6">
                                         <div class="form-box subject-icon mb-30">
-                                            <input type="Email" name="appointmentContactNumber" placeholder="Contact Number">
+                                            <input type="text" name="appointmentContactNumber" placeholder="Contact Number">
                                         </div>
                                     </div>
 

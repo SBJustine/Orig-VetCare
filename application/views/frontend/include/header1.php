@@ -61,7 +61,7 @@
 </head>
 
 <body>
-    <header>
+<header class="white-background"> <!-- Add the white-background class here -->
     	<!-- Preloader Start -->
     <!-- <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -94,6 +94,7 @@
                                             <li><a  href="<?= base_url();?>index.php/services1">Services</a></li>
                                             <li><a href="<?= base_url();?>index.php/about1">About</a></li>                                         
                                             <li><a href="<?= base_url();?>index.php/contact1">Contact</a></li>
+                                            <li><a href="<?= base_url();?>index.php/create_appointment"> Appointment</a></li>
                                             <li><a href="<?= base_url();?>index.php/myAccount">My Account</a></li>
                                             
                                         </ul>
@@ -114,4 +115,12 @@
             </div>
         </div>
         <!-- Header End -->
+   
+
+
+        <style>
+            .white-background {
+    background-color: #ffffff; /* White background color */
+}
+        </style>
     </header>

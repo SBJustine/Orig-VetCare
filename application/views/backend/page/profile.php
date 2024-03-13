@@ -1,51 +1,120 @@
 <main>
-
-
-    <!-- Admin Profile Section -->
     <div class="container-fluid pt-4 px-4">
         <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="bg-light rounded h-100 p-4">
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <img src="<?= base_url();?>assets/img1/gallery/ovet33.jpg"alt=""
+                            class="rounded-circle img-fluid" style="width: 150px;">
+                            <h5 class="my-3">John Smith</h5>
+                            <p class="text-muted mb-1">Full Stack Developer</p>
+                            <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
+                            <div class="d-flex justify-content-center mb-2">
+                            <button type="button" class="btn btn-primary" onclick="window.location.href = 'https://www.facebook.com/edugeelow';">Follow</button>
 
-        <div class="col-sm-12 col-xl-6">
-                        <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4"></h6>
-                            <div class="owl-carousel testimonial-carousel">
-                                <div class="testimonial-item text-center">
-                                    <img class="img-fluid rounded-circle mx-auto mb-4" src="<?= base_url();?>assets/img1/gallery/Vet1.jpg" style="width: 100px; height: 100px;">
-                                    <h5 class="mb-1">Edu Gelo L. Orig</h5>
-                                    <p>Veterinarian</p>
-                                    <p class="mb-0">Orig Vetcare Owner</p>
-                                </div>
 
+                                <!-- <button type="button" class="btn btn-outline-primary ms-1">Message</button> -->
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-light rounded h-100 p-4">
-                            <iframe class="position-relative rounded w-100 h-100"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.4823095975096!2d123.7497234!3d9.7872388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aa4de9c87cccc7%3A0x2e26efbc58318434!2sOrig%20Vetcare%20Animal%20Clinic!5e0!3m2!1sen!2sph!4v1645964899117!5m2!1sen!2sph"
-                            frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-                            tabindex="0"></iframe>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="bg-light rounded h-100 p-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Full Name</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="text-muted mb-0">Johnatan Smith</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Email</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="text-muted mb-0">example@example.com</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Phone</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="text-muted mb-0">(097) 234-5678</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Mobile</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="text-muted mb-0">(098) 765-4321</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Address</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-
-            <!-- <div class="col-md-8">
-                
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Manage Products</h5>
-                        <p class="card-text">View and update product information.</p>
-                        <a href="#" class="btn btn-primary">Go to Products</a>
-                    </div>
                 </div>
-                Add more sections as needed
-            </div> -->
+            </div>
         </div>
     </div>
 
-   
-        
-                
+    <style>
+        /* Custom CSS for the main section */
+        .breadcrumb {
+            background-color: #f8f9fa;
+            border-radius: 0.25rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .breadcrumb-item {
+            font-size: 0.9rem;
+        }
+
+        .card-profile {
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+        }
+
+        .profile-name {
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-info button {
+            margin-right: 0.5rem;
+        }
+    </style>
 
 </main>
-

@@ -732,9 +732,10 @@ $reports = $this->Users_model->fetch_allreports($id);
 
 public function profile(){
 	$data['website_info'] = $this->Users_model->fetch_all("website_info");		
-	$this->load->view('backend/include/header',$data);
+	$this->load->view('backend/include/header');
 	$this->load->view('backend/include/nav');
 	$this->load->view('backend/page/profile',$data);
+	$this->load->view('backend/include/footer');
 	
 
 }
